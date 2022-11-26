@@ -146,6 +146,8 @@ void CLOCK_Initialize (void)
     GCLK0_Initialize();
 
 
+    /* Selection of the Generator and write Lock for RTC */
+    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(4U) | GCLK_CLKCTRL_GEN(0x0U)  | GCLK_CLKCTRL_CLKEN_Msk;
 
 
     /*Disable RC oscillator*/

@@ -60,6 +60,8 @@
 void Reset_Handler (void);
 void NonMaskableInt_Handler (void);
 void HardFault_Handler (void);
+void xPortSysTickHandler (void);
+void RTC_InterruptHandler (void);
 
 
 
