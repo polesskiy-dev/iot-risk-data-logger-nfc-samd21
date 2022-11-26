@@ -1,0 +1,14 @@
+configName: default
+folderName: iot-data-logger-nfc-samd21
+format_version: v1.0
+frameworkPath: ../../Harmony3
+processor: ATSAMD21E17D
+projectName: iot-data-logger-nfc-samd21
+settings:
+  PackageFilter: crypto;core_apps_sam_d21_da1;dev_packs;net;core;bootloader;csp_apps_sam_d21_da1;bsp;quick_docs;usb;csp;harmony-services;Devices
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: ./dev_packs/arm/CMSIS/5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: ./dev_packs/Microchip/SAMD21_DFP/3.6.144/samd21d/atdf/ATSAMD21E17D.atdf
