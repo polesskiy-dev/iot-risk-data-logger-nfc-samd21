@@ -2264,7 +2264,6 @@
     )
   )
 
-
   (junction (at 201.93 242.57) (diameter 0) (color 0 0 0 0)
     (uuid 16dd2ae7-2f58-43c3-9a20-b8eb5e915bce)
   )
@@ -2982,6 +2981,10 @@
     (uuid ffdc21dd-3774-4d07-a152-34190c1d8781)
   )
 
+  (text "TODO: check whether we need VBUS detection" (at 205.74 181.61 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 0061781a-9058-4f52-86ad-c2a42c82269b)
+  )
   (text "HARDWARE CRYPTO\n" (at 213.36 19.05 0)
     (effects (font (size 2.54 2.54) (thickness 0.508) bold) (justify left bottom))
     (uuid 1293222d-ebb8-4055-8826-8d2557befb1d)

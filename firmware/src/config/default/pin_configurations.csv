@@ -3,7 +3,7 @@
 2,PA01,,Available,,,,,,NORMAL
 3,PA02,,Available,,,,,,NORMAL
 4,PA03,NFC_INT,EIC_EXTINT3,Digital,High Impedance,n/a,No,No,NORMAL
-5,PA04,~TEMP_RESET,GPIO,Digital,Out,High,,,NORMAL
+5,PA04,TEMP_RESET,GPIO,Digital,Out,High,,,NORMAL
 6,PA05,TEMP_INT,EIC_EXTINT5,Digital,High Impedance,n/a,No,No,NORMAL
 7,PA06,IMU_INT1,EIC_EXTINT6,Digital,High Impedance,n/a,No,No,NORMAL
 8,PA07,IMU_INT2,EIC_EXTINT7,Digital,High Impedance,n/a,No,No,NORMAL

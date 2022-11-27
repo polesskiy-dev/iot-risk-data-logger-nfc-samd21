@@ -43,6 +43,7 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
+#include "configuration.h"
 #include "definitions.h"
 #include "device.h"
 
@@ -79,6 +80,45 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* SPI PLIB Interface Initialization for AT25DF Driver */
+const DRV_AT25DF_PLIB_INTERFACE drvAT25DFPlibAPI = {
+
+    /* SPI PLIB WriteRead function */
+    .writeRead = (DRV_AT25DF_PLIB_WRITE_READ)SERCOM1_SPI_WriteRead,
+
+    /* SPI PLIB Write function */
+    .write = (DRV_AT25DF_PLIB_WRITE)SERCOM1_SPI_Write,
+
+    /* SPI PLIB Read function */
+    .read = (DRV_AT25DF_PLIB_READ)SERCOM1_SPI_Read,
+
+    /* SPI PLIB Transfer Status function */
+    .isBusy = (DRV_AT25DF_PLIB_IS_BUSY)SERCOM1_SPI_IsBusy,
+
+    /* SPI PLIB Callback Register */
+    .callbackRegister = (DRV_AT25DF_PLIB_CALLBACK_REGISTER)SERCOM1_SPI_CallbackRegister,
+};
+
+/* AT25DF Driver Initialization Data */
+const DRV_AT25DF_INIT drvAT25DFInitData =
+{
+    /* SPI PLIB API  interface*/
+    .spiPlib = &drvAT25DFPlibAPI,
+
+    /* AT25DF Number of clients */
+    .numClients = DRV_AT25DF_CLIENTS_NUMBER_IDX,
+
+    /* FLASH Page Size in bytes */
+    .pageSize = DRV_AT25DF_PAGE_SIZE,
+
+    /* Total size of the FLASH in bytes */
+    .flashSize = DRV_AT25DF_FLASH_SIZE,
+
+    .blockStartAddress = 0x0,
+
+    .chipSelectPin = DRV_AT25DF_CHIP_SELECT_PIN_IDX
+};
+
 
 
 // *****************************************************************************
@@ -86,12 +126,46 @@
 // Section: System Data
 // *****************************************************************************
 // *****************************************************************************
+/* Structure to hold the object handles for the modules in the system. */
+SYSTEM_OBJECTS sysObj;
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Library/Stack Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/******************************************************
+ * USB Driver Initialization
+ ******************************************************/
+ 
+
+
+const DRV_USBFSV1_INIT drvUSBInit =
+{
+    /* Interrupt Source for USB module */ 
+    .interruptSource = USB_IRQn,
+
+    /* System module initialization */
+    .moduleInit = {0},
+
+    /* USB Controller to operate as USB Device */
+    .operationMode = DRV_USBFSV1_OPMODE_DEVICE,
+
+    /* USB Full Speed Operation */
+	.operationSpeed = USB_SPEED_FULL,
+    
+    /* Stop in idle */
+    .runInStandby = true,
+
+    /* Suspend in sleep */
+    .suspendInSleep = false,
+
+    /* Identifies peripheral (PLIB-level) ID */
+    .usbID = USB_REGS,
+	
+};
+
+
 
 
 // *****************************************************************************
@@ -137,11 +211,29 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_Initialize( );
 
+    SERCOM1_SPI_Initialize();
+
+
+    SERCOM0_I2C_Initialize();
 
     RTC_Initialize();
 
 
+    sysObj.drvAT25DF = DRV_AT25DF_Initialize(DRV_AT25DF_INDEX, (SYS_MODULE_INIT *)&drvAT25DFInitData);
 
+
+
+
+	 /* Initialize the USB device layer */
+    sysObj.usbDevObject0 = USB_DEVICE_Initialize (USB_DEVICE_INDEX_0 , ( SYS_MODULE_INIT* ) & usbDevInitData);
+	
+	
+
+	/* Initialize USB Driver */ 
+    sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
+
+
+    APP_Initialize();
 
 
     NVIC_Initialize();
