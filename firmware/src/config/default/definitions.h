@@ -58,6 +58,9 @@
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
 #include "peripheral/rtc/plib_rtc.h"
+#include "peripheral/tc/plib_tc3.h"
+#include "system/time/sys_time.h"
+#include "driver/i2c/drv_i2c.h"
 #include "usb/usb_device_cdc.h"
 #include "usb/usb_cdc.h"
 #include "driver/usb/usbfsv1/drv_usbfsv1.h"
@@ -193,8 +196,12 @@ Remarks:
 
 typedef struct
 {
+    /* I2C0 Driver Object */
+    SYS_MODULE_OBJ drvI2C0;
+
 	SYS_MODULE_OBJ  usbDevObject0;
 
+    SYS_MODULE_OBJ  sysTime;
 	SYS_MODULE_OBJ  drvUSBFSV1Object;
 
     /* AT25DF Driver Object */

@@ -97,6 +97,24 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '48000000'}
+  - type: Menu
+    attributes: {id: CoreIARMenu}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Menu
+    attributes: {id: CoreKEILMenu}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
   - type: KeyValueSet
     attributes: {id: DEVICE_BOD33_ACTION}
     children:
@@ -364,7 +382,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '8000000'}
+  - type: KeyValueSet
+    attributes: {id: GCLK_ID_20_GENSEL}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
   - type: Boolean
     attributes: {id: GCLK_ID_21_CHEN}
     children:
@@ -374,6 +399,27 @@ children:
         attributes: {id: core, value: 'true'}
   - type: Integer
     attributes: {id: GCLK_ID_21_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '8000000'}
+  - type: KeyValueSet
+    attributes: {id: GCLK_ID_21_GENSEL}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+  - type: Boolean
+    attributes: {id: GCLK_ID_27_CHEN}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: Integer
+    attributes: {id: GCLK_ID_27_FREQ}
     children:
     - type: Values
       children:
@@ -392,7 +438,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '32768'}
+  - type: KeyValueSet
+    attributes: {id: GCLK_ID_4_GENSEL}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '2'}
   - type: Boolean
     attributes: {id: GCLK_ID_6_CHEN}
     children:
@@ -584,6 +637,27 @@ children:
         attributes: {id: core, value: SERCOM1_SPI_InterruptHandler}
   - type: Boolean
     attributes: {id: NVIC_10_0_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: Boolean
+    attributes: {id: NVIC_18_0_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: String
+    attributes: {id: NVIC_18_0_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: TC3_TimerInterruptHandler}
+  - type: Boolean
+    attributes: {id: NVIC_18_0_HANDLER_LOCK}
     children:
     - type: Values
       children:
@@ -1071,7 +1145,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x1000c'}
+        attributes: {id: core, value: '0x1080c'}
   - type: Boolean
     attributes: {id: PORT_GROUP_0}
     children:
@@ -1491,7 +1565,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '32768'}
   - type: Boolean
     attributes: {id: RTC_INTERRUPT_ENABLE}
     children:
@@ -1533,7 +1607,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '8000000'}
   - type: Boolean
     attributes: {id: SERCOM0_INTERRUPT_ENABLE}
     children:
@@ -1575,7 +1649,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '8000000'}
   - type: Boolean
     attributes: {id: SERCOM1_INTERRUPT_ENABLE}
     children:
@@ -1641,42 +1715,6 @@ children:
         attributes: {id: visible}
         children:
         - {type: Value, value: 'true'}
-  - type: File
-    attributes: {id: SYSTICK_FILE_0}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
-  - type: File
-    attributes: {id: SYSTICK_FILE_1}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
-  - type: File
-    attributes: {id: SYSTICK_FILE_2}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
-  - type: Menu
-    attributes: {id: SYSTICK_MENU_0}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: visible}
-        children:
-        - {type: Value, value: 'false'}
   - type: String
     attributes: {id: SYSTICK_PERIOD}
     children:
@@ -1729,6 +1767,48 @@ children:
       - type: Dynamic
         attributes: {id: core, value: 'true'}
   - type: Boolean
+    attributes: {id: TC3_CLOCK_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: Integer
+    attributes: {id: TC3_CLOCK_FREQUENCY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '48000000'}
+  - type: Boolean
+    attributes: {id: TC3_INTERRUPT_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tc3, value: 'true'}
+  - type: Boolean
+    attributes: {id: TC3_INTERRUPT_ENABLE_UPDATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: String
+    attributes: {id: TC3_INTERRUPT_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tc3, value: TC3_TimerInterruptHandler}
+  - type: Boolean
+    attributes: {id: TC3_INTERRUPT_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tc3, value: 'true'}
+  - type: Boolean
     attributes: {id: USB_CLOCK_ENABLE}
     children:
     - type: Values
@@ -1773,12 +1853,6 @@ children:
   - type: Boolean
     attributes: {id: USE_SYSTICK_INTERRUPT}
     children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: readOnly}
-        children:
-        - {type: Value, value: 'false'}
     - type: Values
       children:
       - type: Dynamic
@@ -1838,14 +1912,5 @@ children:
       children:
       - type: User
         attributes: {value: 'false'}
-  - type: File
-    attributes: {id: systickSystemInitFile}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
 - type: ElementPosition
   attributes: {x: '500', y: '20', id: core}

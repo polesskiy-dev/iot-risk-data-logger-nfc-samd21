@@ -76,7 +76,7 @@ void __attribute__((optimize("-O1"),section(".text.Dummy_Handler"),long_call, no
 }
 
 /* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 8.6 deviated 24 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated 23 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Device vectors list dummy definition*/
 extern void vPortSVCHandler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void xPortPendSVHandler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -93,7 +93,6 @@ extern void SERCOM3_Handler            ( void ) __attribute__((weak, alias("Dumm
 extern void TCC0_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC1_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC2_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TC3_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TC4_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TC5_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void ADC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -138,7 +137,7 @@ const H3DeviceVectors exception_table=
     .pfnTCC0_Handler               = TCC0_Handler,
     .pfnTCC1_Handler               = TCC1_Handler,
     .pfnTCC2_Handler               = TCC2_Handler,
-    .pfnTC3_Handler                = TC3_Handler,
+    .pfnTC3_Handler                = TC3_TimerInterruptHandler,
     .pfnTC4_Handler                = TC4_Handler,
     .pfnTC5_Handler                = TC5_Handler,
     .pfnADC_Handler                = ADC_Handler,
