@@ -8,7 +8,28 @@ files:
   userChecksum: F58DB2348A0FCE945652B285010E5F8A
 - generatedChecksum: null
   logicalPath: ''
-  name: app.c
+  name: app_flash.c
+  physicalPath: ../..
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: null
+- generatedChecksum: null
+  logicalPath: ''
+  name: app_light_sensor.c
+  physicalPath: ../..
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: null
+- generatedChecksum: null
+  logicalPath: ''
+  name: app_temp_sensor.c
+  physicalPath: ../..
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: null
+- generatedChecksum: null
+  logicalPath: ''
+  name: app_usb.c
   physicalPath: ../..
   security: NON_SECURE
   type: SOURCE
@@ -90,13 +111,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 972E955D94A63BA89BF6ABD6AADB1023
-- generatedChecksum: 40CACDF39EB68A99B15565B0BD4A8A87
+- generatedChecksum: E580D5594AD32A327A935AA9444092F3
   logicalPath: config/default
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 40CACDF39EB68A99B15565B0BD4A8A87
+  userChecksum: E580D5594AD32A327A935AA9444092F3
 - generatedChecksum: BB1471B8340F75C0B6C6F9D53CA64339
   logicalPath: config/default
   name: interrupts.c
@@ -237,13 +258,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: AD9DEEA019A0C5B587E2066874A0499D
-- generatedChecksum: 1788E77E8949C72A493800BB167122D1
+- generatedChecksum: DE6934557C61FE178549B849F626EBEB
   logicalPath: config/default
   name: tasks.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 1788E77E8949C72A493800BB167122D1
+  userChecksum: DE6934557C61FE178549B849F626EBEB
 - generatedChecksum: F1B86F6E1527FD59A8713B67564F2898
   logicalPath: FreeRTOS/Source
   name: timers.c
@@ -330,7 +351,28 @@ files:
   userChecksum: 981F1FD8B513CE421AAEF166A1648F5C
 - generatedChecksum: null
   logicalPath: ''
-  name: app.h
+  name: app_flash.h
+  physicalPath: ../..
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: null
+- generatedChecksum: null
+  logicalPath: ''
+  name: app_light_sensor.h
+  physicalPath: ../..
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: null
+- generatedChecksum: null
+  logicalPath: ''
+  name: app_temp_sensor.h
+  physicalPath: ../..
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: null
+- generatedChecksum: null
+  logicalPath: ''
+  name: app_usb.h
   physicalPath: ../..
   security: NON_SECURE
   type: HEADER
@@ -426,13 +468,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 95B6CAEC80B355A5796CDEF2D9EFCEAF
-- generatedChecksum: 0ED0CEA724C916C23691D2E76BC62D1F
+- generatedChecksum: 62AF42FF86306F6137F40EAA54CCA059
   logicalPath: config/default
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0ED0CEA724C916C23691D2E76BC62D1F
+  userChecksum: 62AF42FF86306F6137F40EAA54CCA059
 - generatedChecksum: 1EA4EDD5EA90F43EC407DE32441159A9
   logicalPath: FreeRTOS/Source/include
   name: deprecated_definitions.h

@@ -241,7 +241,10 @@
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../src/app.h</itemPath>
+      <itemPath>../src/app_temp_sensor.h</itemPath>
+      <itemPath>../src/app_light_sensor.h</itemPath>
+      <itemPath>../src/app_flash.h</itemPath>
+      <itemPath>../src/app_usb.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -361,7 +364,10 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
-      <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/app_temp_sensor.c</itemPath>
+      <itemPath>../src/app_light_sensor.c</itemPath>
+      <itemPath>../src/app_flash.c</itemPath>
+      <itemPath>../src/app_usb.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

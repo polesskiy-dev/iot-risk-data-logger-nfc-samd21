@@ -1,0 +1,46 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: sys_time}
+children:
+- type: Symbols
+  children:
+  - type: Combo
+    attributes: {id: SYS_TIME_OPERATING_MODE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: String
+    attributes: {id: SYS_TIME_PLIB}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: sys_time, value: TC3}
+  - type: String
+    attributes: {id: SYS_TIME_REMOTE_COMPONENT_ID}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: sys_time, value: tc3}
+- type: Attachments
+  children:
+  - type: DirectDependency
+    attributes: {id: sys_time_TMR_dependency}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: tc3}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: TC3_TMR}
+- type: ElementPosition
+  attributes: {x: '963', y: '154', id: sys_time}

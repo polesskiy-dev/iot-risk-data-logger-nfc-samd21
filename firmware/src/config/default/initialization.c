@@ -307,7 +307,10 @@ void SYS_Initialize ( void* data )
     sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
 
 
-    APP_Initialize();
+    APP_TEMP_SENSOR_Initialize();
+    APP_LIGHT_SENSOR_Initialize();
+    APP_FLASH_Initialize();
+    APP_USB_Initialize();
 
 
     NVIC_Initialize();

@@ -71,7 +71,10 @@
 #include "system/ports/sys_ports.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "app.h"
+#include "app_temp_sensor.h"
+#include "app_light_sensor.h"
+#include "app_flash.h"
+#include "app_usb.h"
 
 
 
