@@ -78,7 +78,7 @@ USB_DEVICE_CDC_EVENT_RESPONSE APP_USB_USBDeviceCDCEventHandler
     APP_USB_DATA * appDataObject;
     USB_CDC_CONTROL_LINE_STATE * controlLineStateData;
     USB_DEVICE_CDC_EVENT_DATA_READ_COMPLETE * eventDataRead;
-    
+
     appDataObject = (APP_USB_DATA *)userData;
 
     switch(event)
@@ -136,24 +136,24 @@ USB_DEVICE_CDC_EVENT_RESPONSE APP_USB_USBDeviceCDCEventHandler
 
             appDataObject->breakData = ((USB_DEVICE_CDC_EVENT_DATA_SEND_BREAK *)
                     pData)->breakDuration;
-            
+
             /* Complete the control transfer by sending a ZLP  */
             USB_DEVICE_ControlStatus(appDataObject->deviceHandle,
                     USB_DEVICE_CONTROL_STATUS_OK);
-            
+
             break;
 
         case USB_DEVICE_CDC_EVENT_READ_COMPLETE:
 
             /* This means that the host has sent some data, store the same */
             eventDataRead = (USB_DEVICE_CDC_EVENT_DATA_READ_COMPLETE *)pData;
-            
+
             /* Notify state machine that a read was completed */
-            
-            
+
+
             /* Update the number of bytes read */
             appDataObject->numBytesRead = eventDataRead->length;
-            
+
             break;
 
         case USB_DEVICE_CDC_EVENT_CONTROL_TRANSFER_DATA_RECEIVED:
@@ -164,7 +164,7 @@ USB_DEVICE_CDC_EVENT_RESPONSE APP_USB_USBDeviceCDCEventHandler
 
             USB_DEVICE_ControlStatus(appDataObject->deviceHandle,
                     USB_DEVICE_CONTROL_STATUS_OK);
-            
+
             break;
 
         case USB_DEVICE_CDC_EVENT_CONTROL_TRANSFER_DATA_SENT:
@@ -172,7 +172,7 @@ USB_DEVICE_CDC_EVENT_RESPONSE APP_USB_USBDeviceCDCEventHandler
             /* This means the GET LINE CODING function data is valid. We don't
              * do much with this data in this demo.
              */
-            
+
             break;
 
         case USB_DEVICE_CDC_EVENT_WRITE_COMPLETE:
@@ -182,8 +182,8 @@ USB_DEVICE_CDC_EVENT_RESPONSE APP_USB_USBDeviceCDCEventHandler
              */
 
             /* Notify state machine that a write was completed */
-            
-            
+
+
             break;
 
         default:
@@ -198,9 +198,9 @@ USB_DEVICE_CDC_EVENT_RESPONSE APP_USB_USBDeviceCDCEventHandler
  ***********************************************/
 void APP_USB_USBDeviceEventHandler 
 (
-    USB_DEVICE_EVENT event, 
-    void * eventData, 
-    uintptr_t context 
+    USB_DEVICE_EVENT event,
+    void * eventData,
+    uintptr_t context
 )
 {
     USB_DEVICE_EVENT_DATA_CONFIGURED *configuredEventData;
@@ -210,13 +210,10 @@ void APP_USB_USBDeviceEventHandler
         case USB_DEVICE_EVENT_SOF:
 
             app_usbData.sofEventHasOccurred = true;
-            
+
             break;
 
         case USB_DEVICE_EVENT_RESET:
-
-            /* Update LED to show reset state */
-            USB_LED_Set();
 
             app_usbData.isConfigured = false;
 
@@ -226,51 +223,47 @@ void APP_USB_USBDeviceEventHandler
 
             /* Check the configuration. We only support configuration 1 */
             configuredEventData = (USB_DEVICE_EVENT_DATA_CONFIGURED*)eventData;
-            
+
             if ( configuredEventData->configurationValue == 1)
             {
                 /* Mark that the device is now configured */
-                
+
 
                 /* Update LED to show configured state */
-                
+
 
                 /* Register the CDC Device application event handler here.
                  * Note how the appData object pointer is passed as the
                  * user data 
                  */
-                
+
 
             }
-            
+
             break;
 
         case USB_DEVICE_EVENT_POWER_DETECTED:
 
             /* VBUS was detected. We can attach the device */
             USB_DEVICE_Attach(app_usbData.deviceHandle);
-            
+
             break;
 
         case USB_DEVICE_EVENT_POWER_REMOVED:
 
             /* VBUS is not available any more. Detach the device. */
             USB_DEVICE_Detach(app_usbData.deviceHandle);
-            
-            USB_LED_Set();
-            
+
             break;
 
         case USB_DEVICE_EVENT_SUSPENDED:
 
-            USB_LED_Set();
-            
             break;
 
         case USB_DEVICE_EVENT_RESUMED:
         case USB_DEVICE_EVENT_ERROR:
         default:
-            
+
             break;
     }
 }
@@ -380,20 +373,20 @@ void APP_USB_Tasks ( void )
     /* Update the application state machine based
      * on the current state 
      */
-    
+
     switch(app_usbData.state)
     {
         case APP_USB_STATE_INIT:
 
             /* Open the device layer */
-            
+
 
             if(app_usbData.deviceHandle != USB_DEVICE_HANDLE_INVALID)
             {
                 /* Register a callback with device layer to get event 
                  * notification (for end point 0) 
                  */
-                
+
 
                 app_usbData.state = APP_USB_STATE_WAIT_FOR_CONFIGURATION;
             }
@@ -414,7 +407,7 @@ void APP_USB_Tasks ( void )
                 /* If the device is configured then lets start reading */
                 app_usbData.state = APP_USB_STATE_SCHEDULE_READ;
             }
-            
+
             break;
 
         case APP_USB_STATE_SCHEDULE_READ:
@@ -428,16 +421,16 @@ void APP_USB_Tasks ( void )
              * else wait for the current read to complete 
              */
             app_usbData.state = APP_USB_STATE_WAIT_FOR_READ_COMPLETE;
-            
+
             if(app_usbData.isReadComplete == true)
             {
                 app_usbData.isReadComplete = false;
-                app_usbData.readTransferHandle = 
+                app_usbData.readTransferHandle =
                         USB_DEVICE_CDC_TRANSFER_HANDLE_INVALID;
-                
+
                 /* Schedule read */
-                
-                
+
+
                 if(app_usbData.readTransferHandle ==
                         USB_DEVICE_CDC_TRANSFER_HANDLE_INVALID)
                 {
@@ -479,133 +472,21 @@ void APP_USB_Tasks ( void )
              */
             switch (app_usbData.cdcReadBuffer[0])
             {
-                /* h,H - Menu Command */
-                case 'h':
-                case 'H':
-                    app_usbData.isCommand = true;
-                    app_usbData.numBytesWrite =
-                            sprintf((char*)app_usbData.cdcWriteBuffer,
-                            "Getting Started Menu:\r\n"
-                            "1 - Toggle board LED\r\n"
-                            "2 - Show latest temperature value\r\n"
-                            "3 - Show past 5 temperature values from EEPROM\r\n"
-                            "4 - Show latest light sensor value\r\n"
-                            "h - Show this menu\r\n");
-                    
-                    break;
-                
-                /* 1 - Led Toggle Command */
-                case '1':
-                    app_usbData.isCommand = true;
-                    app_usbData.numBytesWrite =
-                        sprintf((char*)app_usbData.cdcWriteBuffer,
-                            "Toggled LED State\r\n");
-                    
-                    /*Toggle the E70 Xplained board LED*/
-                    
-                    
-                    break;
-                
-                /* 2 - Display Temperature Command */
-                case '2':
-                    app_usbData.isCommand = true;
-                    int8_t temp;
-                    
-                    /* Fetch the latest temperature from the sensor */
-                    
-                    
-                    if (temp != INT8_MIN)
-                    {
-                        app_usbData.numBytesWrite = 
-                            sprintf((char*)app_usbData.cdcWriteBuffer,
-                            "Temperature = %d F\r\n",
-                            temp);
-                    }
-                    else
-                        app_usbData.numBytesWrite = 
-                                sprintf((char*)app_usbData.cdcWriteBuffer,
-                                    "Couldn't fetch temperature\r\n");
-                    
-                    break;
-                
-                /* 3 - Display Past 5 Temperatures Command */
-                case '3':
-                    app_usbData.isCommand = true;
-                    int8_t temps[5], j;
-                    uint32_t k = 0;
-                    
-                    /* Fetch last 5 temperature values from the EEPROM */
-                    
-                    
-                    if (result)
-                    {
-                        for(j=0; j<5; j++)
-                        {
-                            k += sprintf((char*)&app_usbData.cdcWriteBuffer[k],
-                                    "Temperature %d = %d F\r\n", j+1, temps[j]);
-                        }
-                        app_usbData.numBytesWrite = k;
-                    }
-                    else
-                        app_usbData.numBytesWrite = 
-                                sprintf((char*)app_usbData.cdcWriteBuffer,
-                                    "Couldn't fetch temperature\r\n");
-                    
-                    break;
-                
-                /* 4 - Display Light Sensor Value Command */
-                case '4':
-                    app_usbData.isCommand = true;
-                    uint8_t brightness = 0;
-                    uint16_t adc_count = 0;
-                    float adc_voltage = 0;
-                    
-                    /* Start ADC conversion */
-                    AFEC1_ConversionStart();
-                    
-                    /* Wait till ADC conversion result is available */
-                    while(!AFEC1_ChannelResultIsReady(AFEC_CH6))
-                    {
-                        /* Takes approximately 4 uS
-                         * for the conversion to complete
-                         */
-                    };
-                    
-                    /* Read the ADC result */
-                    
-                    
-                    /* Calculate voltage */
-                    adc_voltage = (float)adc_count * 3.3 / 4095U;
-                    
-                    /* Calculate percentage */
-                    brightness = (uint8_t) ((3.3 - adc_voltage)/3.3 * 100);
-                    
-                    /* Format result */
-                    app_usbData.numBytesWrite = sprintf(
-                            (char*)app_usbData.cdcWriteBuffer,
-                            "Brightness = %d%%\r\n",
-                            brightness);
-                    
-                    break;
-                
-                /* Do nothing */
-                default:
-                    /* Clear command flag */
-                    app_usbData.isCommand = false;
-                    
-                    break;
+                // TODO check incoming buffer and echo it
+
+                // TODO get rid of isCommand
             }
-            
+
             /* Schedule write only if a valid command was processed */
             if(app_usbData.isCommand)
             {
                 app_usbData.isWriteComplete = false;
                 app_usbData.writeTransferHandle =
                         USB_DEVICE_CDC_TRANSFER_HANDLE_INVALID;
-                
+
                 /* Schedule write */
-                
-                
+
+
                 app_usbData.state = APP_USB_STATE_WAIT_FOR_WRITE_COMPLETE;
             }
             else
@@ -635,7 +516,7 @@ void APP_USB_Tasks ( void )
 
         case APP_USB_STATE_ERROR:
         default:
-            
+
             break;
     }
 }
