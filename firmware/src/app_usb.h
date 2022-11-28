@@ -46,6 +46,9 @@ extern "C" {
 // Section: Type Definitions
 // *****************************************************************************
 // *****************************************************************************
+#define APP_USB_READ_BUFFER_SIZE    512
+#define APP_USB_WRITE_BUFFER_SIZE   512
+
 
 // *****************************************************************************
 /* Application states
@@ -62,9 +65,24 @@ typedef enum
 {
     /* Application's state machine's initial state. */
     APP_USB_STATE_INIT=0,
-    APP_USB_STATE_SERVICE_TASKS,
-    /* TODO: Define states used by the application state machine. */
 
+    /* Application waits for device configuration*/
+    APP_USB_STATE_WAIT_FOR_CONFIGURATION,
+
+    /* Wait for a character receive */
+    APP_USB_STATE_SCHEDULE_READ,
+
+    /* A character is received from host */
+    APP_USB_STATE_WAIT_FOR_READ_COMPLETE,
+
+    /* Wait for the TX to get completed */
+    APP_USB_STATE_SCHEDULE_WRITE,
+
+    /* Wait for the write to complete */
+    APP_USB_STATE_WAIT_FOR_WRITE_COMPLETE,
+
+    /* Application Error state*/
+    APP_USB_STATE_ERROR
 } APP_USB_STATES;
 
 
@@ -83,11 +101,56 @@ typedef enum
 
 typedef struct
 {
+    /* Device layer handle returned by device layer open function */
+    USB_DEVICE_HANDLE deviceHandle;
+
     /* The application's current state */
     APP_USB_STATES state;
 
-    /* TODO: Define any additional data used by the application. */
+    /* Set Line Coding Data */
+    USB_CDC_LINE_CODING setLineCodingData;
 
+    /* Device configured state */
+    bool isConfigured;
+
+    /* Get Line Coding Data */
+    USB_CDC_LINE_CODING getLineCodingData;
+
+    /* Control Line State */
+    USB_CDC_CONTROL_LINE_STATE controlLineStateData;
+
+    /* Read transfer handle */
+    USB_DEVICE_CDC_TRANSFER_HANDLE readTransferHandle;
+
+    /* Write transfer handle */
+    USB_DEVICE_CDC_TRANSFER_HANDLE writeTransferHandle;
+
+    /* True if a character was read */
+    bool isReadComplete;
+
+    /* True if a character was written*/
+    bool isWriteComplete;
+
+    /* Flag determines SOF event occurrence */
+    bool sofEventHasOccurred;
+
+    /* Break data */
+    uint16_t breakData;
+
+    /* Application CDC read buffer */
+    uint8_t * cdcReadBuffer;
+
+    /* Application CDC Write buffer */
+    uint8_t * cdcWriteBuffer;
+
+    /* Number of bytes read from Host */
+    uint32_t numBytesRead;
+
+    /* Number of bytes to be sent to Host */
+    uint32_t numBytesWrite;
+
+    /* Command flag */
+    bool isCommand;
 } APP_USB_DATA;
 
 // *****************************************************************************
