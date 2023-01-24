@@ -236,14 +236,12 @@ void APP_USB_USBDeviceEventHandler
                  * Note how the appData object pointer is passed as the
                  * user data 
                  */
-
-
             }
 
             break;
 
         case USB_DEVICE_EVENT_POWER_DETECTED:
-
+            // TODO check whether we can detect it by Vcc change from ADC
             /* VBUS was detected. We can attach the device */
             USB_DEVICE_Attach(app_usbData.deviceHandle);
 
