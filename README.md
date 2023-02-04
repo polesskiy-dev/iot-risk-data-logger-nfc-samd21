@@ -1,13 +1,17 @@
+## Schematics
+
+![](./docs/pcb-images/schematics.png)
+
 ## PCB
 
 PCB development:
 ![](./docs/pcb-images/Screenshot%202023-01-26%20at%2019.58.40.png)
 
 PCB Front render:
-![](./docs/pcb-images/Screenshot%202023-01-26%20at%2019.57.32.png)
+![](./docs/pcb-images/iot-data-logger-nfc-samd21-front.png)
 
 PCB Back render:
-![](./docs/pcb-images/Screenshot%202023-01-26%20at%2019.57.42.png)
+![](./docs/pcb-images/iot-data-logger-nfc-samd21-back.png)
 
 
 ## BOM
