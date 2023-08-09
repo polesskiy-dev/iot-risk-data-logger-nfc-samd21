@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 210)
+    (start_pass_no 874)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -22,16 +22,20 @@
       (active on)
       (preferred_direction vertical)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 1.8)
+      (against_preferred_direction_trace_costs 1.9)
     )
   )
   (rule
     (width 200.0)
-    (clear 250.0)
-    (clear 100.0 (type smd_to_turn_gap))
-    (clear 62.4 (type smd-smd))
-    (clear 200.0 (type thin-thin))
-    (clear 200.0 (type usb-usb))
+    (clearance 200.2)
+    (clearance 100.0 (type smd_to_turn_gap))
+    (clearance 200.2 (type smd))
+    (clearance 200.2 (type "kicad_default"))
+    (clearance 200.2 (type gnd))
+    (clearance 200.2 (type pwd))
+    (clearance 200.2 (type thin))
+    (clearance 200.2 (type usb))
+    (clearance 200.2 (type kicad))
   )
   (padstack "Via[0-1]_800:400_um"
     (shape
@@ -79,12 +83,6 @@
     usb "Via[0-1]_800:400_um-usb"
   )
   (class default
-    "unconnected-(IC1-Pad1)" XIN32 "unconnected-(IC2-Pad4)" "unconnected-(IC2-Pad7)" "unconnected-(IC2-Pad8)" "unconnected-(U3-Pad7)" "unconnected-(U3-Pad3)" XOUT32
-    SDA SCL SWDIO SWDCLK "Net-(AE1-Pad2)" "Net-(AE1-Pad1)" "NFC_INT" "unconnected-(J1-Pad6)"
-    "unconnected-(J1-Pad7)" "unconnected-(J1-Pad8)" "unconnected-(J2-PadA8)" "unconnected-(J2-PadB8)" "TEMP_INT" MOSI SCK "FLASH_CS"
-    MISO "unconnected-(U2-Pad3)" "unconnected-(U2-Pad14)" "unconnected-(U2-Pad13)" "unconnected-(U2-Pad27)" ~RESET "Net-(C12-Pad1)" LED
-    "USB_VBUS_SENSE" "_TEMP_RESET" "unconnected-(U2-Pad16)" "Net-(C11-Pad1)" "Net-(C13-Pad1)" "Net-(C20-Pad1)" "IMU_INT1" "IMU_INT2"
-    "unconnected-(U2-Pad15)" "unconnected-(U2-Pad5)"
     (clearance_class default)
     (via_rule default)
     (rule
@@ -95,6 +93,13 @@
     )
   )
   (class "kicad_default"
+    "Net-(IC1-AC1)" XIN32 "Net-(IC1-AC0)" "Net-(BT1-+)" "Net-(U2-VDDCORE)" XOUT32 "Net-(D3-GND)" SDA
+    SCL SWDIO SWDCLK "Net-(U2-VDDANA)" "Net-(U7-BYP)" "NFC_INT" "Net-(D1-A)" "Net-(D2-A)"
+    "Net-(Q1-D)" "unconnected-(IC1-V_EH-Pad1)" "TEMP_INT" MOSI SCK MISO ~RESET "unconnected-(J1-Pin_4-Pad4)"
+    LED "USB_VBUS_SENSE" "unconnected-(J1-Pin_6-Pad6)" "unconnected-(J1-Pin_7-Pad7)" "IMU_INT1" "IMU_INT2" "Net-(J2-CC1)" "unconnected-(J2-SBU1-PadA8)"
+    "Net-(J2-CC2)" "unconnected-(J2-SBU2-PadB8)" "~FLASH_CS" "unconnected-(U2-PA02{slash}VDDANA{slash}EXTINT[2]{slash}AIN[0]{slash}Y[0]{slash}VOUT-Pad3)" "LIGHT_INT" "unconnected-(U2-PA11{slash}VDDIO{slash}EXTINT[11]{slash}AIN[19]{slash}X[3]{slash}SERCOM0{slash}PAD[3]{slash}SERCOM2{slash}PAD[3]{slash}TCC1{slash}WO[1]{slash}TCC0{slash}WO[3]{slash}I2S{slash}FS[0]{slash}GCLK_IO[5]-Pad14)" "unconnected-(U2-PA14{slash}VDDIO{slash}EXTINT[14]{slash}SERCOM2{slash}PAD[2]{slash}SERCOM4{slash}PAD[2]{slash}TC3{slash}WO[0]{slash}TCC0{slash}WO[4]{slash}GCLK_IO[0]-Pad15)" "unconnected-(U2-PA15{slash}VDDIO{slash}EXTINT[15]{slash}SERCOM2{slash}PAD[3]{slash}SERCOM4{slash}PAD[3]{slash}TC3{slash}WO[1]{slash}TCC0{slash}WO[5]{slash}GCLK_IO[1]-Pad16)"
+    "~TEMP_RESET" "unconnected-(U2-PA28{slash}VDDIO{slash}EXTINT[8]{slash}GCLK_IO[0]-Pad27)" "unconnected-(U3-~{WP}-Pad3)" "unconnected-(U3-~{HOLD}-Pad7)" "unconnected-(U2-PA04{slash}VDDANA{slash}EXTINT[4]{slash}ADC{slash}VREFB{slash}AIN[4]{slash}AIN[0]{slash}Y[2]{slash}SERCOM0{slash}PAD[0]{slash}TCC0{slash}WO[0]-Pad5)" "Net-(U7-VDD)" "Net-(U4-VCC)" "Net-(IC1-VCC)"
+    "Net-(U8-VDD)" "Net-(U6-VDD)"
     (clearance_class "kicad_default")
     (via_rule "kicad_default")
     (rule
@@ -116,7 +121,7 @@
     )
   )
   (class pwd
-    +5V +3V0 "Net-(F1-Pad1)" "Net-(BT1-Pad1)" "Net-(BT2-Pad1)"
+    +5V +3V0
     (clearance_class pwd)
     (via_rule pwd)
     (rule
@@ -127,7 +132,6 @@
     )
   )
   (class thin
-    "Net-(D1-Pad2)" "Net-(J2-PadA5)" "Net-(J2-PadB5)" "Net-(D2-Pad2)"
     (clearance_class thin)
     (via_rule thin)
     (rule
