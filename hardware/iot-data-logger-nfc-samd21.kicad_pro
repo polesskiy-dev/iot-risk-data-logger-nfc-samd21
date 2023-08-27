@@ -580,7 +580,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "iot-data-logger-nfc-samd21.dsn",
-      "step": "iot-data-logger-nfc-samd21.step",
+      "step": "enclosure/iot-data-logger-nfc-samd21.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
