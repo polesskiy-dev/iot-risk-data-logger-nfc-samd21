@@ -6,7 +6,7 @@
 
 ## Common assembly 2D drawings
 
-![](./assembly-drawings-2D/logger-thread-inserts-drawings-A4.pdf)
+![](./creation-process/logger-assembly-dimensions.png)
 
 ## Common assembly animation
 
@@ -16,6 +16,30 @@ https://github.com/polesskiy-dev/iot-risk-data-logger-nfc-samd21/assets/5185707/
 
 ### Transparent top
 
+![](./creation-process/Logger%20transparent%20top%20v11.png)
+
 ### Seal TPU gasket
 
-### Main bottom
+![](./creation-process/Logger%20gasket%20v17.png)
+
+### Main bottom body
+
+![](./creation-process/Logger%20bottom%20enclosure%20v33.png)
+
+## Some creation process pictures
+
+### PCB Model
+
+![](./creation-process/Logger%20PCB%20board%20v6.png)
+
+### Assembled
+
+![](./creation-process/Screenshot%202023-08-21%20at%2022.18.43.png)
+
+### Assembly
+
+![](./creation-process/Screenshot%202023-08-21%20at%2022.19.28.png)
+
+### Manufacturing order
+
+![](./creation-process/Screenshot%202023-08-20%20at%2022.51.52.png)
