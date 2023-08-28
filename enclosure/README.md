@@ -10,7 +10,7 @@
 
 ## Common assembly animation
 
-![](./Logger%20Assembly%20v19.mp4)
+https://github.com/polesskiy-dev/iot-risk-data-logger-nfc-samd21/assets/5185707/992220a2-24c9-4537-aab9-c0bec074c23c
 
 ## Enclosure parts
 
