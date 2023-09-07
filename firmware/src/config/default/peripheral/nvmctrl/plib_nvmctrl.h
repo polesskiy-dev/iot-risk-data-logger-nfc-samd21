@@ -71,10 +71,6 @@
 #define NVMCTRL_FLASH_PAGESIZE             (64U)
 #define NVMCTRL_FLASH_ROWSIZE              (256U)
 
-#define NVMCTRL_RWWEEPROM_START_ADDRESS    (0x00400000U)
-#define NVMCTRL_RWWEEPROM_SIZE             (0x1000U)
-#define NVMCTRL_RWWEEPROM_PAGESIZE         (64U)
-#define NVMCTRL_RWWEEPROM_ROWSIZE          (256U)
 
 #define NVMCTRL_USERROW_START_ADDRESS     (0x00804000U)
 #define NVMCTRL_USERROW_SIZE              (0x100U)
@@ -101,13 +97,6 @@ bool NVMCTRL_PageBufferCommit( const uint32_t address);
 
 
 bool NVMCTRL_RowErase( uint32_t address );
-
-bool NVMCTRL_RWWEEPROM_Read( uint32_t *data, uint32_t length, const uint32_t address );
-
-bool NVMCTRL_RWWEEPROM_PageWrite ( uint32_t *data, const uint32_t address );
-
-bool NVMCTRL_RWWEEPROM_RowErase ( uint32_t address );
-
 NVMCTRL_ERROR NVMCTRL_ErrorGet( void );
 
 bool NVMCTRL_IsBusy( void );

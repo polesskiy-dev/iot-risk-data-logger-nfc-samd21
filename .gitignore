@@ -1,3 +1,4 @@
 .idea
+.vscode
 /firmware/iot-data-logger-nfc-samd21.X/build/
 /firmware/iot-data-logger-nfc-samd21.X/dist/

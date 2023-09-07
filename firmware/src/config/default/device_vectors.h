@@ -110,8 +110,6 @@ typedef struct H3DeviceVectorsTag
   pfn_handler_t pfnDAC_Handler;                     /* 25 Digital-to-Analog Converter */
   pfn_handler_t pfnPTC_Handler;                     /* 26 Peripheral Touch Controller */
   pfn_handler_t pfnI2S_Handler;                     /* 27 Inter-IC Sound Controller */
-  pfn_handler_t pfnReserved28;
-  pfn_handler_t pfnTCC3_Handler;                    /* 29 Timer/Counter for Control Applications 3 */
 }H3DeviceVectors;
 
 #endif //DEVICE_VECTORS_H

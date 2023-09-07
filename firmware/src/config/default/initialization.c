@@ -43,10 +43,8 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include "configuration.h"
 #include "definitions.h"
 #include "device.h"
-
 
 
 // ****************************************************************************
@@ -80,94 +78,10 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
-// <editor-fold defaultstate="collapsed" desc="DRV_I2C Instance 0 Initialization Data">
-
-/* I2C Client Objects Pool */
-static DRV_I2C_CLIENT_OBJ drvI2C0ClientObjPool[DRV_I2C_CLIENTS_NUMBER_IDX0];
-
-/* I2C PLib Interface Initialization */
-const DRV_I2C_PLIB_INTERFACE drvI2C0PLibAPI = {
-
-    /* I2C PLib Transfer Read Add function */
-    .read = (DRV_I2C_PLIB_READ)SERCOM0_I2C_Read,
-
-    /* I2C PLib Transfer Write Add function */
-    .write = (DRV_I2C_PLIB_WRITE)SERCOM0_I2C_Write,
-
-
-    /* I2C PLib Transfer Write Read Add function */
-    .writeRead = (DRV_I2C_PLIB_WRITE_READ)SERCOM0_I2C_WriteRead,
-
-    /*I2C PLib Transfer Abort function */
-    .transferAbort = (DRV_I2C_PLIB_TRANSFER_ABORT)SERCOM0_I2C_TransferAbort,
-
-    /* I2C PLib Transfer Status function */
-    .errorGet = (DRV_I2C_PLIB_ERROR_GET)SERCOM0_I2C_ErrorGet,
-
-    /* I2C PLib Transfer Setup function */
-    .transferSetup = (DRV_I2C_PLIB_TRANSFER_SETUP)SERCOM0_I2C_TransferSetup,
-
-    /* I2C PLib Callback Register */
-    .callbackRegister = (DRV_I2C_PLIB_CALLBACK_REGISTER)SERCOM0_I2C_CallbackRegister,
-};
-
-
-/* I2C Driver Initialization Data */
-const DRV_I2C_INIT drvI2C0InitData =
-{
-    /* I2C PLib API */
-    .i2cPlib = &drvI2C0PLibAPI,
-
-    /* I2C Number of clients */
-    .numClients = DRV_I2C_CLIENTS_NUMBER_IDX0,
-
-    /* I2C Client Objects Pool */
-    .clientObjPool = (uintptr_t)&drvI2C0ClientObjPool[0],
-
-    /* I2C Clock Speed */
-    .clockSpeed = DRV_I2C_CLOCK_SPEED_IDX0,
-};
-
-// </editor-fold>
-
-/* SPI PLIB Interface Initialization for AT25DF Driver */
-const DRV_AT25DF_PLIB_INTERFACE drvAT25DFPlibAPI = {
-
-    /* SPI PLIB WriteRead function */
-    .writeRead = (DRV_AT25DF_PLIB_WRITE_READ)SERCOM1_SPI_WriteRead,
-
-    /* SPI PLIB Write function */
-    .write = (DRV_AT25DF_PLIB_WRITE)SERCOM1_SPI_Write,
-
-    /* SPI PLIB Read function */
-    .read = (DRV_AT25DF_PLIB_READ)SERCOM1_SPI_Read,
-
-    /* SPI PLIB Transfer Status function */
-    .isBusy = (DRV_AT25DF_PLIB_IS_BUSY)SERCOM1_SPI_IsBusy,
-
-    /* SPI PLIB Callback Register */
-    .callbackRegister = (DRV_AT25DF_PLIB_CALLBACK_REGISTER)SERCOM1_SPI_CallbackRegister,
-};
-
-/* AT25DF Driver Initialization Data */
-const DRV_AT25DF_INIT drvAT25DFInitData =
-{
-    /* SPI PLIB API  interface*/
-    .spiPlib = &drvAT25DFPlibAPI,
-
-    /* AT25DF Number of clients */
-    .numClients = DRV_AT25DF_CLIENTS_NUMBER_IDX,
-
-    /* FLASH Page Size in bytes */
-    .pageSize = DRV_AT25DF_PAGE_SIZE,
-
-    /* Total size of the FLASH in bytes */
-    .flashSize = DRV_AT25DF_FLASH_SIZE,
-
-    .blockStartAddress = 0x0,
-
-    .chipSelectPin = DRV_AT25DF_CHIP_SELECT_PIN_IDX
-};
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
 
 
 
@@ -176,46 +90,12 @@ const DRV_AT25DF_INIT drvAT25DFInitData =
 // Section: System Data
 // *****************************************************************************
 // *****************************************************************************
-/* Structure to hold the object handles for the modules in the system. */
-SYSTEM_OBJECTS sysObj;
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Library/Stack Initialization Data
 // *****************************************************************************
 // *****************************************************************************
-/******************************************************
- * USB Driver Initialization
- ******************************************************/
- 
-
-
-const DRV_USBFSV1_INIT drvUSBInit =
-{
-    /* Interrupt Source for USB module */ 
-    .interruptSource = USB_IRQn,
-
-    /* System module initialization */
-    .moduleInit = {0},
-
-    /* USB Controller to operate as USB Device */
-    .operationMode = DRV_USBFSV1_OPMODE_DEVICE,
-
-    /* USB Full Speed Operation */
-	.operationSpeed = USB_SPEED_FULL,
-    
-    /* Stop in idle */
-    .runInStandby = true,
-
-    /* Suspend in sleep */
-    .suspendInSleep = false,
-
-    /* Identifies peripheral (PLIB-level) ID */
-    .usbID = USB_REGS,
-	
-};
-
-
 
 
 // *****************************************************************************
@@ -223,25 +103,6 @@ const DRV_USBFSV1_INIT drvUSBInit =
 // Section: System Initialization
 // *****************************************************************************
 // *****************************************************************************
-// <editor-fold defaultstate="collapsed" desc="SYS_TIME Initialization Data">
-
-const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
-    .timerCallbackSet = (SYS_TIME_PLIB_CALLBACK_REGISTER)TC3_TimerCallbackRegister,
-    .timerStart = (SYS_TIME_PLIB_START)TC3_TimerStart,
-    .timerStop = (SYS_TIME_PLIB_STOP)TC3_TimerStop,
-    .timerFrequencyGet = (SYS_TIME_PLIB_FREQUENCY_GET)TC3_TimerFrequencyGet,
-    .timerPeriodSet = (SYS_TIME_PLIB_PERIOD_SET)TC3_Timer16bitPeriodSet,
-    .timerCompareSet = (SYS_TIME_PLIB_COMPARE_SET)TC3_Timer16bitCompareSet,
-    .timerCounterGet = (SYS_TIME_PLIB_COUNTER_GET)TC3_Timer16bitCounterGet,
-};
-
-const SYS_TIME_INIT sysTimeInitData =
-{
-    .timePlib = &sysTimePlibAPI,
-    .hwTimerIntNum = TC3_IRQn,
-};
-
-// </editor-fold>
 
 
 
@@ -251,7 +112,7 @@ const SYS_TIME_INIT sysTimeInitData =
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -265,13 +126,13 @@ const SYS_TIME_INIT sysTimeInitData =
 
 void SYS_Initialize ( void* data )
 {
+
     /* MISRAC 2012 deviation block start */
     /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
     NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(3UL);
 
   
-    PORT_Initialize();
 
     CLOCK_Initialize();
 
@@ -280,44 +141,23 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_Initialize( );
 
-    SERCOM1_SPI_Initialize();
 
 
-    SERCOM0_I2C_Initialize();
 
-    RTC_Initialize();
-
-    TC3_TimerInitialize();
-
-
-    /* Initialize I2C0 Driver Instance */
-    sysObj.drvI2C0 = DRV_I2C_Initialize(DRV_I2C_INDEX_0, (SYS_MODULE_INIT *)&drvI2C0InitData);
-    sysObj.drvAT25DF = DRV_AT25DF_Initialize(DRV_AT25DF_INDEX, (SYS_MODULE_INIT *)&drvAT25DFInitData);
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 
 
-    sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
 
 
-	 /* Initialize the USB device layer */
-    sysObj.usbDevObject0 = USB_DEVICE_Initialize (USB_DEVICE_INDEX_0 , ( SYS_MODULE_INIT* ) & usbDevInitData);
-	
-	
-
-	/* Initialize USB Driver */ 
-    sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
-
-
-    APP_TEMP_SENSOR_Initialize();
-    APP_LIGHT_SENSOR_Initialize();
-    APP_FLASH_Initialize();
-    APP_USB_Initialize();
-
-
+    /* MISRAC 2012 deviation block end */
     NVIC_Initialize();
+
 
     /* MISRAC 2012 deviation block end */
 }
-
 
 /*******************************************************************************
  End of File
