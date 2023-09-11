@@ -177,28 +177,28 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: eic, value: 'true'}
+        attributes: {id: eic, value: 'false'}
   - type: Boolean
     attributes: {id: EIC_INTERRUPT_ENABLE_UPDATE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'false'}
+        attributes: {id: core, value: 'true'}
   - type: String
     attributes: {id: EIC_INTERRUPT_HANDLER}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: eic, value: EIC_InterruptHandler}
+        attributes: {id: eic, value: EIC_Handler}
   - type: Boolean
     attributes: {id: EIC_INTERRUPT_HANDLER_LOCK}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: eic, value: 'true'}
+        attributes: {id: eic, value: 'false'}
   - type: Integer
     attributes: {id: GCLK_0_FREQ}
     children:
@@ -485,6 +485,8 @@ children:
     children:
     - type: Values
       children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
       - type: User
         attributes: {value: 'true'}
   - type: Integer
@@ -640,16 +642,37 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
   - type: String
     attributes: {id: NVIC_4_0_HANDLER}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: EIC_InterruptHandler}
+        attributes: {id: core, value: EIC_Handler}
   - type: Boolean
     attributes: {id: NVIC_4_0_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: Boolean
+    attributes: {id: NVIC_7_0_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: String
+    attributes: {id: NVIC_7_0_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: DRV_USBFSV1_USB_Handler}
+  - type: Boolean
+    attributes: {id: NVIC_7_0_HANDLER_LOCK}
     children:
     - type: Values
       children:
@@ -1266,6 +1289,13 @@ children:
         attributes: {value: A}
   - type: String
     attributes: {id: PM_APBA_INITIAL_VALUE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x7f'}
+  - type: String
+    attributes: {id: PM_APBB_INITIAL_VALUE}
     children:
     - type: Values
       children:
@@ -1903,6 +1933,48 @@ children:
       children:
       - type: Dynamic
         attributes: {id: tc3, value: 'true'}
+  - type: Boolean
+    attributes: {id: USB_CLOCK_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: drv_usbfs_v1, value: 'true'}
+  - type: Integer
+    attributes: {id: USB_CLOCK_FREQUENCY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '47972352'}
+  - type: Boolean
+    attributes: {id: USB_INTERRUPT_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: drv_usbfs_v1, value: 'true'}
+  - type: Boolean
+    attributes: {id: USB_INTERRUPT_ENABLE_UPDATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: String
+    attributes: {id: USB_INTERRUPT_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: drv_usbfs_v1, value: DRV_USBFSV1_USB_Handler}
+  - type: Boolean
+    attributes: {id: USB_INTERRUPT_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: drv_usbfs_v1, value: 'true'}
   - type: Boolean
     attributes: {id: XOSC32K_EN32K}
     children:

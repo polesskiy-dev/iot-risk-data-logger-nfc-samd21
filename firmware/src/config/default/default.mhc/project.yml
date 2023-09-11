@@ -1,4 +1,11 @@
 files:
+- generatedChecksum: 1C8E0685B0B99622BABC95848E7EB0E4
+  logicalPath: config/default
+  name: diskImage.c
+  physicalPath: ''
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 32629716BFEAABCB6D2284D32B6E7703
 - generatedChecksum: 022EA8F46C2EB9BAC23417DCB0A01567
   logicalPath: config/default/driver/spi_flash/at25df
   name: drv_at25df.c
@@ -34,6 +41,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 8AF410E2D4EC23CFDFC96D00E8161A4B
+- generatedChecksum: 941C09024124A4937C0E368A25C140DE
+  logicalPath: config/default/driver/usb/usbfsv1/src
+  name: drv_usbfsv1.c
+  physicalPath: driver/usb/usbfsv1/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 941C09024124A4937C0E368A25C140DE
+- generatedChecksum: DE6B2F7A6193E5F8C2F36196B0B687AC
+  logicalPath: config/default/driver/usb/usbfsv1/src
+  name: drv_usbfsv1_device.c
+  physicalPath: driver/usb/usbfsv1/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: DE6B2F7A6193E5F8C2F36196B0B687AC
 - generatedChecksum: 4DBC6B099BE7DCEB5D977AB4D922BEC0
   logicalPath: config/default
   name: exceptions.c
@@ -41,20 +62,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4DBC6B099BE7DCEB5D977AB4D922BEC0
-- generatedChecksum: 3C542A06223BBFB5F0B4BF3A9417AD1E
+- generatedChecksum: 980DBC850BCD3AAAE3F6AC9286596822
   logicalPath: config/default
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 3C542A06223BBFB5F0B4BF3A9417AD1E
-- generatedChecksum: A09E21DBADABF57A84CFBC3417C08DE1
+  userChecksum: 980DBC850BCD3AAAE3F6AC9286596822
+- generatedChecksum: 466F3939A0044A933A875B0E5A824ED6
   logicalPath: config/default
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: A09E21DBADABF57A84CFBC3417C08DE1
+  userChecksum: 466F3939A0044A933A875B0E5A824ED6
 - generatedChecksum: 2CDCA8CDF135BDEB85FDFC0A2A991C0B
   logicalPath: config/default
   name: libc_syscalls.c
@@ -76,13 +97,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 7634B642A899B77F533B69BEA4A7CA0C
-- generatedChecksum: 66508C25E4EEB94BE1DB9028B21E2DE5
+- generatedChecksum: E5025ED4367C82A9DE7B66D95A22BEC3
   logicalPath: config/default/peripheral/eic
   name: plib_eic.c
   physicalPath: peripheral/eic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 66508C25E4EEB94BE1DB9028B21E2DE5
+  userChecksum: E5025ED4367C82A9DE7B66D95A22BEC3
 - generatedChecksum: C3ECDED3D6301DB0DE622293ED615D21
   logicalPath: config/default/peripheral/evsys
   name: plib_evsys.c
@@ -90,13 +111,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C3ECDED3D6301DB0DE622293ED615D21
-- generatedChecksum: 8B0604592906719E81771F53CC2D5339
+- generatedChecksum: 08788458AC2489DBA9BB903DBD67582C
   logicalPath: config/default/peripheral/nvic
   name: plib_nvic.c
   physicalPath: peripheral/nvic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 8B0604592906719E81771F53CC2D5339
+  userChecksum: 08788458AC2489DBA9BB903DBD67582C
 - generatedChecksum: 863E81DB42B4A5EF5A58D3E51A9B9ECD
   logicalPath: config/default/peripheral/nvmctrl
   name: plib_nvmctrl.c
@@ -153,6 +174,55 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 1878893938097AAE124354492E34D482
+- generatedChecksum: B6A601293D46A6001FE463E424C4B1D4
+  logicalPath: config/default/system/console
+  name: sys_console.c
+  physicalPath: system/console/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: B6A601293D46A6001FE463E424C4B1D4
+- generatedChecksum: 5BA0902794A8669B3FE37E8A8BEE9D65
+  logicalPath: config/default/system/console
+  name: sys_console_local.h
+  physicalPath: system/console/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 5BA0902794A8669B3FE37E8A8BEE9D65
+- generatedChecksum: 28E105BA9A86B26F60E1F3819F9AD141
+  logicalPath: config/default/system/console
+  name: sys_console_usb_cdc.c
+  physicalPath: system/console/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 28E105BA9A86B26F60E1F3819F9AD141
+- generatedChecksum: C89BC66EBA5BC88371BC248BC05B0133
+  logicalPath: config/default/system/console
+  name: sys_console_usb_cdc.h
+  physicalPath: system/console/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: C89BC66EBA5BC88371BC248BC05B0133
+- generatedChecksum: 66F10F136633A5BA94B3990BE996E8B6
+  logicalPath: config/default/system/console
+  name: sys_console_usb_cdc_definitions.h
+  physicalPath: system/console/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 66F10F136633A5BA94B3990BE996E8B6
+- generatedChecksum: C2F846C134104E8F665B53BE22937562
+  logicalPath: config/default/system/debug
+  name: sys_debug.c
+  physicalPath: system/debug/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: C2F846C134104E8F665B53BE22937562
+- generatedChecksum: B8C6C7356AC7841AECC7C779040F745C
+  logicalPath: config/default/system/debug
+  name: sys_debug_local.h
+  physicalPath: system/debug/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: B8C6C7356AC7841AECC7C779040F745C
 - generatedChecksum: 6303FB884EC21ABC4E3FCFC706997003
   logicalPath: config/default/system/int
   name: sys_int.c
@@ -167,13 +237,48 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4B1B25AA8E0020AB48FB24F2CC04A8BE
-- generatedChecksum: 6C3767E28C3646C6C3557E200A20AFF7
+- generatedChecksum: 061958E64B722BFB31537B6F05574840
   logicalPath: config/default
   name: tasks.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 6C3767E28C3646C6C3557E200A20AFF7
+  userChecksum: 061958E64B722BFB31537B6F05574840
+- generatedChecksum: BCCEF5B801FFD0CF22D0B454D2F25F1F
+  logicalPath: config/default/usb/src
+  name: usb_device.c
+  physicalPath: usb/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: BCCEF5B801FFD0CF22D0B454D2F25F1F
+- generatedChecksum: A40DCA3705B81ABAAC49D5107947C230
+  logicalPath: config/default/usb/src
+  name: usb_device_cdc.c
+  physicalPath: usb/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: A40DCA3705B81ABAAC49D5107947C230
+- generatedChecksum: ABA41F10EA872DBEBB285D03A009BC51
+  logicalPath: config/default/usb/src
+  name: usb_device_cdc_acm.c
+  physicalPath: usb/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: ABA41F10EA872DBEBB285D03A009BC51
+- generatedChecksum: F1BB5F0F9473437F7B5DD10687B6A9F7
+  logicalPath: config/default
+  name: usb_device_init_data.c
+  physicalPath: ''
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: F1BB5F0F9473437F7B5DD10687B6A9F7
+- generatedChecksum: 5B2E4F04BB9E3347BD0D10242479D4F0
+  logicalPath: config/default/usb/src
+  name: usb_device_msd.c
+  physicalPath: usb/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 5B2E4F04BB9E3347BD0D10242479D4F0
 - generatedChecksum: 71352EF41F6688AD8408E42970B50B66
   logicalPath: config/default/stdio
   name: xc32_monitor.c
@@ -265,13 +370,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 52F91AC0727F2311EDA0E3BAA7719A9F
-- generatedChecksum: AED040A69531927C5468DCC6B370423A
+- generatedChecksum: 1F829D2F36F8EFB7BFDDF4CD5F466EA6
   logicalPath: config/default
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: AED040A69531927C5468DCC6B370423A
+  userChecksum: 1F829D2F36F8EFB7BFDDF4CD5F466EA6
 - generatedChecksum: CCBD23918BE14943EA128B0D552031C5
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: core_cm0plus.h
@@ -293,13 +398,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: CB8D4E72D581CDEFB0BB729ADC52D698
-- generatedChecksum: 8F9590512D987004C10F4801923B82AA
+- generatedChecksum: 77FB4EEE4D2221BB22F7DF51FB4A4BFF
   logicalPath: config/default
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8F9590512D987004C10F4801923B82AA
+  userChecksum: 77FB4EEE4D2221BB22F7DF51FB4A4BFF
 - generatedChecksum: 4821302AA348DF2D25B60299A468C2D7
   logicalPath: config/default
   name: device.h
@@ -398,6 +503,41 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 9BCF696B0E5B793C6AA72CFAD925C511
+- generatedChecksum: DF147276AE56CA76E3E9BEB8447620AB
+  logicalPath: config/default/driver/usb
+  name: drv_usb.h
+  physicalPath: driver/usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: DF147276AE56CA76E3E9BEB8447620AB
+- generatedChecksum: A8072403A5346EF85CDFD4EF996C0826
+  logicalPath: config/default/driver/usb
+  name: drv_usb_external_dependencies.h
+  physicalPath: driver/usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: A8072403A5346EF85CDFD4EF996C0826
+- generatedChecksum: 8CB3090FD67D3B706DD56057C97A1CF8
+  logicalPath: config/default/driver/usb/usbfsv1
+  name: drv_usbfsv1.h
+  physicalPath: driver/usb/usbfsv1
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 8CB3090FD67D3B706DD56057C97A1CF8
+- generatedChecksum: 9AC35C4BCA2D22ABB5D1787F040BE1A7
+  logicalPath: config/default/driver/usb/usbfsv1/src
+  name: drv_usbfsv1_local.h
+  physicalPath: driver/usb/usbfsv1/src
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 9AC35C4BCA2D22ABB5D1787F040BE1A7
+- generatedChecksum: 2801BA265B48F0D67186FF65F0CA1F1C
+  logicalPath: config/default/driver/usb/usbfsv1/src
+  name: drv_usbfsv1_variant_mapping.h
+  physicalPath: driver/usb/usbfsv1/src
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 2801BA265B48F0D67186FF65F0CA1F1C
 - generatedChecksum: BEA43FC50A08EA64E61A7BF2B14BDAD7
   logicalPath: packs/ATSAMD21E18A_DFP/component
   name: dsu.h
@@ -489,13 +629,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 60D83610D79083C8FCA62E859E628F82
-- generatedChecksum: 788624F1798FAAB22B602D0F84CA6A69
+- generatedChecksum: 73A420E8D7094D0BA8B082706641D2FB
   logicalPath: config/default
   name: interrupts.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 788624F1798FAAB22B602D0F84CA6A69
+  userChecksum: 73A420E8D7094D0BA8B082706641D2FB
 - generatedChecksum: 47E760D36E42A7B436306A9CB4E72A0E
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: mpu_armv7.h
@@ -587,13 +727,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: D9883C70E96468DEE4D7B4669D1C837B
-- generatedChecksum: 5D336F7F11DF6D40EBD107F153883D31
+- generatedChecksum: 84409E8D9A1703408B09413B64BBF37E
   logicalPath: config/default/peripheral/eic
   name: plib_eic.h
   physicalPath: peripheral/eic
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5D336F7F11DF6D40EBD107F153883D31
+  userChecksum: 84409E8D9A1703408B09413B64BBF37E
 - generatedChecksum: CCAEF942C66AF995876DFD85CEFF611F
   logicalPath: config/default/peripheral/evsys
   name: plib_evsys.h
@@ -755,6 +895,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: C37577F89327C585CF5CA1410A2F34F2
+- generatedChecksum: 9E71D345C6F5A276C502502C87316EA5
+  logicalPath: config/default/usb
+  name: scsi.h
+  physicalPath: usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 9E71D345C6F5A276C502502C87316EA5
 - generatedChecksum: 52406CE0413F25471AA622B5A537F7CD
   logicalPath: packs/ATSAMD21E18A_DFP/component
   name: sercom.h
@@ -804,6 +951,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: D5297C2E551718257245686146A5096A
+- generatedChecksum: 9C78DB1FCB3B82FF66B52294C890C5A4
+  logicalPath: config/default/system/console
+  name: sys_console.h
+  physicalPath: system/console
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 9C78DB1FCB3B82FF66B52294C890C5A4
 - generatedChecksum: EE550B61B018F6F80892FDB781A09BE0
   logicalPath: config/default/system/debug
   name: sys_debug.h
@@ -1000,6 +1154,125 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 55CE4B8D13BBEE1BF689ABCC624CCBAD
+- generatedChecksum: F698C0AF1ADC5A3E18B4832DFEAB8DB0
+  logicalPath: config/default/usb
+  name: usb_cdc.h
+  physicalPath: usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: F698C0AF1ADC5A3E18B4832DFEAB8DB0
+- generatedChecksum: 39659CDE2CC726544BD68544FB7EF4B2
+  logicalPath: config/default/usb
+  name: usb_chapter_9.h
+  physicalPath: usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 39659CDE2CC726544BD68544FB7EF4B2
+- generatedChecksum: E7B6EAD8687A8EBC0355E0CE413B6A87
+  logicalPath: config/default/usb
+  name: usb_common.h
+  physicalPath: usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: E7B6EAD8687A8EBC0355E0CE413B6A87
+- generatedChecksum: 68F7DBD311EDCAF1098CDF2FD15B8C73
+  logicalPath: config/default/usb
+  name: usb_device.h
+  physicalPath: usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 68F7DBD311EDCAF1098CDF2FD15B8C73
+- generatedChecksum: EE6F55EAA31844DFFD1822493E3BE0FF
+  logicalPath: config/default/usb
+  name: usb_device_cdc.h
+  physicalPath: usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: EE6F55EAA31844DFFD1822493E3BE0FF
+- generatedChecksum: A8E75B653DC44962608C0013C17A01F7
+  logicalPath: config/default/usb/src
+  name: usb_device_cdc_local.h
+  physicalPath: usb/src
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: A8E75B653DC44962608C0013C17A01F7
+- generatedChecksum: 626BFDDD140B808E90C9DD2E4A27421E
+  logicalPath: config/default/usb/src
+  name: usb_device_function_driver.h
+  physicalPath: usb/src
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 626BFDDD140B808E90C9DD2E4A27421E
+- generatedChecksum: 9B727D396CAEBD5FCB12F1F8264C4FD9
+  logicalPath: config/default/usb/src
+  name: usb_device_local.h
+  physicalPath: usb/src
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 9B727D396CAEBD5FCB12F1F8264C4FD9
+- generatedChecksum: C8D4A1D9092FD842506F565CE9B8C265
+  logicalPath: config/default/usb/src
+  name: usb_device_mapping.h
+  physicalPath: usb/src
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: C8D4A1D9092FD842506F565CE9B8C265
+- generatedChecksum: FE6B03F3573AFF839373A99B2BF81731
+  logicalPath: config/default/usb
+  name: usb_device_msd.h
+  physicalPath: usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: FE6B03F3573AFF839373A99B2BF81731
+- generatedChecksum: 78DD3C60D6E25569FE9F0143064D2E20
+  logicalPath: config/default/usb/src
+  name: usb_device_msd_local.h
+  physicalPath: usb/src
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 78DD3C60D6E25569FE9F0143064D2E20
+- generatedChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
+  logicalPath: config/default/usb/src
+  name: usb_external_dependencies.h
+  physicalPath: usb/src
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 6C4A6859DB16EA8C046F995C6B6C1C6F
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
+  logicalPath: config/default/usb
+  name: usb_host.h
+  physicalPath: usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
+- generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
+  logicalPath: config/default/usb
+  name: usb_host_client_driver.h
+  physicalPath: usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
+- generatedChecksum: 757C8484C955543C893361992D11FD4C
+  logicalPath: config/default/usb
+  name: usb_host_hub_interface.h
+  physicalPath: usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 757C8484C955543C893361992D11FD4C
+- generatedChecksum: 3E3CC6BC9128194CB4D19F29C57E312B
+  logicalPath: config/default/usb
+  name: usb_hub.h
+  physicalPath: usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 3E3CC6BC9128194CB4D19F29C57E312B
+- generatedChecksum: 8AF03E090F2D85FDF03C40E013D06615
+  logicalPath: config/default/usb
+  name: usb_msd.h
+  physicalPath: usb
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 8AF03E090F2D85FDF03C40E013D06615
 - generatedChecksum: null
   logicalPath: config/default
   name: user.h

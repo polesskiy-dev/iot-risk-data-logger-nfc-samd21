@@ -84,9 +84,9 @@ extern void SysTick_Handler            ( void ) __attribute__((weak, alias("Dumm
 extern void PM_Handler                 ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SYSCTRL_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void WDT_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void EIC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void NVMCTRL_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void DMAC_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void USB_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void EVSYS_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM2_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM3_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -124,10 +124,10 @@ const H3DeviceVectors exception_table=
     .pfnSYSCTRL_Handler            = SYSCTRL_Handler,
     .pfnWDT_Handler                = WDT_Handler,
     .pfnRTC_Handler                = RTC_InterruptHandler,
-    .pfnEIC_Handler                = EIC_InterruptHandler,
+    .pfnEIC_Handler                = EIC_Handler,
     .pfnNVMCTRL_Handler            = NVMCTRL_Handler,
     .pfnDMAC_Handler               = DMAC_Handler,
-    .pfnUSB_Handler                = USB_Handler,
+    .pfnUSB_Handler                = DRV_USBFSV1_USB_Handler,
     .pfnEVSYS_Handler              = EVSYS_Handler,
     .pfnSERCOM0_Handler            = SERCOM0_I2C_InterruptHandler,
     .pfnSERCOM1_Handler            = SERCOM1_SPI_InterruptHandler,
@@ -144,6 +144,7 @@ const H3DeviceVectors exception_table=
     .pfnDAC_Handler                = DAC_Handler,
     .pfnPTC_Handler                = PTC_Handler,
     .pfnI2S_Handler                = I2S_Handler,
+
 
 
 };

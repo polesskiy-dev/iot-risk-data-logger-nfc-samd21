@@ -241,6 +241,71 @@ SYSTEM_OBJECTS sysObj;
 // Section: Library/Stack Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/******************************************************
+ * USB Driver Initialization
+ ******************************************************/
+ 
+/*  When designing a Self-powered USB Device, the application should make sure
+    that USB_DEVICE_Attach() function is called only when VBUS is actively powered.
+	Therefore, the firmware needs some means to detect when the Host is powering 
+	the VBUS. A 5V tolerant I/O pin can be connected to VBUS (through a resistor)
+	and can be used to detect when VBUS is high or low. The application can specify
+	a VBUS Detect function through the USB Driver Initialize data structure. 
+	The USB device stack will periodically call this function. If the VBUS is 
+	detected, the USB_DEVICE_EVENT_POWER_DETECTED event is generated. If the VBUS 
+	is removed (i.e., the device is physically detached from Host), the USB stack 
+	will generate the event USB_DEVICE_EVENT_POWER_REMOVED. The application should 
+	call USB_DEVICE_Detach() when VBUS is removed. 
+    
+    The following are the steps to generate the VBUS_SENSE Function through MHC     
+        1) Navigate to MHC->Tools->Pin Configuration and Configure the pin used 
+		   as VBUS_SENSE. Set this pin Function as "GPIO" and set as "Input". 
+		   Provide a custom name to the pin.
+        2) Select the USB Driver Component in MHC Project Graph and enable the  
+		   "Enable VBUS Sense" Check-box.     
+        3) Specify the custom name of the VBUS SENSE pin in the "VBUS SENSE Pin Name" box.  */ 
+static DRV_USB_VBUS_LEVEL DRV_USBFSV1_VBUS_Comparator(void)
+{
+    DRV_USB_VBUS_LEVEL retVal = DRV_USB_VBUS_LEVEL_INVALID;
+    
+    if(true == USB_VBUS_SENSE_Get())
+    {
+        retVal = DRV_USB_VBUS_LEVEL_VALID;
+    }
+	return (retVal);
+
+}
+
+
+const DRV_USBFSV1_INIT drvUSBInit =
+{
+    /* Interrupt Source for USB module */ 
+    .interruptSource = USB_IRQn,
+
+    /* System module initialization */
+    .moduleInit = {0},
+
+    /* USB Controller to operate as USB Device */
+    .operationMode = DRV_USBFSV1_OPMODE_DEVICE,
+
+    /* USB Full Speed Operation */
+	.operationSpeed = USB_SPEED_FULL,
+    
+    /* Stop in idle */
+    .runInStandby = true,
+
+    /* Suspend in sleep */
+    .suspendInSleep = false,
+
+    /* Identifies peripheral (PLIB-level) ID */
+    .usbID = USB_REGS,
+	
+    /* Function to check for VBus */
+    .vbusComparator = DRV_USBFSV1_VBUS_Comparator
+	
+};
+
+
 
 
 // *****************************************************************************
@@ -267,6 +332,47 @@ static const SYS_TIME_INIT sysTimeInitData =
 };
 
 // </editor-fold>
+// <editor-fold defaultstate="collapsed" desc="SYS_CONSOLE Instance 0 Initialization Data">
+
+
+/* These buffers are passed to the USB CDC Function Driver */
+static uint8_t CACHE_ALIGN sysConsole0USBCdcRdBuffer[SYS_CONSOLE_USB_CDC_READ_WRITE_BUFFER_SIZE];
+static uint8_t CACHE_ALIGN sysConsole0USBCdcWrBuffer[SYS_CONSOLE_USB_CDC_READ_WRITE_BUFFER_SIZE];
+
+/* These are the USB CDC Ring Buffers. Data received from USB layer are copied to these ring buffer. */
+static uint8_t sysConsole0USBCdcRdRingBuffer[SYS_CONSOLE_USB_CDC_RD_BUFFER_SIZE_IDX0];
+static uint8_t sysConsole0USBCdcWrRingBuffer[SYS_CONSOLE_USB_CDC_WR_BUFFER_SIZE_IDX0];
+
+const SYS_CONSOLE_USB_CDC_INIT_DATA sysConsole0USBCdcInitData =
+{
+    .cdcInstanceIndex           = 0,
+    .cdcReadBuffer              = sysConsole0USBCdcRdBuffer,
+    .cdcWriteBuffer             = sysConsole0USBCdcWrBuffer,
+    .consoleReadBuffer          = sysConsole0USBCdcRdRingBuffer,
+    .consoleWriteBuffer         = sysConsole0USBCdcWrRingBuffer,
+    .consoleReadBufferSize      = SYS_CONSOLE_USB_CDC_RD_BUFFER_SIZE_IDX0,
+    .consoleWriteBufferSize     = SYS_CONSOLE_USB_CDC_WR_BUFFER_SIZE_IDX0,
+};
+
+const SYS_CONSOLE_INIT sysConsole0Init =
+{
+    .deviceInitData = (const void*)&sysConsole0USBCdcInitData,
+    .consDevDesc = &sysConsoleUSBCdcDevDesc,
+    .deviceIndex = 0,
+};
+
+
+// </editor-fold>
+
+
+static const SYS_DEBUG_INIT debugInit =
+{
+    .moduleInit = {0},
+    .errorLevel = SYS_DEBUG_GLOBAL_ERROR_LEVEL,
+    .consoleIndex = 0,
+};
+
+
 
 
 
@@ -306,16 +412,16 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_Initialize( );
 
+    RTC_Initialize();
+
+    TC3_TimerInitialize();
+
     SERCOM1_SPI_Initialize();
 
 
     SERCOM0_I2C_Initialize();
 
     EIC_Initialize();
-
-    RTC_Initialize();
-
-    TC3_TimerInitialize();
 
 
 
@@ -339,6 +445,24 @@ void SYS_Initialize ( void* data )
     sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
     
     /* MISRAC 2012 deviation block end */
+    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
+     H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+        sysObj.sysConsole0 = SYS_CONSOLE_Initialize(SYS_CONSOLE_INDEX_0, (SYS_MODULE_INIT *)&sysConsole0Init);
+   /* MISRAC 2012 deviation block end */
+    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
+     H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+        
+    sysObj.sysDebug = SYS_DEBUG_Initialize(SYS_DEBUG_INDEX_0, (SYS_MODULE_INIT*)&debugInit);
+
+    /* MISRAC 2012 deviation block end */
+
+
+    /* Initialize the USB device layer */
+    sysObj.usbDevObject0 = USB_DEVICE_Initialize (USB_DEVICE_INDEX_0 , ( SYS_MODULE_INIT* ) & usbDevInitData);
+
+
+	/* Initialize USB Driver */ 
+    sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
 
 
     /* MISRAC 2012 deviation block end */

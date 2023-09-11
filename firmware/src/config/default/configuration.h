@@ -88,6 +88,29 @@ extern "C" {
 #define SYS_TIME_CPU_CLOCK_FREQUENCY                (47972352)
 #define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (200)
 
+#define SYS_CONSOLE_INDEX_0                       0
+
+/* RX buffer size has one additional element for the empty spot needed in circular buffer */
+#define SYS_CONSOLE_USB_CDC_RD_BUFFER_SIZE_IDX0    129
+
+/* TX buffer size has one additional element for the empty spot needed in circular buffer */
+#define SYS_CONSOLE_USB_CDC_WR_BUFFER_SIZE_IDX0    129
+
+
+
+#define SYS_DEBUG_ENABLE
+#define SYS_DEBUG_GLOBAL_ERROR_LEVEL       SYS_ERROR_DEBUG
+#define SYS_DEBUG_BUFFER_DMA_READY
+#define SYS_DEBUG_USE_CONSOLE
+
+
+#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(0U)
+#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(1U)
+#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		(200U)
+
+#define SYS_CONSOLE_USB_CDC_READ_WRITE_BUFFER_SIZE 	(64)
+
 
 
 // *****************************************************************************
@@ -129,6 +152,57 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
+/* Number of Endpoints used */
+#define DRV_USBFSV1_ENDPOINTS_NUMBER                        4
+
+/* The USB Device Layer will not initialize the USB Driver */
+#define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
+
+/* Maximum device layer instances */
+#define USB_DEVICE_INSTANCES_NUMBER                         1
+
+/* EP0 size in bytes */
+#define USB_DEVICE_EP0_BUFFER_SIZE                          64
+
+
+/* Maximum instances of CDC function driver */
+#define USB_DEVICE_CDC_INSTANCES_NUMBER                     1
+
+
+/* CDC Transfer Queue Size for both read and
+   write. Applicable to all instances of the
+   function driver */
+#define USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED                 3
+
+/*** USB Driver Configuration ***/
+
+/* Maximum USB driver instances */
+#define DRV_USBFSV1_INSTANCES_NUMBER                        1
+
+
+/* Enables Device Support */
+#define DRV_USBFSV1_DEVICE_SUPPORT                          true
+	
+/* Disable Host Support */
+#define DRV_USBFSV1_HOST_SUPPORT                            false
+
+/* Enable usage of Dual Bank */
+#define DRV_USBFSV1_DUAL_BANK_ENABLE                        false
+
+/* Alignment for buffers that are submitted to USB Driver*/ 
+#define USB_ALIGN  __ALIGNED(CACHE_LINE_SIZE)
+
+/* Maximum instances of MSD function driver */
+#define USB_DEVICE_MSD_INSTANCES_NUMBER     1 
+
+#define USB_DEVICE_MSD_NUM_SECTOR_BUFFERS 1
+
+
+/* Number of Logical Units */
+#define USB_DEVICE_MSD_LUNS_NUMBER      1
+
+
+
 
 
 // *****************************************************************************
