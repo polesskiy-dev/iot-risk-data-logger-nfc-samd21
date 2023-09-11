@@ -18,6 +18,31 @@ children:
       children:
       - type: Dynamic
         attributes: {id: tc3, value: SYS_TIME_PLIB_MODE_COMPARE}
+  - type: Comment
+    attributes: {id: TC_COMPARE_PERIOD_COMMENT}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: '**** Waveform Period is 24414.0625 us ****'}
+  - type: Integer
+    attributes: {id: TC_FREQUENCY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tc3, value: '1024'}
+  - type: Comment
+    attributes: {id: TC_Resolution}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: '****Timer resolution is 976562.5 nS****'}
   - type: Boolean
     attributes: {id: TC_SYS_TIME_CONNECTED}
     children:
@@ -45,11 +70,28 @@ children:
       children:
       - type: Dynamic
         attributes: {id: tc3, value: 'false'}
+  - type: Long
+    attributes: {id: TC_TIMER_PERIOD}
+    children:
+    - type: Attributes
+      children:
+      - type: Long
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '65535'}
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tc3, value: '0'}
   - type: Float
     attributes: {id: TC_TIMER_TIME_MS}
     children:
     - type: Attributes
       children:
+      - type: Float
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '64000.0'}
       - type: Boolean
         attributes: {id: visible}
         children:

@@ -4,13 +4,13 @@
 
 
 project: iot-risk-data-logger-nfc-samd21
-creation_date: 2023-09-10T12:50:34.937+02:00[Europe/Podgorica]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2023-09-11T11:25:27.326+02:00[Europe/Podgorica]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Mac OS X
 mhc_mode: IDE            # [IDE|Standalone|Headless]
 mhc_version: v3.8.5
 mplabx_version: v6.10        # if MPLAB X plugin only
 plugin_version: v3.6.4        # if MPLAB X plugin only
-compiler: XC32 (2.10)
+compiler: XC32 (4.30)
 
 modules:
     - {name: "csp", version: "v3.17.0"}

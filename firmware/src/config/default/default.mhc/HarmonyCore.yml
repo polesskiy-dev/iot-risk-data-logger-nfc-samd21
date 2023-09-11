@@ -228,15 +228,6 @@ children:
         children:
         - {type: Value, value: 'true'}
   - type: File
-    attributes: {id: SYSTEM_MEDIA}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
-  - type: File
     attributes: {id: SYSTEM_MODULE}
     children:
     - type: Attributes
