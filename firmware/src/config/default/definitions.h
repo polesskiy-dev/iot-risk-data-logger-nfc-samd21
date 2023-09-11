@@ -50,14 +50,19 @@
 #include <stdbool.h>
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
 #include "peripheral/evsys/plib_evsys.h"
+#include "peripheral/sercom/i2c_master/plib_sercom0_i2c_master.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
+#include "peripheral/pm/plib_pm.h"
+#include "peripheral/eic/plib_eic.h"
+#include "peripheral/rtc/plib_rtc.h"
 #include "peripheral/tc/plib_tc3.h"
+#include "system/time/sys_time.h"
+#include "driver/i2c/drv_i2c.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/time/sys_time.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -186,6 +191,9 @@ Remarks:
 
 typedef struct
 {
+    /* I2C0 Driver Object */
+    SYS_MODULE_OBJ drvI2C0;
+
     SYS_MODULE_OBJ  sysTime;
 
 } SYSTEM_OBJECTS;

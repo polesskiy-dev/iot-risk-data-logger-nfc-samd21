@@ -27,6 +27,13 @@ children:
         attributes: {id: text}
         children:
         - {type: Value, value: '**** Waveform Period is 24414.0625 us ****'}
+  - type: Boolean
+    attributes: {id: TC_CTRLA_RUNSTDBY}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
   - type: Integer
     attributes: {id: TC_FREQUENCY}
     children:

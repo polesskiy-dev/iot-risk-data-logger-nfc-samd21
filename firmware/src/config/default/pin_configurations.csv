@@ -9,7 +9,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 8,PA07,IMU_INT1,EIC_EXTINT7,Digital,High Impedance,n/a,No,No,NORMAL
 11,PA08,SDA,SERCOM0_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
 12,PA09,SCL,SERCOM0_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
-13,PA10,_LIGHT_INT,EIC_EXTINT10,Digital,High Impedance,n/a,No,No,NORMAL
+13,PA10,_LIGHT_INT,EIC_EXTINT10,Digital,High Impedance,n/a,Yes,No,NORMAL
 14,PA11,,Available,,,,,,NORMAL
 15,PA14,,Available,,,,,,NORMAL
 16,PA15,,Available,,,,,,NORMAL

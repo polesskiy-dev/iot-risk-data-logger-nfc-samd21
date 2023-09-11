@@ -84,7 +84,7 @@ void TC3_TimerInitialize( void )
     }
 
     /* Configure counter mode & prescaler */
-    TC3_REGS->COUNT16.TC_CTRLA = TC_CTRLA_MODE_COUNT16 | TC_CTRLA_PRESCALER_DIV1 | TC_CTRLA_WAVEGEN_MPWM ;
+    TC3_REGS->COUNT16.TC_CTRLA = TC_CTRLA_MODE_COUNT16 | TC_CTRLA_PRESCALER_DIV1 | TC_CTRLA_WAVEGEN_MPWM | TC_CTRLA_RUNSTDBY_Msk;
 
     /* Configure timer period */
     TC3_REGS->COUNT16.TC_CC[0U] = 0U;

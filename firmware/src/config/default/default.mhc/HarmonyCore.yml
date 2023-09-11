@@ -33,9 +33,9 @@ children:
         - type: Pairs
           children:
           - type: Pair
-            attributes: {description: 'FALSE', value: '0', key: ENABLE_DRV_COMMON}
+            attributes: {description: 'FALSE', value: '1', key: ENABLE_DRV_COMMON}
           - type: Pair
-            attributes: {description: 'TRUE', value: '1', key: ENABLE_SYS_COMMON}
+            attributes: {description: 'TRUE', value: '2', key: ENABLE_SYS_COMMON}
           - type: Pair
             attributes: {description: 'FALSE', value: '0', key: ENABLE_SYS_MEDIA}
           - type: Pair
@@ -291,4 +291,4 @@ children:
         children:
         - {type: Value, value: 'true'}
 - type: ElementPosition
-  attributes: {x: '180', y: '20', id: HarmonyCore}
+  attributes: {x: '160', y: '19', id: HarmonyCore}

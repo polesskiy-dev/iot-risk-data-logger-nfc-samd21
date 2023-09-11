@@ -7,6 +7,10 @@
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="default" projectFiles="true">
           <logicalFolder name="f2" displayName="driver" projectFiles="true">
+            <logicalFolder name="f1" displayName="i2c" projectFiles="true">
+              <itemPath>../src/config/default/driver/i2c/drv_i2c.h</itemPath>
+              <itemPath>../src/config/default/driver/i2c/drv_i2c_definitions.h</itemPath>
+            </logicalFolder>
             <itemPath>../src/config/default/driver/driver.h</itemPath>
             <itemPath>../src/config/default/driver/driver_common.h</itemPath>
           </logicalFolder>
@@ -19,6 +23,9 @@
             <logicalFolder name="f4" displayName="clock" projectFiles="true">
               <itemPath>../src/config/default/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="f9" displayName="eic" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/eic/plib_eic.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="f2" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/default/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
@@ -28,8 +35,20 @@
             <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/default/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="f8" displayName="pm" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/pm/plib_pm.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="f3" displayName="port" projectFiles="true">
               <itemPath>../src/config/default/peripheral/port/plib_port.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f10" displayName="rtc" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/rtc/plib_rtc.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f7" displayName="sercom" projectFiles="true">
+              <logicalFolder name="f1" displayName="i2c_master" projectFiles="true">
+                <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom0_i2c_master.h</itemPath>
+              </logicalFolder>
             </logicalFolder>
             <logicalFolder name="f6" displayName="tc" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tc/plib_tc_common.h</itemPath>
@@ -170,9 +189,18 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="default" projectFiles="true">
+          <logicalFolder name="f4" displayName="driver" projectFiles="true">
+            <logicalFolder name="f1" displayName="i2c" projectFiles="true">
+              <itemPath>../src/config/default/driver/i2c/src/drv_i2c.c</itemPath>
+              <itemPath>../src/config/default/driver/i2c/src/drv_i2c_local.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f4" displayName="clock" projectFiles="true">
               <itemPath>../src/config/default/peripheral/clock/plib_clock.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f9" displayName="eic" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/eic/plib_eic.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f2" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/default/peripheral/evsys/plib_evsys.c</itemPath>
@@ -183,8 +211,19 @@
             <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
             </logicalFolder>
+            <logicalFolder name="f8" displayName="pm" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/pm/plib_pm.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="f3" displayName="port" projectFiles="true">
               <itemPath>../src/config/default/peripheral/port/plib_port.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f10" displayName="rtc" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/rtc/plib_rtc_clock.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f7" displayName="sercom" projectFiles="true">
+              <logicalFolder name="f1" displayName="i2c_master" projectFiles="true">
+                <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom0_i2c_master.c</itemPath>
+              </logicalFolder>
             </logicalFolder>
             <logicalFolder name="f6" displayName="tc" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tc/plib_tc3.c</itemPath>
@@ -223,9 +262,14 @@
         <itemPath>../src/config/default/default.mhc/GraphSettings.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/dfp.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/rtc.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/pm.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/evsys.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/nvmctrl.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/drv_i2c.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/sercom0.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/eic.yml</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
@@ -249,8 +293,8 @@
         <platform>4</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMD21_DFP" vendor="Microchip" version="3.6.144"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="SAMD21_DFP" vendor="Microchip" version="3.6.144"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -317,7 +361,7 @@
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="true"/>
-        <property key="optimization-level" value="-O1"/>
+        <property key="optimization-level" value=""/>
         <property key="place-data-into-section" value="true"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
@@ -536,6 +580,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-3ffff"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/iot-risk-data-logger-nfc-samd21.X/debug/default/iot-risk-data-logger-nfc-samd21_ptg"/>
         <property key="programmerToGoImageName"
                   value="iot-risk-data-logger-nfc-samd21_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
