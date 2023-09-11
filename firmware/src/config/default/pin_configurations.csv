@@ -2,26 +2,26 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 1,PA00,,Available,,,,,,NORMAL
 2,PA01,,Available,,,,,,NORMAL
 3,PA02,,Available,,,,,,NORMAL
-4,PA03,,Available,,,,,,NORMAL
+4,PA03,_NFC_INT,EIC_EXTINT3,Digital,High Impedance,n/a,Yes,No,NORMAL
 5,PA04,,Available,,,,,,NORMAL
-6,PA05,,Available,,,,,,NORMAL
-7,PA06,,Available,,,,,,NORMAL
-8,PA07,,Available,,,,,,NORMAL
-11,PA08,,Available,,,,,,NORMAL
-12,PA09,,Available,,,,,,NORMAL
-13,PA10,,Available,,,,,,NORMAL
+6,PA05,TEMP_INIT,EIC_EXTINT5,Digital,High Impedance,n/a,No,No,NORMAL
+7,PA06,IMU_INT2,EIC_EXTINT6,Digital,High Impedance,n/a,No,No,NORMAL
+8,PA07,IMU_INT1,EIC_EXTINT7,Digital,High Impedance,n/a,No,No,NORMAL
+11,PA08,SDA,SERCOM0_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+12,PA09,SCL,SERCOM0_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+13,PA10,_LIGHT_INT,EIC_EXTINT10,Digital,High Impedance,n/a,No,No,NORMAL
 14,PA11,,Available,,,,,,NORMAL
 15,PA14,,Available,,,,,,NORMAL
 16,PA15,,Available,,,,,,NORMAL
-17,PA16,,Available,,,,,,NORMAL
-18,PA17,,Available,,,,,,NORMAL
-19,PA18,,Available,,,,,,NORMAL
-20,PA19,,Available,,,,,,NORMAL
-21,PA22,,Available,,,,,,NORMAL
+17,PA16,MOSI,SERCOM1_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+18,PA17,SCK,SERCOM1_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+19,PA18,_FLASH_CS,GPIO,Digital,Out,High,,,NORMAL
+20,PA19,MISO,SERCOM1_PAD3,Digital,High Impedance,n/a,No,No,NORMAL
+21,PA22,_TEMP_RESET,GPIO,Digital,Out,High,,,NORMAL
 22,PA23,_LED,GPIO,Digital,Out,High,,,STRONG
-23,PA24,,Available,,,,,,NORMAL
-24,PA25,,Available,,,,,,NORMAL
-25,PA27,,Available,,,,,,NORMAL
+23,PA24,,USB_DM,Digital,High Impedance,n/a,No,No,NORMAL
+24,PA25,,USB_DP,Digital,High Impedance,n/a,No,No,NORMAL
+25,PA27,USB_VBUS_SENSE,EIC_EXTINT15,Digital,High Impedance,n/a,No,No,NORMAL
 27,PA28,,Available,,,,,,NORMAL
 31,PA30,,Available,,,,,,NORMAL
 32,PA31,,Available,,,,,,NORMAL

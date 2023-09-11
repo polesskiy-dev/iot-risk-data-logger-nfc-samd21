@@ -62,13 +62,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 863E81DB42B4A5EF5A58D3E51A9B9ECD
-- generatedChecksum: 4AAC47578F0FA033F184FEED84911D16
+- generatedChecksum: 9F713C75348AEFA2AA87880B79DC1004
   logicalPath: config/default/peripheral/port
   name: plib_port.c
   physicalPath: peripheral/port
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 4AAC47578F0FA033F184FEED84911D16
+  userChecksum: 9F713C75348AEFA2AA87880B79DC1004
 - generatedChecksum: 219DE6BD9607FFCDD747FDB593E4C945
   logicalPath: config/default/peripheral/tc
   name: plib_tc3.c
@@ -489,13 +489,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: EF2F1BB1D2A75B3EEF721CF17362EFA1
-- generatedChecksum: 27FAF8A787B20EEFAC07E0E3E940630E
+- generatedChecksum: 906E18E1D79968E7C8B390C782A8B0F6
   logicalPath: config/default/peripheral/port
   name: plib_port.h
   physicalPath: peripheral/port
   security: NON_SECURE
   type: HEADER
-  userChecksum: 27FAF8A787B20EEFAC07E0E3E940630E
+  userChecksum: 906E18E1D79968E7C8B390C782A8B0F6
 - generatedChecksum: 0DE96936AB21998A284FA176F870E596
   logicalPath: config/default/peripheral/tc
   name: plib_tc3.h
@@ -839,13 +839,13 @@ files:
   security: NON_SECURE
   type: LINKER
   userChecksum: E99F0EBEE53A0CD6A820440B412C7DD2
-- generatedChecksum: 945820C53EE83523F837D0B847AB51A7
+- generatedChecksum: 1984F5CA0E23F1221189A26ABC35DCB3
   logicalPath: ''
   name: pin_configurations.csv
   physicalPath: ''
   security: NON_SECURE
   type: IMPORTANT
-  userChecksum: 945820C53EE83523F837D0B847AB51A7
+  userChecksum: 1984F5CA0E23F1221189A26ABC35DCB3
 format_version: v1.0
 libraries: []
 settings:
