@@ -49,18 +49,22 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
+#include "peripheral/sercom/spi_master/plib_sercom1_spi_master.h"
 #include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/sercom/i2c_master/plib_sercom0_i2c_master.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/pm/plib_pm.h"
+#include "driver/memory/drv_memory.h"
 #include "peripheral/eic/plib_eic.h"
 #include "peripheral/rtc/plib_rtc.h"
 #include "peripheral/tc/plib_tc3.h"
 #include "system/time/sys_time.h"
 #include "driver/i2c/drv_i2c.h"
+#include "driver/spi_flash/at25df/drv_at25df.h"
 #include "system/int/sys_int.h"
+#include "system/ports/sys_ports.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
 
@@ -195,6 +199,10 @@ typedef struct
     SYS_MODULE_OBJ drvI2C0;
 
     SYS_MODULE_OBJ  sysTime;
+    SYS_MODULE_OBJ  drvMemory0;
+    /* AT25DF Driver Object */
+    SYS_MODULE_OBJ drvAT25DF;
+
 
 } SYSTEM_OBJECTS;
 

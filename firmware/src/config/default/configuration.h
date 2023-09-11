@@ -101,10 +101,27 @@ extern "C" {
 #define DRV_I2C_QUEUE_SIZE_IDX0               2
 #define DRV_I2C_CLOCK_SPEED_IDX0              100
 
+/* Memory Driver Global Configuration Options */
+#define DRV_MEMORY_INSTANCES_NUMBER          (1U)
 /* I2C Driver Common Configuration Options */
 #define DRV_I2C_INSTANCES_NUMBER              (1U)
 
 
+
+/* Memory Driver Instance 0 Configuration */
+#define DRV_MEMORY_INDEX_0                   0
+#define DRV_MEMORY_CLIENTS_NUMBER_IDX0       1
+#define DRV_MEMORY_BUF_Q_SIZE_IDX0    1
+
+/* AT25DF Driver Configuration Options */
+#define DRV_AT25DF_INSTANCES_NUMBER              1
+#define DRV_AT25DF_INDEX                         0
+#define DRV_AT25DF_CLIENTS_NUMBER_IDX            1
+#define DRV_AT25DF_INT_SRC_IDX                   SERCOM1_IRQn
+#define DRV_AT25DF_FLASH_SIZE                    8388608
+#define DRV_AT25DF_PAGE_SIZE                     256
+#define DRV_AT25DF_ERASE_BUFFER_SIZE             4096
+#define DRV_AT25DF_CHIP_SELECT_PIN_IDX           SYS_PORT_PIN_PA18
 
 
 // *****************************************************************************

@@ -76,7 +76,9 @@ void SYS_Tasks ( void )
     
 
     /* Maintain Device Drivers */
-    
+    DRV_MEMORY_Tasks(sysObj.drvMemory0);
+
+
 
     /* Maintain Middleware & Other Libraries */
     

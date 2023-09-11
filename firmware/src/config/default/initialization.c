@@ -153,6 +153,78 @@ static const DRV_I2C_INIT drvI2C0InitData =
 };
 // </editor-fold>
 
+// <editor-fold defaultstate="collapsed" desc="DRV_MEMORY Instance 0 Initialization Data">
+
+static uint8_t gDrvMemory0EraseBuffer[DRV_AT25DF_ERASE_BUFFER_SIZE] CACHE_ALIGN;
+
+static DRV_MEMORY_CLIENT_OBJECT gDrvMemory0ClientObject[DRV_MEMORY_CLIENTS_NUMBER_IDX0];
+
+static DRV_MEMORY_BUFFER_OBJECT gDrvMemory0BufferObject[DRV_MEMORY_BUF_Q_SIZE_IDX0];
+
+static const DRV_MEMORY_DEVICE_INTERFACE drvMemory0DeviceAPI = {
+    .Open               = DRV_AT25DF_Open,
+    .Close              = DRV_AT25DF_Close,
+    .Status             = DRV_AT25DF_Status,
+    .SectorErase        = DRV_AT25DF_SectorErase,
+    .Read               = DRV_AT25DF_Read,
+    .PageWrite          = DRV_AT25DF_PageWrite,
+    .EventHandlerSet    = NULL,
+    .GeometryGet        = (DRV_MEMORY_DEVICE_GEOMETRY_GET)DRV_AT25DF_GeometryGet,
+    .TransferStatusGet  = (DRV_MEMORY_DEVICE_TRANSFER_STATUS_GET)DRV_AT25DF_TransferStatusGet
+};
+static const DRV_MEMORY_INIT drvMemory0InitData =
+{
+    .memDevIndex                = DRV_AT25DF_INDEX,
+    .memoryDevice               = &drvMemory0DeviceAPI,
+    .isMemDevInterruptEnabled   = false,
+    .isFsEnabled                = false,
+    .ewBuffer                   = &gDrvMemory0EraseBuffer[0],
+    .clientObjPool              = (uintptr_t)&gDrvMemory0ClientObject[0],
+    .bufferObj                  = (uintptr_t)&gDrvMemory0BufferObject[0],
+    .queueSize                  = DRV_MEMORY_BUF_Q_SIZE_IDX0,
+    .nClientsMax                = DRV_MEMORY_CLIENTS_NUMBER_IDX0
+};
+
+// </editor-fold>
+/* SPI PLIB Interface Initialization for AT25DF Driver */
+static const DRV_AT25DF_PLIB_INTERFACE drvAT25DFPlibAPI = {
+
+    /* SPI PLIB WriteRead function */
+    .writeRead = (DRV_AT25DF_PLIB_WRITE_READ)SERCOM1_SPI_WriteRead,
+
+    /* SPI PLIB Write function */
+    .write_t = (DRV_AT25DF_PLIB_WRITE)SERCOM1_SPI_Write,
+
+    /* SPI PLIB Read function */
+    .read_t = (DRV_AT25DF_PLIB_READ)SERCOM1_SPI_Read,
+
+    /* SPI PLIB Transfer Status function */
+    .isBusy = (DRV_AT25DF_PLIB_IS_BUSY)SERCOM1_SPI_IsBusy,
+
+    /* SPI PLIB Callback Register */
+    .callbackRegister = (DRV_AT25DF_PLIB_CALLBACK_REGISTER)SERCOM1_SPI_CallbackRegister,
+};
+
+/* AT25DF Driver Initialization Data */
+static const DRV_AT25DF_INIT drvAT25DFInitData =
+{
+    /* SPI PLIB API  interface*/
+    .spiPlib = &drvAT25DFPlibAPI,
+
+    /* AT25DF Number of clients */
+    .numClients = DRV_AT25DF_CLIENTS_NUMBER_IDX,
+
+    /* FLASH Page Size in bytes */
+    .pageSize = DRV_AT25DF_PAGE_SIZE,
+
+    /* Total size of the FLASH in bytes */
+    .flashSize = DRV_AT25DF_FLASH_SIZE,
+
+    .blockStartAddress = 0x0,
+
+    .chipSelectPin = DRV_AT25DF_CHIP_SELECT_PIN_IDX
+};
+
 
 
 
@@ -234,6 +306,8 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_Initialize( );
 
+    SERCOM1_SPI_Initialize();
+
 
     SERCOM0_I2C_Initialize();
 
@@ -252,6 +326,11 @@ void SYS_Initialize ( void* data )
 
     /* Initialize I2C0 Driver Instance */
     sysObj.drvI2C0 = DRV_I2C_Initialize(DRV_I2C_INDEX_0, (SYS_MODULE_INIT *)&drvI2C0InitData);
+
+
+    sysObj.drvMemory0 = DRV_MEMORY_Initialize((SYS_MODULE_INDEX)DRV_MEMORY_INDEX_0, (SYS_MODULE_INIT *)&drvMemory0InitData);
+
+    sysObj.drvAT25DF = DRV_AT25DF_Initialize(DRV_AT25DF_INDEX, (SYS_MODULE_INIT *)&drvAT25DFInitData);
 
 
     /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  

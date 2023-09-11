@@ -1,4 +1,18 @@
 files:
+- generatedChecksum: 022EA8F46C2EB9BAC23417DCB0A01567
+  logicalPath: config/default/driver/spi_flash/at25df
+  name: drv_at25df.c
+  physicalPath: driver/spi_flash/at25df/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 022EA8F46C2EB9BAC23417DCB0A01567
+- generatedChecksum: D5A9B9B880BA172086214CA937153566
+  logicalPath: config/default/driver/spi_flash/at25df
+  name: drv_at25df_local.h
+  physicalPath: driver/spi_flash/at25df/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: D5A9B9B880BA172086214CA937153566
 - generatedChecksum: F70ECB1EB2B85FBB544967E61A064828
   logicalPath: config/default/driver/i2c
   name: drv_i2c.c
@@ -13,6 +27,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 3C80BB699F0D79641D5B22F6430B67DA
+- generatedChecksum: 8AF410E2D4EC23CFDFC96D00E8161A4B
+  logicalPath: config/default/driver/memory
+  name: drv_memory.c
+  physicalPath: driver/memory/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 8AF410E2D4EC23CFDFC96D00E8161A4B
 - generatedChecksum: 4DBC6B099BE7DCEB5D977AB4D922BEC0
   logicalPath: config/default
   name: exceptions.c
@@ -20,20 +41,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4DBC6B099BE7DCEB5D977AB4D922BEC0
-- generatedChecksum: 18142C1C338272D7C8BAAA197F725835
+- generatedChecksum: 3C542A06223BBFB5F0B4BF3A9417AD1E
   logicalPath: config/default
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 18142C1C338272D7C8BAAA197F725835
-- generatedChecksum: 42FBE13E3C920B061978D0E83FCD3DAF
+  userChecksum: 3C542A06223BBFB5F0B4BF3A9417AD1E
+- generatedChecksum: A09E21DBADABF57A84CFBC3417C08DE1
   logicalPath: config/default
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 42FBE13E3C920B061978D0E83FCD3DAF
+  userChecksum: A09E21DBADABF57A84CFBC3417C08DE1
 - generatedChecksum: 2CDCA8CDF135BDEB85FDFC0A2A991C0B
   logicalPath: config/default
   name: libc_syscalls.c
@@ -48,13 +69,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: C92B54D37E55E0092EA572633BEC0D00
+- generatedChecksum: 7634B642A899B77F533B69BEA4A7CA0C
   logicalPath: config/default/peripheral/clock
   name: plib_clock.c
   physicalPath: peripheral/clock
   security: NON_SECURE
   type: SOURCE
-  userChecksum: C92B54D37E55E0092EA572633BEC0D00
+  userChecksum: 7634B642A899B77F533B69BEA4A7CA0C
 - generatedChecksum: 66508C25E4EEB94BE1DB9028B21E2DE5
   logicalPath: config/default/peripheral/eic
   name: plib_eic.c
@@ -69,13 +90,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C3ECDED3D6301DB0DE622293ED615D21
-- generatedChecksum: 749BAE7836453434E58BD3B7DCFFA322
+- generatedChecksum: 8B0604592906719E81771F53CC2D5339
   logicalPath: config/default/peripheral/nvic
   name: plib_nvic.c
   physicalPath: peripheral/nvic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 749BAE7836453434E58BD3B7DCFFA322
+  userChecksum: 8B0604592906719E81771F53CC2D5339
 - generatedChecksum: 863E81DB42B4A5EF5A58D3E51A9B9ECD
   logicalPath: config/default/peripheral/nvmctrl
   name: plib_nvmctrl.c
@@ -111,6 +132,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 492D1422ECFCB6635157C77DA3AC8023
+- generatedChecksum: 1F5EC77BAE3617EDDFFA63CF896CF525
+  logicalPath: config/default/peripheral/sercom/spi_master
+  name: plib_sercom1_spi_master.c
+  physicalPath: peripheral/sercom/spi_master
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 1F5EC77BAE3617EDDFFA63CF896CF525
 - generatedChecksum: 33293A645CD492B749ADF0F00322B97C
   logicalPath: config/default/peripheral/tc
   name: plib_tc3.c
@@ -139,13 +167,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4B1B25AA8E0020AB48FB24F2CC04A8BE
-- generatedChecksum: F990EA74B88225A40356B42256C01AAF
+- generatedChecksum: 6C3767E28C3646C6C3557E200A20AFF7
   logicalPath: config/default
   name: tasks.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: F990EA74B88225A40356B42256C01AAF
+  userChecksum: 6C3767E28C3646C6C3557E200A20AFF7
 - generatedChecksum: 71352EF41F6688AD8408E42970B50B66
   logicalPath: config/default/stdio
   name: xc32_monitor.c
@@ -237,13 +265,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 52F91AC0727F2311EDA0E3BAA7719A9F
-- generatedChecksum: 7213E3CC2435B3012C8E386B7C79A765
+- generatedChecksum: AED040A69531927C5468DCC6B370423A
   logicalPath: config/default
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7213E3CC2435B3012C8E386B7C79A765
+  userChecksum: AED040A69531927C5468DCC6B370423A
 - generatedChecksum: CCBD23918BE14943EA128B0D552031C5
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: core_cm0plus.h
@@ -265,13 +293,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: CB8D4E72D581CDEFB0BB729ADC52D698
-- generatedChecksum: A5249A3968222DADB0F788E29FD00D6E
+- generatedChecksum: 8F9590512D987004C10F4801923B82AA
   logicalPath: config/default
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: A5249A3968222DADB0F788E29FD00D6E
+  userChecksum: 8F9590512D987004C10F4801923B82AA
 - generatedChecksum: 4821302AA348DF2D25B60299A468C2D7
   logicalPath: config/default
   name: device.h
@@ -321,6 +349,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: CC7DFCC51CD25171A3E400E18969354F
+- generatedChecksum: 2D86639E5F8B3680ACD8E7788A7DEE7F
+  logicalPath: config/default/driver/spi_flash/at25df
+  name: drv_at25df.h
+  physicalPath: driver/spi_flash/at25df
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 2D86639E5F8B3680ACD8E7788A7DEE7F
+- generatedChecksum: 10869B19D7764F79826EAA139321E73F
+  logicalPath: config/default/driver/spi_flash/at25df
+  name: drv_at25df_definitions.h
+  physicalPath: driver/spi_flash/at25df
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 10869B19D7764F79826EAA139321E73F
 - generatedChecksum: FBF0B18E635527E95AB98D6FAA19B136
   logicalPath: config/default/driver/i2c
   name: drv_i2c.h
@@ -335,6 +377,27 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 91A0E9762F2DDB7F4B876479FD0D3AF7
+- generatedChecksum: C0C434C82EC2000BE264EC9928BFD529
+  logicalPath: config/default/driver/memory
+  name: drv_memory.h
+  physicalPath: driver/memory
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: C0C434C82EC2000BE264EC9928BFD529
+- generatedChecksum: FB10C86BD2F343F15F90D72870D2F069
+  logicalPath: config/default/driver/memory
+  name: drv_memory_definitions.h
+  physicalPath: driver/memory
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: FB10C86BD2F343F15F90D72870D2F069
+- generatedChecksum: 9BCF696B0E5B793C6AA72CFAD925C511
+  logicalPath: config/default/driver/memory
+  name: drv_memory_local.h
+  physicalPath: driver/memory/src
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 9BCF696B0E5B793C6AA72CFAD925C511
 - generatedChecksum: BEA43FC50A08EA64E61A7BF2B14BDAD7
   logicalPath: packs/ATSAMD21E18A_DFP/component
   name: dsu.h
@@ -426,13 +489,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 60D83610D79083C8FCA62E859E628F82
-- generatedChecksum: C868A5A522E92735B74CB737AB617D84
+- generatedChecksum: 788624F1798FAAB22B602D0F84CA6A69
   logicalPath: config/default
   name: interrupts.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: C868A5A522E92735B74CB737AB617D84
+  userChecksum: 788624F1798FAAB22B602D0F84CA6A69
 - generatedChecksum: 47E760D36E42A7B436306A9CB4E72A0E
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: mpu_armv7.h
@@ -580,6 +643,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 2D6D31273C51BF96C49F01049A6566F9
+- generatedChecksum: 1335F2FC9F96C231AC58802D79E9EDFA
+  logicalPath: config/default/peripheral/sercom/spi_master
+  name: plib_sercom1_spi_master.h
+  physicalPath: peripheral/sercom/spi_master
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 1335F2FC9F96C231AC58802D79E9EDFA
 - generatedChecksum: 31E86D11EB7EA38F6C561E98BBC6FF2A
   logicalPath: config/default/peripheral/sercom/i2c_master
   name: plib_sercom_i2c_master_common.h
@@ -587,6 +657,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 31E86D11EB7EA38F6C561E98BBC6FF2A
+- generatedChecksum: BED7AF34A8D633C6994B780C19D7157F
+  logicalPath: config/default/peripheral/sercom/spi_master
+  name: plib_sercom_spi_master_common.h
+  physicalPath: peripheral/sercom/spi_master
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: BED7AF34A8D633C6994B780C19D7157F
 - generatedChecksum: 0DE96936AB21998A284FA176F870E596
   logicalPath: config/default/peripheral/tc
   name: plib_tc3.h
@@ -748,6 +825,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 50448A46D4D17B15734349D79C1933C3
+- generatedChecksum: A18715B8A69D26A3611BFD04D551ED83
+  logicalPath: config/default/system/ports
+  name: sys_ports.h
+  physicalPath: system/ports
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: A18715B8A69D26A3611BFD04D551ED83
+- generatedChecksum: 0077CD2365E6F28D76DF1D212FF80059
+  logicalPath: config/default/system/ports
+  name: sys_ports_mapping.h
+  physicalPath: system/ports
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 0077CD2365E6F28D76DF1D212FF80059
 - generatedChecksum: 8AAA43F0A71E7074DEDAB281325A7C6D
   logicalPath: config/default
   name: sys_tasks.h
@@ -804,6 +895,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 5BA223FDFA5189FFFB393257F27AE7C5
+- generatedChecksum: C251C89C6B99354E34705EFA5EEB0996
+  logicalPath: config/default/system
+  name: system_media.h
+  physicalPath: system
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: C251C89C6B99354E34705EFA5EEB0996
 - generatedChecksum: B5FE00F76A5F6BF6E557814C0A4C1BA0
   logicalPath: config/default/system
   name: system_module.h
