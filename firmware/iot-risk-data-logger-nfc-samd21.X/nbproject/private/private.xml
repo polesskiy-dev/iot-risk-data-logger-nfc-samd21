@@ -2,6 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/sensors/sht3x-temperature-humidity/sht3x.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/sensors/sht3x-temperature-humidity/sht3x_fsm.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/peripheral/port/plib_port.h</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/common.defs.h</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/nfc/nfc.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/nfc/nfc.h</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/main.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/usb/src/usb_device.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/initialization.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/tasks.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/sensors/sht3x-temperature-humidity/sht3x.h</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/peripheral/tc/plib_tc3.c</file>
+        </group>
     </open-files>
 </project-private>

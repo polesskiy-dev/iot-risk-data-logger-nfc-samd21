@@ -1,0 +1,9 @@
+[submodule "libraries/--force"]
+	path = libraries/--force
+	url = https://github.com/polesskiy-dev/active-object-fsm
+[submodule "libraries/doxygen-awesome-css"]
+	path = libraries/doxygen-awesome-css
+	url = https://github.com/jothepro/doxygen-awesome-css/
+[submodule "libraries/active-object-fsm"]
+	path = libraries/active-object-fsm
+	url = https://github.com/polesskiy-dev/active-object-fsm
