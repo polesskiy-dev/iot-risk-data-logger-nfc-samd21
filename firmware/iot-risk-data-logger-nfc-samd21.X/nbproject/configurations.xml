@@ -528,7 +528,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="512"/>
+        <property key="heap-size" value="8192"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>
@@ -1246,6 +1246,8 @@
         <property key="periphComp5.gte" value="gt"/>
         <property key="periphComp6.gte" value="gt"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/iot-risk-data-logger-nfc-samd21.X/debug/default/iot-risk-data-logger-nfc-samd21_ptg"/>
         <property key="programmerToGoImageName"
                   value="iot-risk-data-logger-nfc-samd21_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>

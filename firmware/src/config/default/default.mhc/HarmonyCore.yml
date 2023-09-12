@@ -83,8 +83,16 @@ children:
   - type: Boolean
     attributes: {id: ENABLE_DRV_COMMON}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
+      - type: Dynamic
+        attributes: {id: HarmonyCore, value: 'true'}
       - type: User
         attributes: {value: 'true'}
   - type: Boolean

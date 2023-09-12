@@ -98,6 +98,24 @@ children:
             attributes: {id: enabled}
             children:
             - {type: Value, value: 'false'}
+      - type: File
+        attributes: {id: SYS_CONSOLE_USB_CDC_SOURCE}
+        children:
+        - type: Attributes
+          children:
+          - type: Boolean
+            attributes: {id: enabled}
+            children:
+            - {type: Value, value: 'true'}
+      - type: File
+        attributes: {id: SYS_CONSOLE_USB_DEFINITIONS_HEADER}
+        children:
+        - type: Attributes
+          children:
+          - type: Boolean
+            attributes: {id: enabled}
+            children:
+            - {type: Value, value: 'true'}
       - type: String
         attributes: {id: SYS_CONSOLE_USB_DEVICE_SPEED}
         children:
@@ -105,6 +123,15 @@ children:
           children:
           - type: Dynamic
             attributes: {id: sys_console_0, value: Full Speed}
+      - type: File
+        attributes: {id: SYS_CONSOLE_USB_HEADER}
+        children:
+        - type: Attributes
+          children:
+          - type: Boolean
+            attributes: {id: enabled}
+            children:
+            - {type: Value, value: 'true'}
     - type: Attachments
       children:
       - type: DirectDependency

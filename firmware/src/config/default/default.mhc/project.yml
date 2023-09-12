@@ -398,13 +398,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: CB8D4E72D581CDEFB0BB729ADC52D698
-- generatedChecksum: 77FB4EEE4D2221BB22F7DF51FB4A4BFF
+- generatedChecksum: C41580E7F87CF0FB4602D39FF1E8702A
   logicalPath: config/default
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 77FB4EEE4D2221BB22F7DF51FB4A4BFF
+  userChecksum: C41580E7F87CF0FB4602D39FF1E8702A
 - generatedChecksum: 4821302AA348DF2D25B60299A468C2D7
   logicalPath: config/default
   name: device.h
