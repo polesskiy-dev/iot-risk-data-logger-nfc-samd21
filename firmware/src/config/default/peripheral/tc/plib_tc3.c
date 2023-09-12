@@ -63,7 +63,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-static TC_TIMER_CALLBACK_OBJ TC3_CallbackObject;
+volatile static TC_TIMER_CALLBACK_OBJ TC3_CallbackObject;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -84,10 +84,10 @@ void TC3_TimerInitialize( void )
     }
 
     /* Configure counter mode & prescaler */
-    TC3_REGS->COUNT16.TC_CTRLA = TC_CTRLA_MODE_COUNT16 | TC_CTRLA_PRESCALER_DIV1 | TC_CTRLA_WAVEGEN_MPWM ;
+    TC3_REGS->COUNT16.TC_CTRLA = TC_CTRLA_MODE_COUNT16 | TC_CTRLA_PRESCALER_DIV1 | TC_CTRLA_WAVEGEN_MPWM | TC_CTRLA_RUNSTDBY_Msk;
 
     /* Configure timer period */
-    TC3_REGS->COUNT16.TC_CC[0U] = 48000U;
+    TC3_REGS->COUNT16.TC_CC[0U] = 0U;
 
     /* Clear all interrupt flags */
     TC3_REGS->COUNT16.TC_INTFLAG = TC_INTFLAG_Msk;
@@ -125,7 +125,7 @@ void TC3_TimerStop( void )
 
 uint32_t TC3_TimerFrequencyGet( void )
 {
-    return (uint32_t)(48000000UL);
+    return (uint32_t)(1024UL);
 }
 
 void TC3_TimerCommandSet(TC_COMMAND command)
@@ -205,7 +205,7 @@ void TC3_TimerCallbackRegister( TC_TIMER_CALLBACK callback, uintptr_t context )
 }
 
 /* Timer Interrupt handler */
-void TC3_TimerInterruptHandler( void )
+void __attribute__((used)) TC3_TimerInterruptHandler( void )
 {
     TC_TIMER_STATUS status;
     status = (TC_TIMER_STATUS) (TC3_REGS->COUNT16.TC_INTFLAG);
@@ -213,7 +213,8 @@ void TC3_TimerInterruptHandler( void )
     TC3_REGS->COUNT16.TC_INTFLAG = TC_INTFLAG_Msk;
     if(TC3_CallbackObject.callback != NULL)
     {
-        TC3_CallbackObject.callback(status, TC3_CallbackObject.context);
+        uintptr_t context = TC3_CallbackObject.context;
+        TC3_CallbackObject.callback(status, context);
     }
 }
 

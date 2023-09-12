@@ -56,14 +56,41 @@ extern "C" {
 // DOM-IGNORE-END
 
 
+typedef enum
+{
+    RTC_ALARM_MASK_SS = 0x1,    //Alarm every minute
+    RTC_ALARM_MASK_MMSS,        //Alarm every Hour
+    RTC_ALARM_MASK_HHMMSS,      //Alarm Every Day
+    RTC_ALARM_MASK_DDHHMMSS,    //Alarm Every Month
+    RTC_ALARM_MASK_MMDDHHMMSS,  //Alarm Every year
+    RTC_ALARM_MASK_YYMMDDHHMMSS //Alarm Once
+} RTC_ALARM_MASK;
+
+typedef enum
+{
+    RTC_CLOCK_INT_MASK_ALARM = 0x0001,
+    RTC_CLOCK_INT_MASK_YEAR_OVERFLOW = 0x0080
+} RTC_CLOCK_INT_MASK;
 
 
+typedef void (*RTC_CALLBACK)( RTC_CLOCK_INT_MASK intCause, uintptr_t context );
+
+
+typedef struct
+{
+    /* RTC Clock*/
+    RTC_CLOCK_INT_MASK intCause;
+    RTC_CALLBACK alarmCallback;
+    uintptr_t context;
+} RTC_OBJECT;
 
 void RTC_Initialize(void);
 
 bool RTC_RTCCTimeSet (struct tm * initialTime );
 void RTC_RTCCTimeGet ( struct tm * currentTime );
+bool RTC_RTCCAlarmSet (struct tm * alarmTime, RTC_ALARM_MASK mask);
 
+void RTC_RTCCCallbackRegister ( RTC_CALLBACK callback, uintptr_t context);
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility

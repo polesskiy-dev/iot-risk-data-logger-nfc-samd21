@@ -173,12 +173,54 @@ children:
       - type: Dynamic
         attributes: {id: evsys, value: 'false'}
   - type: Boolean
+    attributes: {id: GENERATOR_EIC_EXTINT_10_ACTIVE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: eic, value: 'false'}
+  - type: Boolean
+    attributes: {id: GENERATOR_EIC_EXTINT_15_ACTIVE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: eic, value: 'false'}
+  - type: Boolean
+    attributes: {id: GENERATOR_EIC_EXTINT_3_ACTIVE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: eic, value: 'false'}
+  - type: Boolean
+    attributes: {id: GENERATOR_EIC_EXTINT_5_ACTIVE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: eic, value: 'false'}
+  - type: Boolean
+    attributes: {id: GENERATOR_EIC_EXTINT_6_ACTIVE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: eic, value: 'false'}
+  - type: Boolean
+    attributes: {id: GENERATOR_EIC_EXTINT_7_ACTIVE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: eic, value: 'false'}
+  - type: Boolean
     attributes: {id: GENERATOR_RTC_CMP_0_ACTIVE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: rtc, value: 'true'}
+        attributes: {id: rtc, value: 'false'}
   - type: Boolean
     attributes: {id: GENERATOR_RTC_OVF_ACTIVE}
     children:
@@ -243,4 +285,4 @@ children:
       - type: Dynamic
         attributes: {id: rtc, value: 'false'}
 - type: ElementPosition
-  attributes: {x: '160', y: '20', id: evsys}
+  attributes: {x: '321', y: '19', id: evsys}

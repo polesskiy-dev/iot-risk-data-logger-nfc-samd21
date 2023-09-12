@@ -27,6 +27,10 @@
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
 
+void _toggleLED(uintptr_t context) {
+    _LED_Toggle();
+}
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -38,11 +42,16 @@ int main ( void )
 {
     /* Initialize all modules */
     SYS_Initialize ( NULL );
+    
+    // Debug: verify that app sin't stuck
+//    SYS_TIME_CallbackRegisterMS(_toggleLED, (uintptr_t)NULL, 1000, SYS_TIME_PERIODIC);
 
     while ( true )
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */
         SYS_Tasks ( );
+        
+        
     }
 
     /* Execution should not come here during normal operation */

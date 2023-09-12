@@ -1,0 +1,50 @@
+format_version: v1.0
+type: GeneratorComponent
+attributes: {id: usb_device_msd}
+children:
+- type: Instances
+  children:
+  - type: InstanceComponent
+    attributes: {instance: '0', id: usb_device_msd}
+    children:
+    - type: Symbols
+      children:
+      - type: Integer
+        attributes: {id: CONFIG_USB_DEVICE_FUNCTION_BULK_IN_ENDPOINT_NUMBER}
+        children:
+        - type: Values
+          children:
+          - type: Dynamic
+            attributes: {id: usb_device_msd_0, value: '1'}
+      - type: Integer
+        attributes: {id: CONFIG_USB_DEVICE_FUNCTION_BULK_OUT_ENDPOINT_NUMBER}
+        children:
+        - type: Values
+          children:
+          - type: Dynamic
+            attributes: {id: usb_device_msd_0, value: '1'}
+      - type: Integer
+        attributes: {id: CONFIG_USB_DEVICE_FUNCTION_INTERFACE_NUMBER}
+        children:
+        - type: Values
+          children:
+          - type: Dynamic
+            attributes: {id: usb_device_msd_0, value: '0'}
+      - type: Combo
+        attributes: {id: CONFIG_USB_DEVICE_FUNCTION_MSD_LUN_MEDIA_TYPE_IDX0}
+        children:
+        - type: Values
+          children:
+          - type: User
+            attributes: {value: MEDIA_TYPE_SPIFLASH}
+    - type: Attachments
+      children:
+      - type: MultiCapability
+        attributes: {id: usb_device_msd_media_dependency}
+        children:
+        - type: TargetAttachments
+          children:
+          - type: TargetAttachment
+            attributes: {targetComponentID: drv_memory_0, targetAttachmentID: drv_media}
+- type: ElementPosition
+  attributes: {x: '473', y: '178', id: usb_device_msd}

@@ -57,10 +57,10 @@
  * Macro Mapping
  **********************************************/
 
-/* ATSAMD21E17D Devices have USB PADCAL values in OTP4_ADDR */ 
+/* ATSAMD21E18A Devices have USB PADCAL values in OTP4_ADDR */ 
 #define DRV_USBFSV1_READ_PADCAL_VALUE (*((uint32_t *) OTP4_ADDR + 1) >> 13)
 
-/* ATSAMD21E17D Devices has one interrupt vector for USB module */
+/* ATSAMD21E18A Devices has one interrupt vector for USB module */
 #define DRV_USBFSV1_MULTIPLE_ISR_AVAILABLE false
   
 #if (DRV_USBFSV1_MULTIPLE_ISR_AVAILABLE == true)

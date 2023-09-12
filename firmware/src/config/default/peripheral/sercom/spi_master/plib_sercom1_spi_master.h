@@ -153,7 +153,7 @@ void SERCOM1_SPI_Initialize (void);
     false - if spiSourceClock and spi clock frequencies are such that resultant
     baud value is out of the possible range.
 
-  Example:
+  Example: Assuming 20 MHz as peripheral Master clock frequency
     <code>
         SPI_TRANSFER_SETUP setup;
         setup.clockFrequency = 1000000;
@@ -161,7 +161,6 @@ void SERCOM1_SPI_Initialize (void);
         setup.clockPolarity = SPI_CLOCK_POLARITY_IDLE_LOW;
         setup.dataBits = SPI_DATA_BITS_8;
 
-        Assuming 20 MHz as peripheral Master clock frequency
         if (SERCOM1_SPI_TransferSetup (&setup, 20000000) == false)
         {
             this means setup could not be done, debug the reason.
@@ -544,7 +543,7 @@ void SERCOM1_SPI_CallbackRegister(SERCOM_SPI_CALLBACK callBack, uintptr_t contex
     before calling any of the data transfer functions. The library does not
     allow a data transfer operation if another transfer operation is already in
     progress. This function returns true when the SPI PLIB software state machine is idle and
-	all the bytes are transmitted out on the bus (shift register is empty).
+    all the bytes are transmitted out on the bus (shift register is empty).
 
     This function can be used as an alternative to the callback function when
     the library is operating interrupt mode. The allow the application to
@@ -592,11 +591,11 @@ bool SERCOM1_SPI_IsBusy (void);
     Returns hardware transfer status of the SPI transmit shift register
 
   Description:
-    This function returns the hardware status of the transmit shift register. 
-	The status is  returned true after all the bytes have been shifted out on the 
-	SPI bus. This function should be used when using DMA with SPI PLIB to make 
-	sure that all the bytes have been transmitted out on the bus. For SPI 
-	transfers without DMA, the SERCOM1_SPI_IsBusy() API must be used.
+    This function returns the hardware status of the transmit shift register.
+    The status is  returned true after all the bytes have been shifted out on the
+    SPI bus. This function should be used when using DMA with SPI PLIB to make
+    sure that all the bytes have been transmitted out on the bus. For SPI
+    transfers without DMA, the SERCOM1_SPI_IsBusy() API must be used.
 
   Precondition:
     The SERCOM1_SPI_Initialize() should have been called once.
@@ -610,14 +609,13 @@ bool SERCOM1_SPI_IsBusy (void);
 
   Example:
     <code>
-        
+
     </code>
 
   Remarks:
     None.
 */
 bool SERCOM1_SPI_IsTransmitterBusy(void);
-
 
 #ifdef __cplusplus // Provide C++ Compatibility
 }

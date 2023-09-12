@@ -52,74 +52,9 @@
 
 #include "configuration.h"
 #include "definitions.h"
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: RTOS "Tasks" Routine
-// *****************************************************************************
-// *****************************************************************************
-void _USB_DEVICE_Tasks(  void *pvParameters  )
-{
-    while(1)
-    {
-				 /* USB Device layer tasks routine */
-        USB_DEVICE_Tasks(sysObj.usbDevObject0);
-        vTaskDelay(10 / portTICK_PERIOD_MS);
-    }
-}
-
-void _DRV_USBFSV1_Tasks(  void *pvParameters  )
-{
-    while(1)
-    {
-				 /* USB FS Driver Task Routine */
-        DRV_USBFSV1_Tasks(sysObj.drvUSBFSV1Object);
-        vTaskDelay(10 / portTICK_PERIOD_MS);
-    }
-}
-
-/* Handle for the APP_TEMP_SENSOR_Tasks. */
-TaskHandle_t xAPP_TEMP_SENSOR_Tasks;
-
-void _APP_TEMP_SENSOR_Tasks(  void *pvParameters  )
-{   
-    while(1)
-    {
-        APP_TEMP_SENSOR_Tasks();
-    }
-}
-/* Handle for the APP_LIGHT_SENSOR_Tasks. */
-TaskHandle_t xAPP_LIGHT_SENSOR_Tasks;
-
-void _APP_LIGHT_SENSOR_Tasks(  void *pvParameters  )
-{   
-    while(1)
-    {
-        APP_LIGHT_SENSOR_Tasks();
-    }
-}
-/* Handle for the APP_FLASH_Tasks. */
-TaskHandle_t xAPP_FLASH_Tasks;
-
-void _APP_FLASH_Tasks(  void *pvParameters  )
-{   
-    while(1)
-    {
-        APP_FLASH_Tasks();
-    }
-}
-/* Handle for the APP_USB_Tasks. */
-TaskHandle_t xAPP_USB_Tasks;
-
-void _APP_USB_Tasks(  void *pvParameters  )
-{   
-    while(1)
-    {
-        APP_USB_Tasks();
-    }
-}
-
+#include "sys_tasks.h"
+#include "../../nfc/nfc.h"
+#include "../../sensors/sht3x-temperature-humidity/sht3x.h"
 
 
 
@@ -139,75 +74,24 @@ void _APP_USB_Tasks(  void *pvParameters  )
 void SYS_Tasks ( void )
 {
     /* Maintain system services */
-    
+    SYS_CONSOLE_Tasks(SYS_CONSOLE_INDEX_0);
+
+
 
     /* Maintain Device Drivers */
-    
+    DRV_MEMORY_Tasks(sysObj.drvMemory0);
+
+
 
     /* Maintain Middleware & Other Libraries */
-        /* Create OS Thread for USB_DEVICE_Tasks. */
-    xTaskCreate( _USB_DEVICE_Tasks,
-        "USB_DEVICE_TASKS",
-        1024,
-        (void*)NULL,
-        1,
-        (TaskHandle_t*)NULL
-    );
+        /* USB Device layer tasks routine */ 
+    USB_DEVICE_Tasks(sysObj.usbDevObject0);
 
-	/* Create OS Thread for USB Driver Tasks. */
-    xTaskCreate( _DRV_USBFSV1_Tasks,
-        "DRV_USBFSV1_TASKS",
-        1024,
-        (void*)NULL,
-        1,
-        (TaskHandle_t*)NULL
-    );
+    /* USB FS Driver Task Routine */ 
+    DRV_USBFSV1_Tasks(sysObj.drvUSBFSV1Object);
 
 
-
-    /* Maintain the application's state machine. */
-        /* Create OS Thread for APP_TEMP_SENSOR_Tasks. */
-    xTaskCreate((TaskFunction_t) _APP_TEMP_SENSOR_Tasks,
-                "APP_TEMP_SENSOR_Tasks",
-                128,
-                NULL,
-                1,
-                &xAPP_TEMP_SENSOR_Tasks);
-
-    /* Create OS Thread for APP_LIGHT_SENSOR_Tasks. */
-    xTaskCreate((TaskFunction_t) _APP_LIGHT_SENSOR_Tasks,
-                "APP_LIGHT_SENSOR_Tasks",
-                128,
-                NULL,
-                1,
-                &xAPP_LIGHT_SENSOR_Tasks);
-
-    /* Create OS Thread for APP_FLASH_Tasks. */
-    xTaskCreate((TaskFunction_t) _APP_FLASH_Tasks,
-                "APP_FLASH_Tasks",
-                128,
-                NULL,
-                1,
-                &xAPP_FLASH_Tasks);
-
-    /* Create OS Thread for APP_USB_Tasks. */
-    xTaskCreate((TaskFunction_t) _APP_USB_Tasks,
-                "APP_USB_Tasks",
-                128,
-                NULL,
-                1,
-                &xAPP_USB_Tasks);
-
-
-
-
-    /* Start RTOS Scheduler. */
-    
-     /**********************************************************************
-     * Create all Threads for APP Tasks before starting FreeRTOS Scheduler *
-     ***********************************************************************/
-    vTaskStartScheduler(); /* This function never returns. */
-
+    SHT3X_Tasks();
 }
 
 /*******************************************************************************

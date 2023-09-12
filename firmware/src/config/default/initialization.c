@@ -46,7 +46,8 @@
 #include "configuration.h"
 #include "definitions.h"
 #include "device.h"
-
+#include "../../nfc/nfc.h"
+#include "../../sensors/sht3x-temperature-humidity/sht3x.h"
 
 
 // ****************************************************************************
@@ -80,19 +81,26 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
 // <editor-fold defaultstate="collapsed" desc="DRV_I2C Instance 0 Initialization Data">
 
 /* I2C Client Objects Pool */
 static DRV_I2C_CLIENT_OBJ drvI2C0ClientObjPool[DRV_I2C_CLIENTS_NUMBER_IDX0];
 
+/* I2C Transfer Objects Pool */
+static DRV_I2C_TRANSFER_OBJ drvI2C0TransferObj[DRV_I2C_QUEUE_SIZE_IDX0];
+
 /* I2C PLib Interface Initialization */
-const DRV_I2C_PLIB_INTERFACE drvI2C0PLibAPI = {
+static const DRV_I2C_PLIB_INTERFACE drvI2C0PLibAPI = {
 
     /* I2C PLib Transfer Read Add function */
-    .read = (DRV_I2C_PLIB_READ)SERCOM0_I2C_Read,
+    .read_t = (DRV_I2C_PLIB_READ)SERCOM0_I2C_Read,
 
     /* I2C PLib Transfer Write Add function */
-    .write = (DRV_I2C_PLIB_WRITE)SERCOM0_I2C_Write,
+    .write_t = (DRV_I2C_PLIB_WRITE)SERCOM0_I2C_Write,
 
 
     /* I2C PLib Transfer Write Read Add function */
@@ -112,8 +120,17 @@ const DRV_I2C_PLIB_INTERFACE drvI2C0PLibAPI = {
 };
 
 
+static const DRV_I2C_INTERRUPT_SOURCES drvI2C0InterruptSources =
+{
+    /* Peripheral has single interrupt vector */
+    .isSingleIntSrc                        = true,
+
+    /* Peripheral interrupt line */
+    .intSources.i2cInterrupt             = (int32_t)SERCOM0_IRQn,
+};
+
 /* I2C Driver Initialization Data */
-const DRV_I2C_INIT drvI2C0InitData =
+static const DRV_I2C_INIT drvI2C0InitData =
 {
     /* I2C PLib API */
     .i2cPlib = &drvI2C0PLibAPI,
@@ -124,23 +141,64 @@ const DRV_I2C_INIT drvI2C0InitData =
     /* I2C Client Objects Pool */
     .clientObjPool = (uintptr_t)&drvI2C0ClientObjPool[0],
 
+    /* I2C TWI Queue Size */
+    .transferObjPoolSize = DRV_I2C_QUEUE_SIZE_IDX0,
+
+    /* I2C Transfer Objects */
+    .transferObjPool = (uintptr_t)&drvI2C0TransferObj[0],
+
+    /* I2C interrupt sources */
+    .interruptSources = &drvI2C0InterruptSources,
+
     /* I2C Clock Speed */
     .clockSpeed = DRV_I2C_CLOCK_SPEED_IDX0,
 };
-
 // </editor-fold>
 
+// <editor-fold defaultstate="collapsed" desc="DRV_MEMORY Instance 0 Initialization Data">
+
+static uint8_t gDrvMemory0EraseBuffer[DRV_AT25DF_ERASE_BUFFER_SIZE] CACHE_ALIGN;
+
+static DRV_MEMORY_CLIENT_OBJECT gDrvMemory0ClientObject[DRV_MEMORY_CLIENTS_NUMBER_IDX0];
+
+static DRV_MEMORY_BUFFER_OBJECT gDrvMemory0BufferObject[DRV_MEMORY_BUF_Q_SIZE_IDX0];
+
+static const DRV_MEMORY_DEVICE_INTERFACE drvMemory0DeviceAPI = {
+    .Open               = DRV_AT25DF_Open,
+    .Close              = DRV_AT25DF_Close,
+    .Status             = DRV_AT25DF_Status,
+    .SectorErase        = DRV_AT25DF_SectorErase,
+    .Read               = DRV_AT25DF_Read,
+    .PageWrite          = DRV_AT25DF_PageWrite,
+    .EventHandlerSet    = NULL,
+    .GeometryGet        = (DRV_MEMORY_DEVICE_GEOMETRY_GET)DRV_AT25DF_GeometryGet,
+    .TransferStatusGet  = (DRV_MEMORY_DEVICE_TRANSFER_STATUS_GET)DRV_AT25DF_TransferStatusGet
+};
+static const DRV_MEMORY_INIT drvMemory0InitData =
+{
+    .memDevIndex                = DRV_AT25DF_INDEX,
+    .memoryDevice               = &drvMemory0DeviceAPI,
+    .isMemDevInterruptEnabled   = false,
+    .isFsEnabled                = false,
+    .ewBuffer                   = &gDrvMemory0EraseBuffer[0],
+    .clientObjPool              = (uintptr_t)&gDrvMemory0ClientObject[0],
+    .bufferObj                  = (uintptr_t)&gDrvMemory0BufferObject[0],
+    .queueSize                  = DRV_MEMORY_BUF_Q_SIZE_IDX0,
+    .nClientsMax                = DRV_MEMORY_CLIENTS_NUMBER_IDX0
+};
+
+// </editor-fold>
 /* SPI PLIB Interface Initialization for AT25DF Driver */
-const DRV_AT25DF_PLIB_INTERFACE drvAT25DFPlibAPI = {
+static const DRV_AT25DF_PLIB_INTERFACE drvAT25DFPlibAPI = {
 
     /* SPI PLIB WriteRead function */
     .writeRead = (DRV_AT25DF_PLIB_WRITE_READ)SERCOM1_SPI_WriteRead,
 
     /* SPI PLIB Write function */
-    .write = (DRV_AT25DF_PLIB_WRITE)SERCOM1_SPI_Write,
+    .write_t = (DRV_AT25DF_PLIB_WRITE)SERCOM1_SPI_Write,
 
     /* SPI PLIB Read function */
-    .read = (DRV_AT25DF_PLIB_READ)SERCOM1_SPI_Read,
+    .read_t = (DRV_AT25DF_PLIB_READ)SERCOM1_SPI_Read,
 
     /* SPI PLIB Transfer Status function */
     .isBusy = (DRV_AT25DF_PLIB_IS_BUSY)SERCOM1_SPI_IsBusy,
@@ -150,7 +208,7 @@ const DRV_AT25DF_PLIB_INTERFACE drvAT25DFPlibAPI = {
 };
 
 /* AT25DF Driver Initialization Data */
-const DRV_AT25DF_INIT drvAT25DFInitData =
+static const DRV_AT25DF_INIT drvAT25DFInitData =
 {
     /* SPI PLIB API  interface*/
     .spiPlib = &drvAT25DFPlibAPI,
@@ -171,6 +229,7 @@ const DRV_AT25DF_INIT drvAT25DFInitData =
 
 
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: System Data
@@ -188,6 +247,36 @@ SYSTEM_OBJECTS sysObj;
  * USB Driver Initialization
  ******************************************************/
  
+/*  When designing a Self-powered USB Device, the application should make sure
+    that USB_DEVICE_Attach() function is called only when VBUS is actively powered.
+	Therefore, the firmware needs some means to detect when the Host is powering 
+	the VBUS. A 5V tolerant I/O pin can be connected to VBUS (through a resistor)
+	and can be used to detect when VBUS is high or low. The application can specify
+	a VBUS Detect function through the USB Driver Initialize data structure. 
+	The USB device stack will periodically call this function. If the VBUS is 
+	detected, the USB_DEVICE_EVENT_POWER_DETECTED event is generated. If the VBUS 
+	is removed (i.e., the device is physically detached from Host), the USB stack 
+	will generate the event USB_DEVICE_EVENT_POWER_REMOVED. The application should 
+	call USB_DEVICE_Detach() when VBUS is removed. 
+    
+    The following are the steps to generate the VBUS_SENSE Function through MHC     
+        1) Navigate to MHC->Tools->Pin Configuration and Configure the pin used 
+		   as VBUS_SENSE. Set this pin Function as "GPIO" and set as "Input". 
+		   Provide a custom name to the pin.
+        2) Select the USB Driver Component in MHC Project Graph and enable the  
+		   "Enable VBUS Sense" Check-box.     
+        3) Specify the custom name of the VBUS SENSE pin in the "VBUS SENSE Pin Name" box.  */ 
+static DRV_USB_VBUS_LEVEL DRV_USBFSV1_VBUS_Comparator(void)
+{
+    DRV_USB_VBUS_LEVEL retVal = DRV_USB_VBUS_LEVEL_INVALID;
+    
+    if(true == USB_VBUS_SENSE_Get())
+    {
+        retVal = DRV_USB_VBUS_LEVEL_VALID;
+    }
+	return (retVal);
+
+}
 
 
 const DRV_USBFSV1_INIT drvUSBInit =
@@ -213,6 +302,9 @@ const DRV_USBFSV1_INIT drvUSBInit =
     /* Identifies peripheral (PLIB-level) ID */
     .usbID = USB_REGS,
 	
+    /* Function to check for VBus */
+    .vbusComparator = DRV_USBFSV1_VBUS_Comparator
+	
 };
 
 
@@ -225,7 +317,7 @@ const DRV_USBFSV1_INIT drvUSBInit =
 // *****************************************************************************
 // <editor-fold defaultstate="collapsed" desc="SYS_TIME Initialization Data">
 
-const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
+static const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
     .timerCallbackSet = (SYS_TIME_PLIB_CALLBACK_REGISTER)TC3_TimerCallbackRegister,
     .timerStart = (SYS_TIME_PLIB_START)TC3_TimerStart,
     .timerStop = (SYS_TIME_PLIB_STOP)TC3_TimerStop,
@@ -235,13 +327,54 @@ const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
     .timerCounterGet = (SYS_TIME_PLIB_COUNTER_GET)TC3_Timer16bitCounterGet,
 };
 
-const SYS_TIME_INIT sysTimeInitData =
+static const SYS_TIME_INIT sysTimeInitData =
 {
     .timePlib = &sysTimePlibAPI,
     .hwTimerIntNum = TC3_IRQn,
 };
 
 // </editor-fold>
+// <editor-fold defaultstate="collapsed" desc="SYS_CONSOLE Instance 0 Initialization Data">
+
+
+/* These buffers are passed to the USB CDC Function Driver */
+static uint8_t CACHE_ALIGN sysConsole0USBCdcRdBuffer[SYS_CONSOLE_USB_CDC_READ_WRITE_BUFFER_SIZE];
+static uint8_t CACHE_ALIGN sysConsole0USBCdcWrBuffer[SYS_CONSOLE_USB_CDC_READ_WRITE_BUFFER_SIZE];
+
+/* These are the USB CDC Ring Buffers. Data received from USB layer are copied to these ring buffer. */
+static uint8_t sysConsole0USBCdcRdRingBuffer[SYS_CONSOLE_USB_CDC_RD_BUFFER_SIZE_IDX0];
+static uint8_t sysConsole0USBCdcWrRingBuffer[SYS_CONSOLE_USB_CDC_WR_BUFFER_SIZE_IDX0];
+
+const SYS_CONSOLE_USB_CDC_INIT_DATA sysConsole0USBCdcInitData =
+{
+    .cdcInstanceIndex           = 0,
+    .cdcReadBuffer              = sysConsole0USBCdcRdBuffer,
+    .cdcWriteBuffer             = sysConsole0USBCdcWrBuffer,
+    .consoleReadBuffer          = sysConsole0USBCdcRdRingBuffer,
+    .consoleWriteBuffer         = sysConsole0USBCdcWrRingBuffer,
+    .consoleReadBufferSize      = SYS_CONSOLE_USB_CDC_RD_BUFFER_SIZE_IDX0,
+    .consoleWriteBufferSize     = SYS_CONSOLE_USB_CDC_WR_BUFFER_SIZE_IDX0,
+};
+
+const SYS_CONSOLE_INIT sysConsole0Init =
+{
+    .deviceInitData = (const void*)&sysConsole0USBCdcInitData,
+    .consDevDesc = &sysConsoleUSBCdcDevDesc,
+    .deviceIndex = 0,
+};
+
+
+// </editor-fold>
+
+
+static const SYS_DEBUG_INIT debugInit =
+{
+    .moduleInit = {0},
+    .errorLevel = SYS_DEBUG_GLOBAL_ERROR_LEVEL,
+    .consoleIndex = 0,
+};
+
+
 
 
 
@@ -251,7 +384,7 @@ const SYS_TIME_INIT sysTimeInitData =
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -265,6 +398,7 @@ const SYS_TIME_INIT sysTimeInitData =
 
 void SYS_Initialize ( void* data )
 {
+
     /* MISRAC 2012 deviation block start */
     /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
@@ -280,44 +414,68 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_Initialize( );
 
+    RTC_Initialize();
+
+    TC3_TimerInitialize();
+
     SERCOM1_SPI_Initialize();
 
 
     SERCOM0_I2C_Initialize();
 
-    RTC_Initialize();
+    EIC_Initialize();
 
-    TC3_TimerInitialize();
 
+
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 
     /* Initialize I2C0 Driver Instance */
     sysObj.drvI2C0 = DRV_I2C_Initialize(DRV_I2C_INDEX_0, (SYS_MODULE_INIT *)&drvI2C0InitData);
+
+
+    sysObj.drvMemory0 = DRV_MEMORY_Initialize((SYS_MODULE_INDEX)DRV_MEMORY_INDEX_0, (SYS_MODULE_INIT *)&drvMemory0InitData);
+
     sysObj.drvAT25DF = DRV_AT25DF_Initialize(DRV_AT25DF_INDEX, (SYS_MODULE_INIT *)&drvAT25DFInitData);
 
 
+    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
+    H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+        
     sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
+    
+    /* MISRAC 2012 deviation block end */
+    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
+     H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+        sysObj.sysConsole0 = SYS_CONSOLE_Initialize(SYS_CONSOLE_INDEX_0, (SYS_MODULE_INIT *)&sysConsole0Init);
+   /* MISRAC 2012 deviation block end */
+    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
+     H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+        
+    sysObj.sysDebug = SYS_DEBUG_Initialize(SYS_DEBUG_INDEX_0, (SYS_MODULE_INIT*)&debugInit);
+
+    /* MISRAC 2012 deviation block end */
 
 
-	 /* Initialize the USB device layer */
+    /* Initialize the USB device layer */
     sysObj.usbDevObject0 = USB_DEVICE_Initialize (USB_DEVICE_INDEX_0 , ( SYS_MODULE_INIT* ) & usbDevInitData);
-	
-	
+
 
 	/* Initialize USB Driver */ 
     sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
+    
+    /* Initialize sensors */
+    SHT3X_Initialize();
 
 
-    APP_TEMP_SENSOR_Initialize();
-    APP_LIGHT_SENSOR_Initialize();
-    APP_FLASH_Initialize();
-    APP_USB_Initialize();
-
-
+    /* MISRAC 2012 deviation block end */
     NVIC_Initialize();
+
 
     /* MISRAC 2012 deviation block end */
 }
-
 
 /*******************************************************************************
  End of File

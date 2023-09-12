@@ -68,17 +68,17 @@
 // *****************************************************************************
 // *****************************************************************************
 
-typedef void (* DRV_AT25DF_PLIB_CALLBACK)( uintptr_t );
+typedef void (* DRV_AT25DF_PLIB_CALLBACK)( uintptr_t context);
 
-typedef bool (* DRV_AT25DF_PLIB_WRITE_READ)(void*, size_t, void *, size_t);
+typedef bool (* DRV_AT25DF_PLIB_WRITE_READ)(void* pTransmitData, size_t txSize, void *pReceiveData, size_t rxSize);
 
-typedef bool (* DRV_AT25DF_PLIB_WRITE)(void*, size_t);
+typedef bool (* DRV_AT25DF_PLIB_WRITE)(void* pTransmitData, size_t txSize);
 
-typedef bool (* DRV_AT25DF_PLIB_READ)(void*, size_t);
+typedef bool (* DRV_AT25DF_PLIB_READ)(void* pReceiveData, size_t rxSize);
 
 typedef bool (* DRV_AT25DF_PLIB_IS_BUSY)(void);
 
-typedef void (* DRV_AT25DF_PLIB_CALLBACK_REGISTER)(DRV_AT25DF_PLIB_CALLBACK, uintptr_t);
+typedef void (* DRV_AT25DF_PLIB_CALLBACK_REGISTER)(DRV_AT25DF_PLIB_CALLBACK callBack, uintptr_t context);
 
 // *****************************************************************************
 /* AT25DF Driver PLIB Interface Data
@@ -101,10 +101,10 @@ typedef struct
     DRV_AT25DF_PLIB_WRITE_READ                writeRead;
 
     /* AT25DF PLIB write API */
-    DRV_AT25DF_PLIB_WRITE                     write;
+    DRV_AT25DF_PLIB_WRITE                     write_t;
 
     /* AT25DF PLIB read API */
-    DRV_AT25DF_PLIB_READ                      read;
+    DRV_AT25DF_PLIB_READ                      read_t;
 
     /* AT25DF PLIB Transfer status API */
     DRV_AT25DF_PLIB_IS_BUSY                   isBusy;

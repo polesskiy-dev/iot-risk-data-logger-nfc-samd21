@@ -65,30 +65,21 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/*** Macros for NFC_INT pin ***/
-#define NFC_INT_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 3U)) & 0x01U)
-#define NFC_INT_PIN                  PORT_PIN_PA03
+/*** Macros for _NFC_INT pin ***/
+#define _NFC_INT_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 3U)) & 0x01U)
+#define _NFC_INT_PIN                  PORT_PIN_PA03
 
-/*** Macros for TEMP_RESET pin ***/
-#define TEMP_RESET_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 4U))
-#define TEMP_RESET_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 4U))
-#define TEMP_RESET_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 4U))
-#define TEMP_RESET_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 4U))
-#define TEMP_RESET_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 4U))
-#define TEMP_RESET_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 4U)) & 0x01U)
-#define TEMP_RESET_PIN                  PORT_PIN_PA04
-
-/*** Macros for TEMP_INT pin ***/
-#define TEMP_INT_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 5U)) & 0x01U)
-#define TEMP_INT_PIN                  PORT_PIN_PA05
-
-/*** Macros for IMU_INT1 pin ***/
-#define IMU_INT1_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 6U)) & 0x01U)
-#define IMU_INT1_PIN                  PORT_PIN_PA06
+/*** Macros for TEMP_INIT pin ***/
+#define TEMP_INIT_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 5U)) & 0x01U)
+#define TEMP_INIT_PIN                  PORT_PIN_PA05
 
 /*** Macros for IMU_INT2 pin ***/
-#define IMU_INT2_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 7U)) & 0x01U)
-#define IMU_INT2_PIN                  PORT_PIN_PA07
+#define IMU_INT2_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 6U)) & 0x01U)
+#define IMU_INT2_PIN                  PORT_PIN_PA06
+
+/*** Macros for IMU_INT1 pin ***/
+#define IMU_INT1_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 7U)) & 0x01U)
+#define IMU_INT1_PIN                  PORT_PIN_PA07
 
 /*** Macros for SDA pin ***/
 #define SDA_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 8U)) & 0x01U)
@@ -98,6 +89,10 @@
 #define SCL_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 9U)) & 0x01U)
 #define SCL_PIN                  PORT_PIN_PA09
 
+/*** Macros for _LIGHT_INT pin ***/
+#define _LIGHT_INT_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 10U)) & 0x01U)
+#define _LIGHT_INT_PIN                  PORT_PIN_PA10
+
 /*** Macros for MOSI pin ***/
 #define MOSI_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 16U)) & 0x01U)
 #define MOSI_PIN                  PORT_PIN_PA16
@@ -106,21 +101,40 @@
 #define SCK_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 17U)) & 0x01U)
 #define SCK_PIN                  PORT_PIN_PA17
 
-/*** Macros for FLASH_CS pin ***/
-#define FLASH_CS_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 18U)) & 0x01U)
-#define FLASH_CS_PIN                  PORT_PIN_PA18
+/*** Macros for _FLASH_CS pin ***/
+#define _FLASH_CS_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 18U))
+#define _FLASH_CS_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 18U))
+#define _FLASH_CS_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 18U))
+#define _FLASH_CS_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 18U))
+#define _FLASH_CS_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 18U))
+#define _FLASH_CS_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 18U)) & 0x01U)
+#define _FLASH_CS_PIN                  PORT_PIN_PA18
 
 /*** Macros for MISO pin ***/
 #define MISO_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 19U)) & 0x01U)
 #define MISO_PIN                  PORT_PIN_PA19
 
-/*** Macros for USB_DM pin ***/
-#define USB_DM_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 24U)) & 0x01U)
-#define USB_DM_PIN                  PORT_PIN_PA24
+/*** Macros for _TEMP_RESET pin ***/
+#define _TEMP_RESET_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 22U))
+#define _TEMP_RESET_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 22U))
+#define _TEMP_RESET_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 22U))
+#define _TEMP_RESET_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 22U))
+#define _TEMP_RESET_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 22U))
+#define _TEMP_RESET_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 22U)) & 0x01U)
+#define _TEMP_RESET_PIN                  PORT_PIN_PA22
 
-/*** Macros for USB_DP pin ***/
-#define USB_DP_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 25U)) & 0x01U)
-#define USB_DP_PIN                  PORT_PIN_PA25
+/*** Macros for _LED pin ***/
+#define _LED_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 23U))
+#define _LED_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 23U))
+#define _LED_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 23U))
+#define _LED_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 23U))
+#define _LED_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 23U))
+#define _LED_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 23U)) & 0x01U)
+#define _LED_PIN                  PORT_PIN_PA23
+
+/*** Macros for USB_VBUS_SENSE pin ***/
+#define USB_VBUS_SENSE_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 27U)) & 0x01U)
+#define USB_VBUS_SENSE_PIN                  PORT_PIN_PA27
 
 // *****************************************************************************
 /* PORT Group

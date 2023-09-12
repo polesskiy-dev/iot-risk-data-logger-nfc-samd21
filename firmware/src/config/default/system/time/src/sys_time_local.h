@@ -76,8 +76,8 @@
     None
 */
 
-#define _SYS_TIME_HANDLE_TOKEN_MAX              (0xFFFF)
-#define _SYS_TIME_INDEX_MASK                    (0x0000FFFFUL)
+#define SYS_TIME_HANDLE_TOKEN_MAX              (0xFFFFU)
+#define SYS_TIME_INDEX_MASK                    (0x0000FFFFUL)
 
 // *****************************************************************************
 /* SYS TIME OBJECT INSTANCE structure
@@ -92,7 +92,7 @@
     None.
 */
 
-typedef struct _SYS_TIME_TIMER_OBJ{
+typedef struct SYS_TIME_TIMER_OBJ_T{
       bool                          inUse;    /* TRUE if in use */
       bool                          active;    /* TRUE if soft timer enabled */
       SYS_TIME_CALLBACK_TYPE        type;    /* periodic or not */
@@ -102,7 +102,7 @@ typedef struct _SYS_TIME_TIMER_OBJ{
       uintptr_t                     context; /* context */
       volatile bool                 tmrElapsedFlag;   /* Set on every timer expiry. Cleared after user reads the status. */
       volatile bool                 tmrElapsed;    /* Set on every timer expiry. Cleared after timer is added back to the list */
-      struct _SYS_TIME_TIMER_OBJ*   tmrNext; /* Next timer */
+      struct SYS_TIME_TIMER_OBJ_T*   tmrNext; /* Next timer */
       SYS_TIME_HANDLE               tmrHandle; /* Unique handle for object */
 } SYS_TIME_TIMER_OBJ;
 
@@ -119,6 +119,7 @@ typedef struct{
     uint32_t                        hwTimerCompareMargin;
     volatile uint64_t               swCounter64;           /* Software 64-bit counter */
     uint8_t                         interruptNestingCount;
+    bool                            hwTimerIntStatus;
     SYS_TIME_TIMER_OBJ*             tmrActive;
     /* Mutex to protect access to the shared resources */
     OSAL_MUTEX_DECLARE(timerMutex);

@@ -15,27 +15,49 @@ children:
         - type: Values
           children:
           - type: Dynamic
-            attributes: {id: usb_device_cdc_0, value: '2'}
+            attributes: {id: usb_device_cdc_0, value: '3'}
       - type: Integer
         attributes: {id: CONFIG_USB_DEVICE_FUNCTION_BULK_OUT_ENDPOINT_NUMBER}
         children:
         - type: Values
           children:
           - type: Dynamic
-            attributes: {id: usb_device_cdc_0, value: '2'}
+            attributes: {id: usb_device_cdc_0, value: '3'}
       - type: Integer
         attributes: {id: CONFIG_USB_DEVICE_FUNCTION_INTERFACE_NUMBER}
         children:
         - type: Values
           children:
           - type: Dynamic
-            attributes: {id: usb_device_cdc_0, value: '0'}
+            attributes: {id: usb_device_cdc_0, value: '1'}
       - type: Integer
         attributes: {id: CONFIG_USB_DEVICE_FUNCTION_INT_ENDPOINT_NUMBER}
         children:
         - type: Values
           children:
           - type: Dynamic
-            attributes: {id: usb_device_cdc_0, value: '1'}
+            attributes: {id: usb_device_cdc_0, value: '2'}
+      - type: Boolean
+        attributes: {id: CONFIG_USB_DEVICE_FUNCTION_USE_IAD}
+        children:
+        - type: Values
+          children:
+          - type: Dynamic
+            attributes: {id: usb_device_cdc_0, value: 'true'}
+    - type: Attachments
+      children:
+      - type: DirectCapability
+        attributes: {id: USB Device}
+        children:
+        - type: Attributes
+          children:
+          - type: String
+            attributes: {id: targetComponentID}
+            children:
+            - {type: Value, value: sys_console_0}
+          - type: String
+            attributes: {id: targetAttachmentID}
+            children:
+            - {type: Value, value: sys_console_USB_DEVICE_CDC_dependency}
 - type: ElementPosition
-  attributes: {x: '362', y: '266', id: usb_device_cdc}
+  attributes: {x: '650', y: '198', id: usb_device_cdc}

@@ -10,7 +10,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: sercom1, value: '34'}
+        attributes: {id: sercom1, value: '232'}
   - type: String
     attributes: {id: RECEIVE_DATA_REGISTER}
     children:
@@ -100,7 +100,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: sercom1, value: '3'}
+        attributes: {id: sercom1, value: '22'}
   - type: KeyValueSet
     attributes: {id: SPI_CHARSIZE_BITS}
     children:
@@ -242,7 +242,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: sercom1, value: '50436'}
+        attributes: {id: sercom1, value: '63017'}
   - type: KeyValueSet
     attributes: {id: USART_CHARSIZE_BITS}
     children:
@@ -422,4 +422,4 @@ children:
         children:
         - {type: Value, value: 'false'}
 - type: ElementPosition
-  attributes: {x: '21', y: '113', id: sercom1}
+  attributes: {x: '22', y: '132', id: sercom1}

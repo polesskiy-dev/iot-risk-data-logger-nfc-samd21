@@ -70,6 +70,7 @@
 /* Adjust to tm structure month */
 #define ADJUST_TM_STRUCT_MONTH(mon) ((mon) - (1U))
 
+volatile static RTC_OBJECT rtcObj;
 
 static void RTC_ClockReadSynchronization(void)
 {
@@ -89,15 +90,15 @@ void RTC_Initialize(void)
     {
         /* Wait for Write-Synchronization */
     }
-   RTC_REGS->MODE2.RTC_EVCTRL = 0x100U;
 
     /* Writing to CTRL register will trigger write-synchronization */
-    RTC_REGS->MODE2.RTC_CTRL = RTC_MODE2_CTRL_MODE(2U) | RTC_MODE2_CTRL_PRESCALER(0x5U) | RTC_MODE2_CTRL_ENABLE_Msk;
+    RTC_REGS->MODE2.RTC_CTRL = RTC_MODE2_CTRL_MODE(2U) | RTC_MODE2_CTRL_PRESCALER(0x0U) | RTC_MODE2_CTRL_ENABLE_Msk;
     while((RTC_REGS->MODE2.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
     {
         /* Wait for Write-Synchronization */
     }
 
+   RTC_REGS->MODE2.RTC_INTENSET = 0x1U;
 }
 
 bool RTC_RTCCTimeSet (struct tm * initialTime )
@@ -119,15 +120,15 @@ bool RTC_RTCCTimeSet (struct tm * initialTime )
 void RTC_RTCCTimeGet ( struct tm * currentTime )
 {
     uint32_t dataClockCalendar = 0U;
-	
-	/* Added temp variable for suppressing MISRA C 2012 Rule : 10.x. 
+
+	/* Added temp variable for suppressing MISRA C 2012 Rule : 10.x.
 	   Please don't ignore this variable for any future modifications */
 	uint32_t temp;
 
     /* Enable read-synchronization for CLOCK register to avoid CPU stall */
     RTC_ClockReadSynchronization();
     dataClockCalendar = RTC_REGS->MODE2.RTC_CLOCK;
-    
+
 	temp = ((dataClockCalendar & RTC_MODE2_CLOCK_HOUR_Msk) >> RTC_MODE2_CLOCK_HOUR_Pos);
     currentTime->tm_hour = (int)temp;
 	temp = ((dataClockCalendar & RTC_MODE2_CLOCK_MINUTE_Msk) >> RTC_MODE2_CLOCK_MINUTE_Pos);
@@ -140,4 +141,51 @@ void RTC_RTCCTimeGet ( struct tm * currentTime )
     currentTime->tm_year = (int)temp;
 	temp = ((dataClockCalendar & RTC_MODE2_CLOCK_DAY_Msk) >> RTC_MODE2_CLOCK_DAY_Pos);
     currentTime->tm_mday = (int)temp;
+}
+
+bool RTC_RTCCAlarmSet (struct tm * alarmTime, RTC_ALARM_MASK mask)
+{
+   /* Writing to ALARM register will trigger write-synchronization */
+   RTC_REGS->MODE2.RTC_ALARM = (((TM_STRUCT_REFERENCE_YEAR + (uint32_t)alarmTime->tm_year) - REFERENCE_YEAR) << RTC_MODE2_CLOCK_YEAR_Pos) |
+                    (ADJUST_MONTH((uint32_t)alarmTime->tm_mon) << RTC_MODE2_CLOCK_MONTH_Pos) |
+                    ((uint32_t)alarmTime->tm_mday << RTC_MODE2_CLOCK_DAY_Pos) |
+                    ((uint32_t)alarmTime->tm_hour << RTC_MODE2_CLOCK_HOUR_Pos) |
+                     ((uint32_t)alarmTime->tm_min << RTC_MODE2_CLOCK_MINUTE_Pos) |
+                     ((uint32_t)alarmTime->tm_sec << RTC_MODE2_CLOCK_SECOND_Pos);
+   while((RTC_REGS->MODE2.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
+   {
+       /* Wait for Write-Synchronization */
+   }
+
+   /* Writing to MASK register will trigger write-synchronization */
+   RTC_REGS->MODE2.RTC_MASK = (uint8_t)mask;
+   while((RTC_REGS->MODE2.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
+   {
+       /* Wait for Write-Synchronization */
+   }
+
+   RTC_REGS->MODE2.RTC_INTENSET = RTC_MODE2_INTENSET_ALARM0_Msk;
+   return true;
+}
+
+void RTC_RTCCCallbackRegister ( RTC_CALLBACK callback, uintptr_t context)
+{
+   rtcObj.alarmCallback = callback;
+   rtcObj.context       = context;
+}
+
+
+void __attribute__((used)) RTC_InterruptHandler(void)
+{
+   rtcObj.intCause = (RTC_CLOCK_INT_MASK) RTC_REGS->MODE2.RTC_INTFLAG;
+
+   /* Clear All Interrupts */
+   RTC_REGS->MODE2.RTC_INTFLAG = RTC_MODE2_INTFLAG_Msk;
+
+   if(rtcObj.alarmCallback != NULL)
+   {
+       uintptr_t context = rtcObj.context;
+       RTC_CLOCK_INT_MASK intCause = rtcObj.intCause;
+       rtcObj.alarmCallback(intCause, context);
+   }
 }

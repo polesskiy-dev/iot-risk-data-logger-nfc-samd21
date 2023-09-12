@@ -60,7 +60,7 @@
 void Reset_Handler (void);
 void NonMaskableInt_Handler (void);
 void HardFault_Handler (void);
-void xPortSysTickHandler (void);
+void RTC_InterruptHandler (void);
 void DRV_USBFSV1_USB_Handler (void);
 void SERCOM0_I2C_InterruptHandler (void);
 void SERCOM1_SPI_InterruptHandler (void);

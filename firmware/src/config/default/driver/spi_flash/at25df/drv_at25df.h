@@ -40,8 +40,8 @@
 *******************************************************************************/
 //DOM-IGNORE-END
 
-#ifndef _DRV_AT25DF_H
-#define _DRV_AT25DF_H
+#ifndef DRV_AT25DF_H
+#define DRV_AT25DF_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -168,14 +168,14 @@ typedef struct
         {
             case DRV_AT25DF_TRANSFER_STATUS_COMPLETED:
             {
-                // Handle the transfer complete event.
+                
                 break;
             }
 
             case DRV_AT25DF_TRANSFER_STATUS_ERROR:
             default:
             {
-                // Handle error.
+               
                 break;
             }
         }
@@ -298,7 +298,7 @@ SYS_MODULE_OBJ DRV_AT25DF_Initialize( const SYS_MODULE_INDEX drvIndex, const SYS
 
     if (status == SYS_STATUS_READY)
     {
-        // AT25DF driver is initialized and ready to accept requests.
+        
     }
     </code>
 
@@ -354,8 +354,7 @@ SYS_STATUS DRV_AT25DF_Status( const SYS_MODULE_INDEX drvIndex );
     handle = DRV_AT25DF_Open(DRV_AT25DF_INDEX, DRV_IO_INTENT_READWRITE);
     if (handle == DRV_HANDLE_INVALID)
     {
-        // Unable to open the driver
-        // May be the driver is not initialized
+       
     }
     </code>
 
@@ -387,8 +386,7 @@ DRV_HANDLE DRV_AT25DF_Open(const SYS_MODULE_INDEX drvIndex, const DRV_IO_INTENT 
     None.
 
   Example:
-    <code>
-    // 'handle', returned from the DRV_AT25DF_Open
+    <code>   
 
     DRV_AT25DF_Close(handle);
 
@@ -442,19 +440,15 @@ void DRV_AT25DF_Close( const DRV_HANDLE handle );
     #define BUFFER_SIZE  1024
     #define MEM_ADDRESS  0x00
 
-    uint8_t readBuffer[BUFFER_SIZE];
-
-    // myHandle is the handle returned from DRV_AT25DF_Open API.
-    // In the below example, the transfer status is polled. However, application can
-    // register a callback and get notified when the transfer is complete.
+    uint8_t readBuffer[BUFFER_SIZE];    
 
     if (DRV_AT25DF_Read(myHandle, readBuffer, BUFFER_SIZE, MEM_ADDRESS) != true)
     {
-        // Error handling here
+       
     }
     else
     {
-        // Wait for read to be completed
+        
         while(DRV_AT25DF_TransferStatusGet(myHandle) == DRV_AT25DF_TRANSFER_STATUS_BUSY);
     }
 
@@ -511,19 +505,15 @@ bool DRV_AT25DF_Read(const DRV_HANDLE handle, void *rxData, uint32_t rxDataLengt
     #define BUFFER_SIZE  1024
     #define MEM_ADDRESS  0x00
 
-    uint8_t CACHE_ALIGN writeBuffer[BUFFER_SIZE];
-
-    // myHandle is the handle returned from DRV_AT25DF_Open API.
-    // In the below example, the transfer status is polled. However, application can
-    // register a callback and get notified when the transfer is complete.
+    uint8_t CACHE_ALIGN writeBuffer[BUFFER_SIZE];   
 
     if (DRV_AT25DF_Write(myHandle, writeBuffer, BUFFER_SIZE, MEM_ADDRESS) != true)
     {
-        // Error handling here
+        
     }
     else
     {
-        // Wait for write to be completed
+        
         while(DRV_AT25DF_TransferStatusGet(myHandle) == DRV_AT25DF_TRANSFER_STATUS_BUSY);
     }
     </code>
@@ -580,19 +570,15 @@ bool DRV_AT25DF_Write(const DRV_HANDLE handle, void *txData, uint32_t txDataLeng
     #define PAGE_SIZE  256
     #define MEM_ADDRESS  0x0
 
-    uint8_t CACHE_ALIGN writeBuffer[PAGE_SIZE];
-
-    // myHandle is the handle returned from DRV_AT25DF_Open API.
-    // In the below example, the transfer status is polled. However, application can
-    // register a callback and get notified when the transfer is complete.
+    uint8_t CACHE_ALIGN writeBuffer[PAGE_SIZE];   
 
     if (DRV_AT25DF_PageWrite(myHandle, writeBuffer, MEM_ADDRESS) != true)
     {
-        // Error handling here
+       
     }
     else
     {
-        // Wait for write to be completed
+       
         while(DRV_AT25DF_TransferStatusGet(myHandle) == DRV_AT25DF_TRANSFER_STATUS_BUSY);
     }
     </code>
@@ -638,15 +624,14 @@ bool DRV_AT25DF_PageWrite(const DRV_HANDLE handle, void *txData, uint32_t addres
   Example:
     <code>
 
-    DRV_HANDLE handle;  // Returned from DRV_AT25DF_Open
+    DRV_HANDLE handle;  
     uint32_t sectorStart = 0;
 
     if(DRV_AT25DF_SectorErase(handle, sectorStart) == false)
     {
-        // Error handling here
+        
     }
-
-    // Wait for erase to be completed
+   
     while(DRV_AT25DF_TransferStatusGet(handle) == DRV_AT25DF_TRANSFER_STATUS_BUSY);
 
     </code>
@@ -694,15 +679,14 @@ bool DRV_AT25DF_SectorErase(const DRV_HANDLE handle, uint32_t address);
   Example:
     <code>
 
-    DRV_HANDLE handle;  // Returned from DRV_AT25DF_Open
+    DRV_HANDLE handle;  
     uint32_t blockStart = 0;
 
     if(DRV_AT25DF_BlockErase(handle, blockStart) == false)
     {
-        // Error handling here
+        
     }
-
-    // Wait for erase to be completed
+   
     while(DRV_AT25DF_TransferStatusGet(handle) == DRV_AT25DF_TRANSFER_STATUS_BUSY);
 
     </code>
@@ -747,14 +731,13 @@ bool DRV_AT25DF_BlockErase(const DRV_HANDLE handle, uint32_t address);
   Example:
     <code>
 
-    DRV_HANDLE handle;  // Returned from DRV_AT25DF_Open
+    DRV_HANDLE handle;  
 
     if(DRV_AT25DF_ChipErase(handle) == false)
     {
-        // Error handling here
+        
     }
-
-    // Wait for erase to be completed
+   
     while(DRV_AT25DF_TransferStatusGet(handle) == DRV_AT25DF_TRANSFER_STATUS_BUSY);
 
     </code>
@@ -789,12 +772,11 @@ bool DRV_AT25DF_ChipErase(const DRV_HANDLE handle);
     One of the status element from the enum DRV_AT25DF_TRANSFER_STATUS.
 
   Example:
-    <code>
-    // myHandle is the handle returned from DRV_AT25DF_Open API.
+    <code>   
 
     if (DRV_AT25DF_TransferStatusGet(myHandle) == DRV_AT25DF_TRANSFER_STATUS_COMPLETED)
     {
-        // Operation Done
+        
     }
     </code>
 
@@ -833,9 +815,7 @@ DRV_AT25DF_TRANSFER_STATUS DRV_AT25DF_TransferStatusGet(const DRV_HANDLE handle)
 
     DRV_AT25DF_GEOMETRY flashGeometry;
     uint32_t readBlockSize, writeBlockSize, eraseBlockSize;
-    uint32_t nReadBlocks, nReadRegions, totalFlashSize;
-
-    // myHandle is the handle returned from DRV_AT25DF_Open API.
+    uint32_t nReadBlocks, nReadRegions, totalFlashSize;    
 
     DRV_AT25DF_GeometryGet(myHandle, &flashGeometry);
 
@@ -899,42 +879,36 @@ bool DRV_AT25DF_GeometryGet(const DRV_HANDLE handle, DRV_AT25DF_GEOMETRY *geomet
 
     #define BUFFER_SIZE  256
     #define MEM_ADDRESS  0x00
-
-    // myAppObj is an application specific state data object.
+   
     MY_APP_OBJ myAppObj;
 
-    uint8_t myBuffer[BUFFER_SIZE];
-
-    // myHandle is the handle returned from DRV_AT25DF_Open API.
-
-    // Client registers an event handler with driver. This is done once
+    uint8_t myBuffer[BUFFER_SIZE];   
 
     DRV_AT25DF_EventHandlerSet( myHandle, APP_AT25DFTransferEventHandler, (uintptr_t)&myAppObj );
 
     if (DRV_AT25DF_Read(myHandle, myBuffer, BUFFER_SIZE, MEM_ADDRESS) == false)
     {
-        // Error handling here
+        
     }
 
-    // The registered event handler is called when the request is complete.
+    The registered event handler is called when the request is complete.
 
     void APP_AT25DFTransferEventHandler(DRV_AT25DF_TRANSFER_STATUS event, uintptr_t context)
     {
-        // The context handle was set to an application specific
-        // object. It is now retrievable easily in the event handler.
+       
         MY_APP_OBJ* pMyAppObj = (MY_APP_OBJ *) context;
 
         switch(event)
         {
             case DRV_AT25DF_TRANSFER_STATUS_COMPLETED:
             {
-                // This means the data was transferred.
+               
                 break;
             }
 
             case DRV_AT25DF_TRANSFER_STATUS_ERROR:
             {
-                // Error handling here.
+               
                 break;
             }
 
@@ -961,7 +935,7 @@ void DRV_AT25DF_EventHandlerSet(
 }
 #endif
 
-#endif // #ifndef _DRV_AT25DF_H
+#endif // #ifndef DRV_AT25DF_H
 /*******************************************************************************
  End of File
 */
