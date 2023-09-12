@@ -46,6 +46,8 @@
 #include "configuration.h"
 #include "definitions.h"
 #include "device.h"
+#include "../../nfc/nfc.h"
+#include "../../sensors/sht3x-temperature-humidity/sht3x.h"
 
 
 // ****************************************************************************
@@ -463,6 +465,9 @@ void SYS_Initialize ( void* data )
 
 	/* Initialize USB Driver */ 
     sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
+    
+    /* Initialize sensors */
+    SHT3X_Initialize();
 
 
     /* MISRAC 2012 deviation block end */

@@ -53,7 +53,8 @@
 #include "configuration.h"
 #include "definitions.h"
 #include "sys_tasks.h"
-
+#include "../../nfc/nfc.h"
+#include "../../sensors/sht3x-temperature-humidity/sht3x.h"
 
 
 
@@ -90,8 +91,7 @@ void SYS_Tasks ( void )
     DRV_USBFSV1_Tasks(sysObj.drvUSBFSV1Object);
 
 
-
-
+    SHT3X_Tasks();
 }
 
 /*******************************************************************************

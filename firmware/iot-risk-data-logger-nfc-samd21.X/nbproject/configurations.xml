@@ -143,6 +143,11 @@
           <itemPath>../src/config/default/configuration.h</itemPath>
           <itemPath>../src/config/default/sys_tasks.h</itemPath>
         </logicalFolder>
+        <itemPath>../src/config/common.defs.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="nfc" displayName="nfc" projectFiles="true">
+        <itemPath>../src/nfc/nfc.config.h</itemPath>
+        <itemPath>../src/nfc/nfc.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
         <logicalFolder name="f1" displayName="ATSAMD21E18A_DFP" projectFiles="true">
@@ -232,6 +237,50 @@
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
               </logicalFolder>
             </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="sensors" displayName="sensors" projectFiles="true">
+        <logicalFolder name="sht3x-temperature-humidity"
+                       displayName="sht3x-temperature-humidity"
+                       projectFiles="true">
+          <itemPath>../src/sensors/sht3x-temperature-humidity/sht3x.config.h</itemPath>
+          <itemPath>../src/sensors/sht3x-temperature-humidity/sht3x.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="libraries" displayName="libraries" projectFiles="true">
+      <logicalFolder name="active-object-fsm"
+                     displayName="active-object-fsm"
+                     projectFiles="true">
+        <logicalFolder name=".github" displayName=".github" projectFiles="true">
+          <logicalFolder name="workflows" displayName="workflows" projectFiles="true">
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="docs" displayName="docs" projectFiles="true">
+        </logicalFolder>
+        <logicalFolder name="libraries" displayName="libraries" projectFiles="true">
+          <logicalFolder name="doxygen-awesome-css"
+                         displayName="doxygen-awesome-css"
+                         projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="Unity" displayName="Unity" projectFiles="true">
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="src" displayName="src" projectFiles="true">
+          <logicalFolder name="active_object"
+                         displayName="active_object"
+                         projectFiles="true">
+            <itemPath>../../libraries/active-object-fsm/src/active_object/active_object.c</itemPath>
+            <itemPath>../../libraries/active-object-fsm/src/active_object/active_object.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="event_queue" displayName="event_queue" projectFiles="true">
+            <itemPath>../../libraries/active-object-fsm/src/event_queue/event_queue.c</itemPath>
+            <itemPath>../../libraries/active-object-fsm/src/event_queue/event_queue.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="fsm" displayName="fsm" projectFiles="true">
+            <itemPath>../../libraries/active-object-fsm/src/fsm/fsm.h</itemPath>
+            <itemPath>../../libraries/active-object-fsm/src/fsm/fsm.c</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
@@ -474,6 +523,18 @@
           <itemPath>../src/config/default/diskImage.c</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="nfc" displayName="nfc" projectFiles="true">
+        <itemPath>../src/nfc/nfc_fsm.c</itemPath>
+        <itemPath>../src/nfc/nfc.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="sensors" displayName="sensors" projectFiles="true">
+        <logicalFolder name="sht3x-temperature-humidity"
+                       displayName="sht3x-temperature-humidity"
+                       projectFiles="true">
+          <itemPath>../src/sensors/sht3x-temperature-humidity/sht3x.c</itemPath>
+          <itemPath>../src/sensors/sht3x-temperature-humidity/sht3x_fsm.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -515,6 +576,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../src</Elem>
+    <Elem>../../libraries</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
