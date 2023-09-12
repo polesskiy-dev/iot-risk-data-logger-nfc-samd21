@@ -338,11 +338,11 @@ children:
       - type: String
         attributes: {id: targetComponentID}
         children:
-        - {type: Value, value: drv_i2c_0}
+        - {type: Value, value: atecc608_0}
       - type: String
         attributes: {id: targetAttachmentID}
         children:
-        - {type: Value, value: drv_i2c_I2C_dependency}
+        - {type: Value, value: ATECC608_DEP_PLIB_I2C}
   - type: DirectCapability
     attributes: {id: SERCOM0_SPI}
     children:
@@ -362,4 +362,4 @@ children:
         children:
         - {type: Value, value: 'false'}
 - type: ElementPosition
-  attributes: {x: '20', y: '122', id: sercom0}
+  attributes: {x: '25', y: '311', id: sercom0}

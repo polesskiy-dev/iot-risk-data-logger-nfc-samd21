@@ -60,4 +60,4 @@ children:
             children:
             - {type: Value, value: sys_console_USB_DEVICE_CDC_dependency}
 - type: ElementPosition
-  attributes: {x: '480', y: '446', id: usb_device_cdc}
+  attributes: {x: '650', y: '198', id: usb_device_cdc}

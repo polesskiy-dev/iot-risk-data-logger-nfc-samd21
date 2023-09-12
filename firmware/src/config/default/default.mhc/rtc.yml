@@ -139,4 +139,4 @@ children:
       - type: Dynamic
         attributes: {id: rtc, value: '32'}
 - type: ElementPosition
-  attributes: {x: '519', y: '101', id: rtc}
+  attributes: {x: '522', y: '96', id: rtc}

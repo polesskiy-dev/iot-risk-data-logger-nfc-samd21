@@ -148,4 +148,4 @@ children:
             children:
             - {type: Value, value: USB Device}
 - type: ElementPosition
-  attributes: {x: '668', y: '386', id: sys_console}
+  attributes: {x: '829', y: '140', id: sys_console}

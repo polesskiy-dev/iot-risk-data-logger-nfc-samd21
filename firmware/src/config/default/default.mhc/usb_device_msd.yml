@@ -47,4 +47,4 @@ children:
           - type: TargetAttachment
             attributes: {targetComponentID: drv_memory_0, targetAttachmentID: drv_media}
 - type: ElementPosition
-  attributes: {x: '479', y: '289', id: usb_device_msd}
+  attributes: {x: '473', y: '178', id: usb_device_msd}

@@ -100,4 +100,4 @@ children:
         children:
         - {type: Value, value: 'true'}
 - type: ElementPosition
-  attributes: {x: '320', y: '188', id: usb_device}
+  attributes: {x: '571', y: '333', id: usb_device}
