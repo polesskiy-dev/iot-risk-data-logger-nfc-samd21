@@ -1,0 +1,42 @@
+name: ci
+
+on:
+  push:
+    branches:
+      [ main ]
+
+# TODO should I place it to .env file?
+env:
+  XC32_VERSION: v4.30
+  MPLABX_VERSION: v6.10
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Environment info
+        run: echo "${{ toJSON(env) }}"
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Download Microchip XC32 Compiler
+        run: wget https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc32-v4.30-full-install-linux-x64-installer.tar
+      - name: Extract & Install Microchip XC32 Compiler
+        run: |
+            tar -xf xc32-v4.30-full-install-linux-x64-installer.tar
+            chmod a+x xc32-v4.30-full-install-linux-x64-installer.run
+            sudo ./xc32-v4.30-full-install-linux-x64-installer.run --mode unattended --debuglevel 4 --netservername localhost --LicenseType FreeMode # --installdir /Applications/microchip/xc32/v4.30/bin/
+            ls -al /opt/microchip/xc32/v4.30/bin
+      - name: Replace Makefile-local-default.mk by CI related
+        run: mv ./config/Makefile-ci-default.mk ./firmware/open-risk-logger-samd21-xpro-proto.X/nbproject/Makefile-local-default.mk
+      - name: Compile project Makefile
+        run: cd ./firmware/open-risk-logger-samd21-xpro-proto.X && make
+  # deploy-hex:
+    # needs: [compile]
+    # runs-on: ubuntu-latest
+#    steps:
+#  test:
+#    needs: [install-compiler]
+#  compile:
+#    needs: [install-compiler, test]
