@@ -5,7 +5,7 @@
  */
 
 #ifndef SHT3X_H
-#define	SHT3X_H
+#define    SHT3X_H
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -20,7 +20,7 @@
 #include "../../../../libraries/active-object-fsm/src/fsm/fsm.h"
 #include "./sht3x.config.h"
 
-#ifdef	__cplusplus
+#ifdef    __cplusplus
 extern "C" {
 #endif
 
@@ -60,10 +60,11 @@ void SHT3X_Tasks(void);
  * @param transferHandle[in]    marks appropriate Actor to associate callback with
  * @param context[in]           should be ptr to Actor, mostly unused
  */
-void SHT3X_TransferEventHandler(DRV_I2C_TRANSFER_EVENT event, DRV_I2C_TRANSFER_HANDLE transferHandle, uintptr_t context);
+void
+SHT3X_TransferEventHandler(DRV_I2C_TRANSFER_EVENT event, DRV_I2C_TRANSFER_HANDLE transferHandle, uintptr_t context);
 
-#ifdef	__cplusplus
+#ifdef    __cplusplus
 }
 #endif
 
-#endif	/* SHT3X_H */
+#endif    /* SHT3X_H */

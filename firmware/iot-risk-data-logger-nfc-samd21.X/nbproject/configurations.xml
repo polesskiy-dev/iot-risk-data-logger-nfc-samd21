@@ -113,16 +113,12 @@
           </logicalFolder>
           <logicalFolder name="f5" displayName="usb" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
-              <itemPath>../src/config/default/usb/src/usb_device_msd_local.h</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_local.h</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_mapping.h</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_function_driver.h</itemPath>
               <itemPath>../src/config/default/usb/src/usb_external_dependencies.h</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_cdc_local.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/default/usb/usb_device_msd.h</itemPath>
-            <itemPath>../src/config/default/usb/usb_msd.h</itemPath>
-            <itemPath>../src/config/default/usb/scsi.h</itemPath>
             <itemPath>../src/config/default/usb/usb_device.h</itemPath>
             <itemPath>../src/config/default/usb/usb_common.h</itemPath>
             <itemPath>../src/config/default/usb/usb_chapter_9.h</itemPath>
@@ -247,6 +243,10 @@
           <itemPath>../src/sensors/sht3x-temperature-humidity/sht3x.config.h</itemPath>
           <itemPath>../src/sensors/sht3x-temperature-humidity/sht3x.h</itemPath>
         </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="storage" displayName="storage" projectFiles="true">
+        <itemPath>../src/storage/storage_manager.h</itemPath>
+        <itemPath>../src/storage/storage_data.defs.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="libraries" displayName="libraries" projectFiles="true">
@@ -507,7 +507,6 @@
           </logicalFolder>
           <logicalFolder name="f5" displayName="usb" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
-              <itemPath>../src/config/default/usb/src/usb_device_msd.c</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device.c</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_cdc.c</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_cdc_acm.c</itemPath>
@@ -519,8 +518,8 @@
           <itemPath>../src/config/default/startup_xc32.c</itemPath>
           <itemPath>../src/config/default/libc_syscalls.c</itemPath>
           <itemPath>../src/config/default/tasks.c</itemPath>
-          <itemPath>../src/config/default/usb_device_init_data.c</itemPath>
           <itemPath>../src/config/default/diskImage.c</itemPath>
+          <itemPath>../src/config/default/usb_device_init_data.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="nfc" displayName="nfc" projectFiles="true">
@@ -534,6 +533,10 @@
           <itemPath>../src/sensors/sht3x-temperature-humidity/sht3x.c</itemPath>
           <itemPath>../src/sensors/sht3x-temperature-humidity/sht3x_fsm.c</itemPath>
         </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="storage" displayName="storage" projectFiles="true">
+        <itemPath>../src/storage/storage_manager.c</itemPath>
+        <itemPath>../src/storage/storage_manager_fsm.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
@@ -560,7 +563,6 @@
         <itemPath>../src/config/default/default.mhc/nvmctrl.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/drv_memory.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/usb_device_cdc.yml</itemPath>
-        <itemPath>../src/config/default/default.mhc/usb_device_msd.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/sys_debug.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/drv_i2c.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/settings.yml</itemPath>
@@ -860,7 +862,7 @@
         <property key="communication.speed" value="2.000"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="true"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
         <property key="hwtoolclock.frcindebug" value="false"/>

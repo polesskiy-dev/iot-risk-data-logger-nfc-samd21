@@ -55,6 +55,8 @@
 #include "sys_tasks.h"
 #include "../../nfc/nfc.h"
 #include "../../sensors/sht3x-temperature-humidity/sht3x.h"
+#include "../../storage/storage_manager.h"
+
 
 
 
@@ -90,8 +92,8 @@ void SYS_Tasks ( void )
     /* USB FS Driver Task Routine */ 
     DRV_USBFSV1_Tasks(sysObj.drvUSBFSV1Object);
 
-
-    SHT3X_Tasks();
+    STORAGE_Tasks();
+//    SHT3X_Tasks();
 }
 
 /*******************************************************************************

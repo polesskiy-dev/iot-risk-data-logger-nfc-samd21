@@ -114,6 +114,7 @@ const H3DeviceVectors exception_table=
     /* Configure Initial Stack Pointer, using linker-generated symbols */
     .pvStack = &_stack,
 
+
     .pfnReset_Handler              = Reset_Handler,
     .pfnNonMaskableInt_Handler     = NonMaskableInt_Handler,
     .pfnHardFault_Handler          = HardFault_Handler,
@@ -144,7 +145,6 @@ const H3DeviceVectors exception_table=
     .pfnDAC_Handler                = DAC_Handler,
     .pfnPTC_Handler                = PTC_Handler,
     .pfnI2S_Handler                = I2S_Handler,
-
 
 
 };

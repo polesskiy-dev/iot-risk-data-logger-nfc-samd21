@@ -1,25 +1,25 @@
 #include "./sht3x.h"
 
 #ifdef __DEBUG
-    static const char *const _debugStateNames[SHT3X_STATES_MAX] = {
-        [SHT3X_NO_STATE] = "SHT3X_NO_STATE",
-        [SHT3X_ST_INIT] = "SHT3X_ST_INIT",
-        [SHT3X_ST_IDLE] = "SHT3X_ST_IDLE",
-        [SHT3X_ST_READ_STATUS] = "SHT3X_ST_READ_STATUS",
-        [SHT3X_ST_MEASURE] = "SHT3X_ST_MEASURE",
-        [SHT3X_ST_READ_MEASURE] = "SHT3X_ST_READ_MEASURE",
-        [SHT3X_ST_ERROR] = "SHT3X_ST_ERROR"
-    };
-    
-    static const char *const _debugEventSignals[SHT3X_SIG_MAX] = {
-        [SHT3X_NO_EVENT] = "SHT3X_NO_EVENT",
-        [SHT3X_TRANSFER_SUCCESS] = "SHT3X_TRANSFER_SUCCESS",
-        [SHT3X_TRANSFER_FAIL] = "SHT3X_TRANSFER_FAIL",
-        [SHT3X_READ_STATUS] = "SHT3X_READ_STATUS",
-        [SHT3X_MEASURE] = "SHT3X_MEASURE",
-        [SHT3X_READ_MEASURE] = "SHT3X_READ_MEASURE",
-        [SHT3X_ERROR] = "SHT3X_ERROR"
-    };
+static const char *const _debugStateNames[SHT3X_STATES_MAX] = {
+    [SHT3X_NO_STATE] = "SHT3X_NO_STATE",
+    [SHT3X_ST_INIT] = "SHT3X_ST_INIT",
+    [SHT3X_ST_IDLE] = "SHT3X_ST_IDLE",
+    [SHT3X_ST_READ_STATUS] = "SHT3X_ST_READ_STATUS",
+    [SHT3X_ST_MEASURE] = "SHT3X_ST_MEASURE",
+    [SHT3X_ST_READ_MEASURE] = "SHT3X_ST_READ_MEASURE",
+    [SHT3X_ST_ERROR] = "SHT3X_ST_ERROR"
+};
+
+static const char *const _debugEventSignals[SHT3X_SIG_MAX] = {
+    [SHT3X_NO_EVENT] = "SHT3X_NO_EVENT",
+    [SHT3X_TRANSFER_SUCCESS] = "SHT3X_TRANSFER_SUCCESS",
+    [SHT3X_TRANSFER_FAIL] = "SHT3X_TRANSFER_FAIL",
+    [SHT3X_READ_STATUS] = "SHT3X_READ_STATUS",
+    [SHT3X_MEASURE] = "SHT3X_MEASURE",
+    [SHT3X_READ_MEASURE] = "SHT3X_READ_MEASURE",
+    [SHT3X_ERROR] = "SHT3X_ERROR"
+};
 #endif
 
 extern const TState sht3xStatesList[SHT3X_STATES_MAX];
@@ -51,7 +51,7 @@ void SHT3X_Initialize(void) {
     // init AO fields
     sht3xAO.drvI2CHandle = drvI2CHandle;
     sht3xAO.transferHandle = DRV_I2C_TRANSFER_HANDLE_INVALID;
-    sht3xAO.sensorRegs.status = 0; 
+    sht3xAO.sensorRegs.status = 0;
     sht3xAO.sensorRegs.measurements[SHT3X_MEASUREMENTS_SIZE] = 0;
 
     // error on i2c driver open
@@ -63,7 +63,7 @@ void SHT3X_Initialize(void) {
     DRV_I2C_TransferEventHandlerSet(
             sht3xAO.drvI2CHandle,
             SHT3X_TransferEventHandler,
-            (uintptr_t) & sht3xAO
+            (uintptr_t) &sht3xAO
     );
 
     // TODO schedule it by scheduler and/or call in self-test
@@ -73,15 +73,16 @@ void SHT3X_Initialize(void) {
 void SHT3X_Tasks(void) {
     const TEvent event = ActiveObject_ProcessQueue(&sht3xAO.super);
     if (SHT3X_NO_EVENT == event.sig) return;
-    
-    const TState *nextState = FSM_ProcessEventToNextState(&sht3xAO.super, event, SHT3X_STATES_MAX, SHT3X_SIG_MAX, sht3xStatesList, sht3xTransitionTable);
-    
-    #ifdef __DEBUG
-        SHT3X_SIG sig = event.sig;
-        SHT3X_STATE name = nextState->name;
-        SYS_DEBUG_PRINT(SYS_ERROR_INFO, "SHT3x Event: %s, Next State: %s\r\n", _debugEventSignals[sig], _debugStateNames[name]);
-    #endif
-    
+
+    const TState *nextState = FSM_ProcessEventToNextState(&sht3xAO.super, event, SHT3X_STATES_MAX, SHT3X_SIG_MAX,
+                                                          sht3xStatesList, sht3xTransitionTable);
+
+#ifdef __DEBUG
+    SHT3X_SIG sig = event.sig;
+    SHT3X_STATE name = nextState->name;
+    SYS_DEBUG_PRINT(SYS_ERROR_INFO, "SHT3x Event: %s, Next State: %s\r\n", _debugEventSignals[sig], _debugStateNames[name]);
+#endif
+
     if (FSM_IsValidState(nextState)) FSM_TraverseNextState(&sht3xAO.super, nextState);
 };
 
@@ -116,6 +117,6 @@ void SHT3X_TransferEventHandler(
             return ActiveObject_Dispatch(&sht3xAO.super, (TEvent) {.sig = SHT3X_ERROR});
         default:
             SYS_DEBUG_PRINT(SYS_ERROR_INFO, "SHT3X_TransferEventHandler: unknown event %d\n", event);
-            return;    
+            return;
     };
 };

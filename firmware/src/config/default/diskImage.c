@@ -41,20 +41,15 @@
 
 /******************************************************************************
  * This array contains one FAT12 partition disk image with one file FILE.TXT
- * The total size of this disk (array size) is 32768 bytes
- * The area available for actual storage is 30 KB
  ******************************************************************************/
 
 #include "configuration.h"
 #include "definitions.h"
-#include "usb/src/usb_device_msd_local.h"
-
-// memory address of FAT12 header (5 * 512), 256K-4K=252K
-#define DRV_MEMORY_DEVICE_START_ADDRESS      0x3F000
+#include "../../storage/storage_manager.h"
 
 const unsigned char 
-    __attribute__((keep)) __attribute__((address(DRV_MEMORY_DEVICE_START_ADDRESS)))
-    diskImage[5 * 512] = 
+    __attribute__((keep)) __attribute__((address(DRV_MEMORY_BOOT_SECTOR_NVM_ADDRESS)))
+    FATBootSectorImage[DRV_MEMORY_BOOT_SECTOR_SIZE_PAGES * DRV_AT25DF_PAGE_SIZE] =
 {
     /* Master Boot Record - LBA 0 */
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 

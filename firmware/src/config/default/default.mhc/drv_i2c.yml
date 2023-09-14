@@ -41,4 +41,4 @@ children:
             children:
             - {type: Value, value: SERCOM0_I2C}
 - type: ElementPosition
-  attributes: {x: '163', y: '274', id: drv_i2c}
+  attributes: {x: '174', y: '389', id: drv_i2c}

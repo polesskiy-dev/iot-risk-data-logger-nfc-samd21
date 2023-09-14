@@ -588,4 +588,4 @@ children:
           children:
           - {type: Value, value: sercom0_i2c}
 - type: ElementPosition
-  attributes: {x: '315', y: '480', id: cryptoauthlib}
+  attributes: {x: '324', y: '555', id: cryptoauthlib}

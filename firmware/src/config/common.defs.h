@@ -12,6 +12,7 @@
 // global active objects IDs
 typedef enum {
     NO_ID,
+    STORAGE_AO_ID,
     SHT3X_AO_ID,
     NFC_AO_ID,
     ACTIVE_OBJECTS_MAX

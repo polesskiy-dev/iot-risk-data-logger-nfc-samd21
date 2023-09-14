@@ -146,6 +146,13 @@ extern "C" {
 #define DRV_AT25DF_ERASE_BUFFER_SIZE             4096
 #define DRV_AT25DF_CHIP_SELECT_PIN_IDX           SYS_PORT_PIN_PA18
 
+// FAT boot sector
+
+// memory address of FAT12 header (10 * 256), 256K-4K=252K
+#define DRV_MEMORY_BOOT_SECTOR_SIZE_PAGES           (10)
+#define DRV_MEMORY_BOOT_SECTOR_NVM_ADDRESS          (0x40000 - DRV_MEMORY_BOOT_SECTOR_SIZE_PAGES * DRV_AT25DF_PAGE_SIZE)
+#define DRV_MEMORY_BOOT_SECTOR_FLASH_ADDRESS        (0)
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -153,7 +160,7 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 /* Number of Endpoints used */
-#define DRV_USBFSV1_ENDPOINTS_NUMBER                        4
+#define DRV_USBFSV1_ENDPOINTS_NUMBER                        3
 
 /* The USB Device Layer will not initialize the USB Driver */
 #define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
@@ -191,17 +198,6 @@ extern "C" {
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  __ALIGNED(CACHE_LINE_SIZE)
-
-/* Maximum instances of MSD function driver */
-#define USB_DEVICE_MSD_INSTANCES_NUMBER     1 
-
-#define USB_DEVICE_MSD_NUM_SECTOR_BUFFERS 1
-
-
-/* Number of Logical Units */
-#define USB_DEVICE_MSD_LUNS_NUMBER      1
-
-
 
 
 

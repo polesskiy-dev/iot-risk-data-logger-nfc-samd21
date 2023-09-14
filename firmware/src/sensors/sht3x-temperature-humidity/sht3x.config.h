@@ -39,7 +39,7 @@ typedef enum {
     SHT3X_ERROR,
     SHT3X_SIG_MAX,
 } SHT3X_SIG;
-    
+
 #ifdef __cplusplus
 }
 #endif

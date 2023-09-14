@@ -39,4 +39,4 @@ children:
           - type: TargetAttachment
             attributes: {targetComponentID: sercom0, targetAttachmentID: SERCOM0_I2C}
 - type: ElementPosition
-  attributes: {x: '162', y: '455', id: atecc608}
+  attributes: {x: '176', y: '553', id: atecc608}

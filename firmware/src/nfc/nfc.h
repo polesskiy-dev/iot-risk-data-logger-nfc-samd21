@@ -22,16 +22,16 @@
 #include "../../../../libraries/active-object-fsm/src/fsm/fsm.h"
 #include "./nfc.config.h"
 
-#ifdef	__cplusplus
+#ifdef    __cplusplus
 extern "C" {
 #endif
 
 typedef union {
-   struct {
-       uint32_t MsbPasswd;
-       uint32_t LsbPasswd;
-   };
-   uint8_t pwd[2 * sizeof (uint32_t)];
+    struct {
+        uint32_t MsbPasswd;
+        uint32_t LsbPasswd;
+    };
+    uint8_t pwd[2 * sizeof(uint32_t)];
 } ST25DV_PASSWD;
 
 /**
@@ -39,34 +39,34 @@ typedef union {
 * @extends TActiveObject
 */
 typedef struct {
-   TActiveObject super;
-   DRV_HANDLE drvI2CHandle;
-   DRV_I2C_TRANSFER_HANDLE transferHandle;
-   uint8_t retriesLeft;
-   bool RFFieldPresence;
-   union {
-       uint8_t raw[NFC_CMD_SIZE + ST25DV_MAX_MAILBOX_LENGTH];
-       struct {
-           uint16_t cmd;
-           uint8_t mailbox[ST25DV_MAX_MAILBOX_LENGTH];
-       };
-   } transferBuf;
-   struct {
-       uint8_t uid[NFC_UID_SIZE];
-       ST25DV_PASSWD pwd;
-   } st25dvRegs;
+    TActiveObject super;
+    DRV_HANDLE drvI2CHandle;
+    DRV_I2C_TRANSFER_HANDLE transferHandle;
+    uint8_t retriesLeft;
+    bool RFFieldPresence;
+    union {
+        uint8_t raw[NFC_CMD_SIZE + ST25DV_MAX_MAILBOX_LENGTH];
+        struct {
+            uint16_t cmd;
+            uint8_t mailbox[ST25DV_MAX_MAILBOX_LENGTH];
+        };
+    } transferBuf;
+    struct {
+        uint8_t uid[NFC_UID_SIZE];
+        ST25DV_PASSWD pwd;
+    } st25dvRegs;
 } TNFCActiveObject;
 
 /**
 * @brief Initialize and construct actor, should be called before tasks
 * @memberof TNFCActiveObject
 */
-void NFC_Initialize ( void );
+void NFC_Initialize(void);
 
 /* Microchip Harmony 3 specific */
 
 /** @brief Perform Actor tasks, mainly listen for events and process them */
-void NFC_Tasks( void );
+void NFC_Tasks(void);
 
 /**
 * @brief Callback for I2C ISR on success/error transfer.
@@ -81,7 +81,7 @@ void NFC_Tasks( void );
 */
 void NFC_TransferEventHandler(DRV_I2C_TRANSFER_EVENT event, DRV_I2C_TRANSFER_HANDLE transferHandle, uintptr_t context);
 
-#ifdef	__cplusplus
+#ifdef    __cplusplus
 }
 #endif
 
