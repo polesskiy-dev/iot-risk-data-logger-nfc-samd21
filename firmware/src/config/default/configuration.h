@@ -125,10 +125,16 @@ extern "C" {
 #define DRV_I2C_CLOCK_SPEED_IDX0              100
 
 /* Memory Driver Global Configuration Options */
-#define DRV_MEMORY_INSTANCES_NUMBER          (1U)
+#define DRV_MEMORY_INSTANCES_NUMBER          (2U)
 /* I2C Driver Common Configuration Options */
 #define DRV_I2C_INSTANCES_NUMBER              (1U)
 
+
+
+/* Memory Driver Instance 1 Configuration */
+#define DRV_MEMORY_INDEX_1                   1
+#define DRV_MEMORY_CLIENTS_NUMBER_IDX1       1
+#define DRV_MEMORY_BUF_Q_SIZE_IDX1    1
 
 
 /* Memory Driver Instance 0 Configuration */
@@ -160,7 +166,7 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 /* Number of Endpoints used */
-#define DRV_USBFSV1_ENDPOINTS_NUMBER                        3
+#define DRV_USBFSV1_ENDPOINTS_NUMBER                        4
 
 /* The USB Device Layer will not initialize the USB Driver */
 #define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
@@ -198,6 +204,17 @@ extern "C" {
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  __ALIGNED(CACHE_LINE_SIZE)
+
+/* Maximum instances of MSD function driver */
+#define USB_DEVICE_MSD_INSTANCES_NUMBER     1 
+
+#define USB_DEVICE_MSD_NUM_SECTOR_BUFFERS 1
+
+
+/* Number of Logical Units */
+#define USB_DEVICE_MSD_LUNS_NUMBER      1
+
+
 
 
 

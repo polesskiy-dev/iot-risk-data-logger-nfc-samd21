@@ -57,6 +57,7 @@ static const TState *_idle(TActiveObject *const AO, TEvent event) {
 static const TState *_readMemoryBootSector(TActiveObject *const AO, TEvent event) {
     TSTORAGEActiveObject *storageAO = (TSTORAGEActiveObject *) AO;
 
+    /** @note read block in EEPROM is 1 byte*/
     DRV_MEMORY_AsyncRead(
             storageAO->drvMemoryHandle,
             &(storageAO->transferHandle),
@@ -85,6 +86,7 @@ static const TState *_verifyMemoryBootSector(TActiveObject *const AO, TEvent eve
 static const TState *_writeMemoryBootSector(TActiveObject *const AO, TEvent event) {
     TSTORAGEActiveObject *storageAO = (TSTORAGEActiveObject *) AO;
 
+    /** @note write block in EEPROM is 256 bytes and erase block is 4096*/
     DRV_MEMORY_AsyncEraseWrite(
             storageAO->drvMemoryHandle,
             &(storageAO->transferHandle),

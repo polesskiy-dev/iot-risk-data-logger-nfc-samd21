@@ -27,7 +27,7 @@ extern const TEventHandler sht3xTransitionTable[SHT3X_STATES_MAX][SHT3X_SIG_MAX]
 static TEvent events[SHT3X_QUEUE_MAX_CAPACITY];
 
 /** @brief sht3x environment sensor Active Object */
-TSHT3xActiveObject sht3xAO;
+static TSHT3xActiveObject sht3xAO;
 
 /** SHT3X Local Functions */
 
@@ -40,7 +40,7 @@ static DRV_HANDLE _openI2CDriver(void) {
 
 /** SHT3X Global Functions */
 
-void SHT3X_Initialize(void) {
+TActiveObject *SHT3X_Initialize(void) {
     // init super AO
     ActiveObject_Initialize(&sht3xAO.super, SHT3X_AO_ID, events, SHT3X_QUEUE_MAX_CAPACITY);
     sht3xAO.super.state = &sht3xStatesList[SHT3X_ST_INIT];
@@ -52,11 +52,11 @@ void SHT3X_Initialize(void) {
     sht3xAO.drvI2CHandle = drvI2CHandle;
     sht3xAO.transferHandle = DRV_I2C_TRANSFER_HANDLE_INVALID;
     sht3xAO.sensorRegs.status = 0;
-    sht3xAO.sensorRegs.measurements[SHT3X_MEASUREMENTS_SIZE] = 0;
+    // TODO check that all fields are cleared
 
     // error on i2c driver open
     if (DRV_HANDLE_INVALID == drvI2CHandle) {
-        return ActiveObject_Dispatch(&sht3xAO.super, (TEvent) {.sig = SHT3X_ERROR});
+        ActiveObject_Dispatch(&sht3xAO.super, (TEvent) {.sig = SHT3X_ERROR});
     };
 
     // set I2C handler @see https://microchip-mplab-harmony.github.io/core/index.html?GUID-C99FBA78-A80D-40EE-B863-E40151E30C73
@@ -66,11 +66,16 @@ void SHT3X_Initialize(void) {
             (uintptr_t) &sht3xAO
     );
 
-    // TODO schedule it by scheduler and/or call in self-test
-    ActiveObject_Dispatch(&sht3xAO.super, (TEvent) {.sig = SHT3X_READ_STATUS});
-};
+    return (TActiveObject *) &sht3xAO;
+}
+
+void SHT3X_Deinitialize(void) {
+    sht3xAO.super.state = NULL;
+}
 
 void SHT3X_Tasks(void) {
+    if (NULL == sht3xAO.super.state) return; // not initialized yet
+
     const TEvent event = ActiveObject_ProcessQueue(&sht3xAO.super);
     if (SHT3X_NO_EVENT == event.sig) return;
 

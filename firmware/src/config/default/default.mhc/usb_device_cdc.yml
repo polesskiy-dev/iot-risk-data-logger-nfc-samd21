@@ -37,6 +37,13 @@ children:
           children:
           - type: Dynamic
             attributes: {id: usb_device_cdc_0, value: '1'}
+      - type: Boolean
+        attributes: {id: CONFIG_USB_DEVICE_FUNCTION_USE_IAD}
+        children:
+        - type: Values
+          children:
+          - type: Dynamic
+            attributes: {id: usb_device_cdc_0, value: 'true'}
     - type: Attachments
       children:
       - type: DirectCapability

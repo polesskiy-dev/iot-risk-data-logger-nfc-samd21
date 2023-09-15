@@ -118,6 +118,7 @@
               <itemPath>../src/config/default/usb/src/usb_device_function_driver.h</itemPath>
               <itemPath>../src/config/default/usb/src/usb_external_dependencies.h</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_cdc_local.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_device_msd_local.h</itemPath>
             </logicalFolder>
             <itemPath>../src/config/default/usb/usb_device.h</itemPath>
             <itemPath>../src/config/default/usb/usb_common.h</itemPath>
@@ -128,6 +129,9 @@
             <itemPath>../src/config/default/usb/usb_hub.h</itemPath>
             <itemPath>../src/config/default/usb/usb_device_cdc.h</itemPath>
             <itemPath>../src/config/default/usb/usb_cdc.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_device_msd.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_msd.h</itemPath>
+            <itemPath>../src/config/default/usb/scsi.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/default/device.h</itemPath>
           <itemPath>../src/config/default/device_cache.h</itemPath>
@@ -140,6 +144,10 @@
           <itemPath>../src/config/default/sys_tasks.h</itemPath>
         </logicalFolder>
         <itemPath>../src/config/common.defs.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="init" displayName="init" projectFiles="true">
+        <itemPath>../src/init/init_manager.h</itemPath>
+        <itemPath>../src/init/init.config.h</itemPath>
       </logicalFolder>
       <logicalFolder name="nfc" displayName="nfc" projectFiles="true">
         <itemPath>../src/nfc/nfc.config.h</itemPath>
@@ -510,6 +518,7 @@
               <itemPath>../src/config/default/usb/src/usb_device.c</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_cdc.c</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_cdc_acm.c</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_device_msd.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <itemPath>../src/config/default/initialization.c</itemPath>
@@ -521,6 +530,9 @@
           <itemPath>../src/config/default/diskImage.c</itemPath>
           <itemPath>../src/config/default/usb_device_init_data.c</itemPath>
         </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="init" displayName="init" projectFiles="true">
+        <itemPath>../src/init/init_manager.c</itemPath>
       </logicalFolder>
       <logicalFolder name="nfc" displayName="nfc" projectFiles="true">
         <itemPath>../src/nfc/nfc_fsm.c</itemPath>
@@ -563,6 +575,7 @@
         <itemPath>../src/config/default/default.mhc/nvmctrl.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/drv_memory.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/usb_device_cdc.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/usb_device_msd.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/sys_debug.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/drv_i2c.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/settings.yml</itemPath>
@@ -594,8 +607,8 @@
         <platform>4</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
         <pack name="SAMD21_DFP" vendor="Microchip" version="3.6.144"/>
+        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -862,7 +875,7 @@
         <property key="communication.speed" value="2.000"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
         <property key="hwtoolclock.frcindebug" value="false"/>
@@ -881,8 +894,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-3ffff"/>
         <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/iot-risk-data-logger-nfc-samd21.X/debug/default/iot-risk-data-logger-nfc-samd21_ptg"/>
         <property key="programmerToGoImageName"
                   value="iot-risk-data-logger-nfc-samd21_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>

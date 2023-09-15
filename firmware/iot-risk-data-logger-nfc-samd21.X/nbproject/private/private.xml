@@ -3,7 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/nfc/nfc.config.h</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/storage/storage_manager.h</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/libraries/active-object-fsm/src/fsm/fsm.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/diskImage.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/storage/storage_manager_fsm.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/usb/src/usb_device.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/system/console/src/sys_console_usb_cdc.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/exceptions.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/init/init_manager.h</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/tasks.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/initialization.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/sensors/sht3x-temperature-humidity/sht3x_fsm.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/system/time/src/sys_time.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/storage/storage_manager.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/system/time/sys_time.h</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/main.c</file>
         </group>
     </open-files>
 </project-private>

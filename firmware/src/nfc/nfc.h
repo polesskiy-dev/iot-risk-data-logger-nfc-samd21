@@ -20,6 +20,7 @@
 #include "../config/common.defs.h"
 #include "../../../../libraries/active-object-fsm/src/active_object/active_object.h"
 #include "../../../../libraries/active-object-fsm/src/fsm/fsm.h"
+#include "init/init.config.h"
 #include "./nfc.config.h"
 
 #ifdef    __cplusplus
@@ -61,7 +62,14 @@ typedef struct {
 * @brief Initialize and construct actor, should be called before tasks
 * @memberof TNFCActiveObject
 */
-void NFC_Initialize(void);
+TActiveObject *NFC_Initialize(void);
+
+/**
+ * @brief Deinitialize the actor
+ * @details Sets to NO_STATE, all pending events will be lost
+ * @memberof TNFCActiveObject
+ */
+void NFC_Deinitialize(void);
 
 /* Microchip Harmony 3 specific */
 

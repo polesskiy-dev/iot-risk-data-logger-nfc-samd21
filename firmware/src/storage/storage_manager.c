@@ -30,20 +30,15 @@ static const char *const _debugEventSignals[STORAGE_SIG_MAX] = {
 extern const TState storageStatesList[STORAGE_STATES_MAX];
 extern const TEventHandler storageTransitionTable[STORAGE_STATES_MAX][STORAGE_SIG_MAX];
 static TEvent events[STORAGE_QUEUE_MAX_CAPACITY];
-TSTORAGEActiveObject storageAO;
+static TSTORAGEActiveObject storageAO;
 
-/*
- * TODO check whether we should close Driver for USB MSD usage
- * DRV_MEMORY_Close(memoryAppObj.drvMemoryHandle);
- */
-
-void STORAGE_Initialize(void) {
+TActiveObject *STORAGE_Initialize(void) {
     // init super AO
     ActiveObject_Initialize(&storageAO.super, STORAGE_AO_ID, events, STORAGE_QUEUE_MAX_CAPACITY);
     storageAO.super.state = &storageStatesList[STORAGE_ST_INIT];
 
     // open MEMORY driver, get handler
-    DRV_HANDLE drvMemoryHandle = DRV_MEMORY_Open(sysObj.drvMemory0,
+    DRV_HANDLE drvMemoryHandle = DRV_MEMORY_Open(sysObj.drvMemory1, /* TODO make it 0 driver*/
                                                  DRV_IO_INTENT_READWRITE | DRV_IO_INTENT_NONBLOCKING);
 
     // init AO fields
@@ -51,7 +46,6 @@ void STORAGE_Initialize(void) {
     storageAO.transferHandle = DRV_I2C_TRANSFER_HANDLE_INVALID;
     storageAO.pagesToProcessAmount = 0;
     storageAO.page = 0;
-
     STORAGE_CLearPageBuffer(&storageAO);
 
     // error on driver opening error
@@ -66,11 +60,17 @@ void STORAGE_Initialize(void) {
             (uintptr_t) &storageAO
     );
 
-    // TODO move to init manager
-    ActiveObject_Dispatch(&storageAO.super, (TEvent) {.sig = STORAGE_CHECK_MEMORY_BOOT_SECTOR});
+    return (TActiveObject *) &storageAO;
+};
+
+void STORAGE_Deinitialize(void) {
+    storageAO.super.state = NULL;
+    DRV_MEMORY_Close(storageAO.drvMemoryHandle);
 };
 
 void STORAGE_Tasks(void) {
+    if (NULL == storageAO.super.state) return; // not initialized yet
+
     const TEvent event = ActiveObject_ProcessQueue(&storageAO.super);
     if (STORAGE_NO_EVENT == event.sig) return;
 
@@ -86,8 +86,8 @@ void STORAGE_Tasks(void) {
     if (FSM_IsValidState(nextState)) FSM_TraverseNextState(&storageAO.super, nextState);
 };
 
-void STORAGE_CLearPageBuffer(TSTORAGEActiveObject *const storageAO) {
-    memset(storageAO->pageBuffer, 0, DRV_AT25DF_PAGE_SIZE);
+void STORAGE_CLearPageBuffer(TSTORAGEActiveObject *const AO) {
+    memset(AO->pageBuffer, 0, DRV_AT25DF_PAGE_SIZE);
 }
 
 void STORAGE_TransferEventHandler(DRV_MEMORY_EVENT event, DRV_MEMORY_COMMAND_HANDLE commandHandle, uintptr_t context) {

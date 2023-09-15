@@ -59,5 +59,60 @@ children:
             attributes: {id: targetAttachmentID}
             children:
             - {type: Value, value: memory}
+  - type: InstanceComponent
+    attributes: {instance: '1', id: drv_memory}
+    children:
+    - type: Symbols
+      children:
+      - type: String
+        attributes: {id: DRV_MEMORY_DEVICE}
+        children:
+        - type: Values
+          children:
+          - type: Dynamic
+            attributes: {id: drv_memory_1, value: DRV_AT25DF}
+      - type: Comment
+        attributes: {id: DRV_MEMORY_DEVICE_COMMENT}
+        children:
+        - type: Attributes
+          children:
+          - type: String
+            attributes: {id: text}
+            children:
+            - {type: Value, value: '*** Configure Memory Device in DRV_AT25DF Configurations
+                ***'}
+          - type: Boolean
+            attributes: {id: visible}
+            children:
+            - {type: Value, value: 'true'}
+      - type: Boolean
+        attributes: {id: DRV_MEMORY_ERASE_ENABLE}
+        children:
+        - type: Values
+          children:
+          - type: Dynamic
+            attributes: {id: drv_memory_1, value: 'true'}
+      - type: Boolean
+        attributes: {id: DRV_MEMORY_INTERRUPT_ENABLE}
+        children:
+        - type: Values
+          children:
+          - type: Dynamic
+            attributes: {id: drv_memory_1, value: 'false'}
+    - type: Attachments
+      children:
+      - type: DirectDependency
+        attributes: {id: drv_memory_MEMORY_dependency}
+        children:
+        - type: Attributes
+          children:
+          - type: String
+            attributes: {id: targetComponentID}
+            children:
+            - {type: Value, value: drv_at25df}
+          - type: String
+            attributes: {id: targetAttachmentID}
+            children:
+            - {type: Value, value: memory}
 - type: ElementPosition
   attributes: {x: '321', y: '134', id: drv_memory}

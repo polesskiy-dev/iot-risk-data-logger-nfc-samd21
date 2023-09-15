@@ -81,6 +81,8 @@ void SYS_Tasks ( void )
 
 
     /* Maintain Device Drivers */
+    DRV_MEMORY_Tasks(sysObj.drvMemory1);
+
     DRV_MEMORY_Tasks(sysObj.drvMemory0);
 
 
@@ -91,9 +93,6 @@ void SYS_Tasks ( void )
 
     /* USB FS Driver Task Routine */ 
     DRV_USBFSV1_Tasks(sysObj.drvUSBFSV1Object);
-
-    STORAGE_Tasks();
-//    SHT3X_Tasks();
 }
 
 /*******************************************************************************

@@ -49,6 +49,7 @@
 #include "../../nfc/nfc.h"
 #include "../../sensors/sht3x-temperature-humidity/sht3x.h"
 #include "../../storage/storage_manager.h"
+#include "init/init_manager.h"
 
 
 // ****************************************************************************
@@ -156,6 +157,39 @@ static const DRV_I2C_INIT drvI2C0InitData =
 };
 // </editor-fold>
 
+// <editor-fold defaultstate="collapsed" desc="DRV_MEMORY Instance 1 Initialization Data">
+
+static uint8_t gDrvMemory1EraseBuffer[DRV_AT25DF_ERASE_BUFFER_SIZE] CACHE_ALIGN;
+
+static DRV_MEMORY_CLIENT_OBJECT gDrvMemory1ClientObject[DRV_MEMORY_CLIENTS_NUMBER_IDX1];
+
+static DRV_MEMORY_BUFFER_OBJECT gDrvMemory1BufferObject[DRV_MEMORY_BUF_Q_SIZE_IDX1];
+
+static const DRV_MEMORY_DEVICE_INTERFACE drvMemory1DeviceAPI = {
+    .Open               = DRV_AT25DF_Open,
+    .Close              = DRV_AT25DF_Close,
+    .Status             = DRV_AT25DF_Status,
+    .SectorErase        = DRV_AT25DF_SectorErase,
+    .Read               = DRV_AT25DF_Read,
+    .PageWrite          = DRV_AT25DF_PageWrite,
+    .EventHandlerSet    = NULL,
+    .GeometryGet        = (DRV_MEMORY_DEVICE_GEOMETRY_GET)DRV_AT25DF_GeometryGet,
+    .TransferStatusGet  = (DRV_MEMORY_DEVICE_TRANSFER_STATUS_GET)DRV_AT25DF_TransferStatusGet
+};
+static const DRV_MEMORY_INIT drvMemory1InitData =
+{
+    .memDevIndex                = DRV_AT25DF_INDEX,
+    .memoryDevice               = &drvMemory1DeviceAPI,
+    .isMemDevInterruptEnabled   = false,
+    .isFsEnabled                = false,
+    .ewBuffer                   = &gDrvMemory1EraseBuffer[0],
+    .clientObjPool              = (uintptr_t)&gDrvMemory1ClientObject[0],
+    .bufferObj                  = (uintptr_t)&gDrvMemory1BufferObject[0],
+    .queueSize                  = DRV_MEMORY_BUF_Q_SIZE_IDX1,
+    .nClientsMax                = DRV_MEMORY_CLIENTS_NUMBER_IDX1
+};
+
+// </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="DRV_MEMORY Instance 0 Initialization Data">
 
 static uint8_t gDrvMemory0EraseBuffer[DRV_AT25DF_ERASE_BUFFER_SIZE] CACHE_ALIGN;
@@ -437,6 +471,9 @@ void SYS_Initialize ( void* data )
     sysObj.drvI2C0 = DRV_I2C_Initialize(DRV_I2C_INDEX_0, (SYS_MODULE_INIT *)&drvI2C0InitData);
 
 
+    sysObj.drvMemory1 = DRV_MEMORY_Initialize((SYS_MODULE_INDEX)DRV_MEMORY_INDEX_1, (SYS_MODULE_INIT *)&drvMemory1InitData);
+
+
     sysObj.drvMemory0 = DRV_MEMORY_Initialize((SYS_MODULE_INDEX)DRV_MEMORY_INDEX_0, (SYS_MODULE_INIT *)&drvMemory0InitData);
 
     sysObj.drvAT25DF = DRV_AT25DF_Initialize(DRV_AT25DF_INDEX, (SYS_MODULE_INIT *)&drvAT25DFInitData);
@@ -468,16 +505,12 @@ void SYS_Initialize ( void* data )
     sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
 
     
-
-
     /* MISRAC 2012 deviation block end */
     NVIC_Initialize();
     
-    /* Initialize sensors */
-//    SHT3X_Initialize();
-    
-    /* Initialize Storage Manager */
-    STORAGE_Initialize();
+    /* Initialize Actors */
+    // TODO temporary solution with delayed invocation to resolve conflict with USB initialization
+    SYS_TIME_CallbackRegisterMS((SYS_TIME_CALLBACK) INIT_Initialize, (uintptr_t)NULL, 1000, SYS_TIME_SINGLE);
 
 
     /* MISRAC 2012 deviation block end */

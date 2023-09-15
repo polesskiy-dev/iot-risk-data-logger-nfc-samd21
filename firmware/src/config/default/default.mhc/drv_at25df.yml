@@ -73,7 +73,7 @@ children:
       - type: String
         attributes: {id: targetComponentID}
         children:
-        - {type: Value, value: drv_memory_0}
+        - {type: Value, value: drv_memory_1}
       - type: String
         attributes: {id: targetAttachmentID}
         children:

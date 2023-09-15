@@ -49,6 +49,8 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
+#include "usb/usb_device_msd.h"
+#include "usb/usb_msd.h"
 #include "driver/memory/drv_memory.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
@@ -208,6 +210,7 @@ typedef struct
     SYS_MODULE_OBJ  usbDevObject0;
 
     SYS_MODULE_OBJ  sysTime;
+    SYS_MODULE_OBJ  drvMemory1;
     SYS_MODULE_OBJ  drvMemory0;
 	SYS_MODULE_OBJ  drvUSBFSV1Object;
 

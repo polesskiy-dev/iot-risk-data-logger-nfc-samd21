@@ -34,7 +34,7 @@ extern const TEventHandler nfcTransitionTable[NFC_STATES_MAX][NFC_SIG_MAX];
 static TEvent events[NFC_QUEUE_MAX_CAPACITY];
 
 /** @brief nfc Active Object */
-TNFCActiveObject nfcAO;
+static TNFCActiveObject nfcAO;
 
 /** NFC Local Functions */
 
@@ -48,10 +48,7 @@ static DRV_HANDLE _openI2CDriver(void) {
 
 /** NFC Global Functions */
 
-void NFC_Initialize(void) {
-//    SUPER_ACT_Ctor(&me->super, NFC_ST_INIT);
-
-
+TActiveObject *NFC_Initialize(void) {
     // init super AO
     ActiveObject_Initialize(&nfcAO.super, NFC_AO_ID, events, NFC_QUEUE_MAX_CAPACITY);
     nfcAO.super.state = &nfcStatesList[NFC_ST_INIT];
@@ -63,10 +60,11 @@ void NFC_Initialize(void) {
     nfcAO.drvI2CHandle = drvI2CHandle;
     nfcAO.transferHandle = DRV_I2C_TRANSFER_HANDLE_INVALID;
     nfcAO.retriesLeft = NFC_TRANSFER_RETRIES_MAX;
+    // TODO check that all fields are cleared
 
     // error on driver opening error
     if (DRV_HANDLE_INVALID == drvI2CHandle) {
-        return ActiveObject_Dispatch(&nfcAO.super, (TEvent) {.sig = NFC_ERROR});
+        ActiveObject_Dispatch(&nfcAO.super, (TEvent) {.sig = NFC_ERROR});
     };
 
     // set I2C handler @see https://microchip-mplab-harmony.github.io/core/index.html?GUID-C99FBA78-A80D-40EE-B863-E40151E30C73
@@ -76,11 +74,16 @@ void NFC_Initialize(void) {
             (uintptr_t) &nfcAO
     );
 
-    // TODO schedule it by scheduler and/or call in self-test
-    ActiveObject_Dispatch(&nfcAO.super, (TEvent) {.sig = NFC_READ_UID});
+    return (TActiveObject *) &nfcAO;
 };
 
+void NFC_Deinitialize(void) {
+    nfcAO.super.state = NULL;
+}
+
 void NFC_Tasks(void) {
+    if (NULL == nfcAO.super.state) return; // not initialized yet
+
     const TEvent event = ActiveObject_ProcessQueue(&nfcAO.super);
     if (NFC_NO_EVENT == event.sig) return;
 

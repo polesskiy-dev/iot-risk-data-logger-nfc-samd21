@@ -18,6 +18,7 @@
 #include "../../config/common.defs.h"
 #include "../../../../libraries/active-object-fsm/src/active_object/active_object.h"
 #include "../../../../libraries/active-object-fsm/src/fsm/fsm.h"
+#include "init/init.config.h"
 #include "./sht3x.config.h"
 
 #ifdef    __cplusplus
@@ -39,10 +40,18 @@ typedef struct {
 } TSHT3xActiveObject;
 
 /** 
- * @brief Initialize and construct actor, should be called before tasks 
+ * @brief Initialize and construct actor, should be called before tasks
+ * @memberof TSHT3xActiveObject
+ * @return pointer to initialized actor
+ */
+TActiveObject*  SHT3X_Initialize(void);
+
+/**
+ * @brief Deinitialize the actor
+ * @details Sets to NO_STATE, all pending events will be lost
  * @memberof TSHT3xActiveObject
  */
-void SHT3X_Initialize(void);
+void SHT3X_Deinitialize(void);
 
 /* Microchip Harmony 3 specific */
 

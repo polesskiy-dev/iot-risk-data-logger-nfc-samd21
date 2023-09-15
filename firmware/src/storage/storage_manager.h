@@ -19,6 +19,7 @@
 #include "../config/common.defs.h"
 #include "../../../../libraries/active-object-fsm/src/active_object/active_object.h"
 #include "../../../libraries/active-object-fsm/src/fsm/fsm.h"
+#include "init/init.config.h"
 
 #ifdef    __cplusplus
 extern "C" {
@@ -30,6 +31,8 @@ extern "C" {
 #define STORAGE_QUEUE_MAX_CAPACITY              (8)
 #define READ_BLOCK_SIZE                         (1)
 #define PARTITION_0_ADDRESS                     (512)
+#define BOOT_SECTOR_SIZE                        (4096) // 1 erase block equal
+#define LOG_DATA_START_ADDRESS                  (BOOT_SECTOR_SIZE) // 1st page after boot sector
 #define READ_BLOCKS_IN_PAGE                     (DRV_AT25DF_PAGE_SIZE / READ_BLOCK_SIZE)
 #define BOOT_SECTOR_PAGES_TO_VALIDATE           (1) // Amount of pages on flash to verify with boot sector header in NVM
 #define IS_EQUAL_PAGES                          (0)
@@ -81,8 +84,16 @@ typedef struct {
 /**
 * @brief Initialize and construct actor, should be called before tasks
 * @memberof TSTORAGEActiveObject
+* @return pointer to initialized actor
 */
-void STORAGE_Initialize(void);
+TActiveObject* STORAGE_Initialize(void);
+
+/**
+ * @brief Deinitialize the actor
+ * @details Sets to NO_STATE, all pending events will be lost. Closes MEMORY driver.
+ * @memberof TSTORAGEActiveObject
+ */
+void STORAGE_Deinitialize(void);
 
 /* Microchip Harmony 3 specific */
 
@@ -93,7 +104,7 @@ void STORAGE_Tasks(void);
 * @brief Clean page buffer
 * @memberof TSTORAGEActiveObject
 */
-void STORAGE_CLearPageBuffer(TSTORAGEActiveObject *const storageAO);
+void STORAGE_CLearPageBuffer(TSTORAGEActiveObject *AO);
 
 /**
  * @brief Callback for SPI (MEMORY) ISR on success/error transfer.

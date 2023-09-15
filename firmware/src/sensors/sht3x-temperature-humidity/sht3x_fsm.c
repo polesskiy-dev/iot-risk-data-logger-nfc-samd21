@@ -1,6 +1,6 @@
 #include "./sht3x.h"
 
-extern TSHT3xActiveObject sht3xAO;
+//extern TSHT3xActiveObject sht3xAO;
 
 /* sht3x-temperature-humidity commands registers */
 static const uint8_t SHT3X_CMD_READ_STATUS_REG[SHT3X_CMD_SIZE] = {0xF3, 0x2D};
@@ -17,9 +17,9 @@ static const TState *_readMeasurements(TActiveObject *const AO, TEvent event);
 
 static const TState *_error(TActiveObject *const AO, TEvent event);
 
-static void _dispatchReadMeasurements(uintptr_t context);
+static void _dispatchReadMeasurements(TActiveObject *const AO);
 
-static void _tempDispatchMeasure(uintptr_t context); // TODO replace it by scheduler
+static void _tempDispatchMeasure(TActiveObject *const AO); // TODO replace it by scheduler
 
 // error on i2c transfer queuing
 static inline void _dispatchErrorOnInvalidTransfer(TSHT3xActiveObject *const sht3xAO) {
@@ -54,8 +54,8 @@ static const TState *_idle(TActiveObject *const sht3xAO, TEvent event) {
 
     // temporary schedule measurement
     SYS_TIME_CallbackRegisterMS(
-            _tempDispatchMeasure,
-            (uintptr_t) NULL,
+            (SYS_TIME_CALLBACK) _tempDispatchMeasure,
+            (uintptr_t) sht3xAO,
             1000,
             SYS_TIME_SINGLE
     );
@@ -107,8 +107,8 @@ static const TState *_measure(TActiveObject *const AO, TEvent event) {
 
     // schedule measurement read cause SHT3x sensor needs some time to measure temperature/humidity
     SYS_TIME_CallbackRegisterMS(
-            _dispatchReadMeasurements,
-            (uintptr_t) NULL,
+            (SYS_TIME_CALLBACK) _dispatchReadMeasurements,
+            (uintptr_t) AO,
             SHT3X_MEASURE_TIME_MS,
             SYS_TIME_SINGLE
     );
@@ -137,10 +137,10 @@ static const TState *_readMeasurements(TActiveObject *const AO, TEvent event) {
 
 static const TState *_error(TActiveObject *const AO, TEvent event) { return &(sht3xStatesList[SHT3X_ST_ERROR]); };
 
-static void _dispatchReadMeasurements(uintptr_t context) {
-    ActiveObject_Dispatch(&sht3xAO.super, (TEvent) {.sig = SHT3X_READ_MEASURE});
+static void _dispatchReadMeasurements(TActiveObject *const AO) {
+    ActiveObject_Dispatch(AO, (TEvent) {.sig = SHT3X_READ_MEASURE});
 }
 
-static void _tempDispatchMeasure(uintptr_t context) {
-    ActiveObject_Dispatch(&sht3xAO.super, (TEvent) {.sig = SHT3X_MEASURE});
+static void _tempDispatchMeasure(TActiveObject *const AO) {
+    ActiveObject_Dispatch(AO, (TEvent) {.sig = SHT3X_MEASURE});
 };
