@@ -16,6 +16,7 @@
             <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/initialization.c</file>
             <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/sensors/sht3x-temperature-humidity/sht3x_fsm.c</file>
             <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/system/time/src/sys_time.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/startup_xc32.c</file>
             <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/storage/storage_manager.c</file>
             <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/system/time/sys_time.h</file>
             <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/main.c</file>
