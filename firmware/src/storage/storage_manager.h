@@ -30,12 +30,16 @@ extern "C" {
 
 #define STORAGE_QUEUE_MAX_CAPACITY              (8)
 #define READ_BLOCK_SIZE                         (1)
-#define PARTITION_0_ADDRESS                     (512)
-#define BOOT_SECTOR_SIZE                        (4096) // 1 erase block equal
+#define PARTITION_0_ADDRESS                     (0x200) // 512KB
+#define BOOT_SECTOR_SIZE                        (0x1000) // 1 erase block equal (4096)
 #define LOG_DATA_START_ADDRESS                  (BOOT_SECTOR_SIZE) // 1st page after boot sector
+#define END_OF_PAGE_ADDRESS                     (DRV_AT25DF_PAGE_SIZE - 1)
 #define READ_BLOCKS_IN_PAGE                     (DRV_AT25DF_PAGE_SIZE / READ_BLOCK_SIZE)
+#define WRITE_BLOCKS_IN_PAGE                    (1)
 #define BOOT_SECTOR_PAGES_TO_VALIDATE           (1) // Amount of pages on flash to verify with boot sector header in NVM
 #define IS_EQUAL_PAGES                          (0)
+#define IS_ENOUGH_PLACE_TO_STORE                (0)
+#define ERASED_PAGE_PATTERN                     (0xFF)
     
 extern const unsigned char FATBootSectorImage[DRV_MEMORY_BOOT_SECTOR_SIZE_PAGES * DRV_AT25DF_PAGE_SIZE];
 
@@ -49,6 +53,7 @@ typedef enum {
     STORAGE_ST_WRITE_BOOT_SECTOR,
     STORAGE_ST_FIND_LAST_NONEMPTY_PAGE,
     STORAGE_ST_STORE_DATA_IN_TAIL,
+    STORAGE_ST_STORE_DATA,
     STORAGE_ST_ERROR,
     STORAGE_STATES_MAX
 } STORAGE_STATE;
@@ -73,12 +78,15 @@ typedef enum {
 * @extends TActiveObject
 */
 typedef struct {
-    TActiveObject super;
-    DRV_HANDLE drvMemoryHandle;
-    DRV_MEMORY_COMMAND_HANDLE transferHandle;
-    uint8_t pagesToProcessAmount;
-    uint16_t page;
-    uint8_t pageBuffer[DRV_AT25DF_PAGE_SIZE];
+    TActiveObject super; /**< base class */
+    DRV_HANDLE drvMemoryHandle; /**< MEMORY driver handle */
+    DRV_MEMORY_COMMAND_HANDLE transferHandle; /**< MEMORY driver transfer handle */
+    struct {
+        uint8_t currentPage; /**< current page to process */
+    } flash; /**< flash memory state representation */
+    void* dataToStore; /**< pointer to data to store in flash */
+    size_t dataToStoreSize; /**< size of data to store in flash */
+    uint8_t pageBuffer[DRV_AT25DF_PAGE_SIZE]; /**< page buffer to read to or to write from*/
 } TSTORAGEActiveObject;
 
 /**
@@ -104,7 +112,7 @@ void STORAGE_Tasks(void);
 * @brief Clean page buffer
 * @memberof TSTORAGEActiveObject
 */
-void STORAGE_CLearPageBuffer(TSTORAGEActiveObject *AO);
+void STORAGE_CLearPageBuffer(TSTORAGEActiveObject *storageAO);
 
 /**
  * @brief Callback for SPI (MEMORY) ISR on success/error transfer.

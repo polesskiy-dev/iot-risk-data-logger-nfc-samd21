@@ -44,8 +44,7 @@ TActiveObject *STORAGE_Initialize(void) {
     // init AO fields
     storageAO.drvMemoryHandle = drvMemoryHandle;
     storageAO.transferHandle = DRV_I2C_TRANSFER_HANDLE_INVALID;
-    storageAO.pagesToProcessAmount = 0;
-    storageAO.page = 0;
+    storageAO.flash.currentPage = 0;
     STORAGE_CLearPageBuffer(&storageAO);
 
     // error on driver opening error
@@ -59,6 +58,14 @@ TActiveObject *STORAGE_Initialize(void) {
             STORAGE_TransferEventHandler,
             (uintptr_t) &storageAO
     );
+
+    // for tests, empty some memory if needed
+//    DRV_MEMORY_AsyncErase(
+//            storageAO->drvMemoryHandle,
+//            &(storageAO->transferHandle),
+//            DRV_MEMORY_BOOT_SECTOR_FLASH_ADDRESS,
+//            32 // amount of 4096 blocks to delete
+//    );
 
     return (TActiveObject *) &storageAO;
 };
@@ -86,8 +93,8 @@ void STORAGE_Tasks(void) {
     if (FSM_IsValidState(nextState)) FSM_TraverseNextState(&storageAO.super, nextState);
 };
 
-void STORAGE_CLearPageBuffer(TSTORAGEActiveObject *const AO) {
-    memset(AO->pageBuffer, 0, DRV_AT25DF_PAGE_SIZE);
+void STORAGE_CLearPageBuffer(TSTORAGEActiveObject *const storageAO) {
+    memset(storageAO->pageBuffer, 0, DRV_AT25DF_PAGE_SIZE);
 }
 
 void STORAGE_TransferEventHandler(DRV_MEMORY_EVENT event, DRV_MEMORY_COMMAND_HANDLE commandHandle, uintptr_t context) {
