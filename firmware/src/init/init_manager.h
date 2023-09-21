@@ -54,7 +54,7 @@ typedef struct {
 * @brief Initialize and construct actor, should be called before tasks
 * @memberof TInitActiveObject
 */
-void INIT_Initialize(void);
+void INIT_Initialize(uintptr_t context);
 
 /* Microchip Harmony 3 specific */
 

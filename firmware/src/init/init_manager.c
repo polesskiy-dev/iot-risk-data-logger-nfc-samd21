@@ -22,16 +22,17 @@ const TState initAOStatesList[INIT_STATES_MAX] = {
         [INIT_ST_IDLE] = {.name = INIT_ST_IDLE}
 };
 
-void INIT_Initialize(void) {
+void INIT_Initialize(uintptr_t context) {
     systemActorsList[INIT_AO_ID] = (TActiveObject *) &initAO; // place to global AO list
     ActiveObject_Initialize(&initAO.super, INIT_AO_ID, events, INIT_QUEUE_MAX_CAPACITY);
 
-    // init sensors on next cycle
-    ActiveObject_Dispatch(&initAO.super, (TEvent) {.sig = INIT_SIG_SENSORS});
-    // init NFC on next cycle
-    ActiveObject_Dispatch(&initAO.super, (TEvent) {.sig = INIT_SIG_NFC});
     // init storage on next cycle
     ActiveObject_Dispatch(&initAO.super, (TEvent) {.sig = INIT_SIG_STORAGE});
+    // init sensors on next cycle
+//    ActiveObject_Dispatch(&initAO.super, (TEvent) {.sig = INIT_SIG_SENSORS});
+    // init NFC on next cycle
+    ActiveObject_Dispatch(&initAO.super, (TEvent) {.sig = INIT_SIG_NFC});
+    // TODO init ambient light, accelerometer
 
     initAO.super.state = &initAOStatesList[INIT_ST_INIT];
 }

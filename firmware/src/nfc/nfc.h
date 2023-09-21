@@ -27,14 +27,6 @@
 extern "C" {
 #endif
 
-typedef union {
-    struct {
-        uint32_t MsbPasswd;
-        uint32_t LsbPasswd;
-    };
-    uint8_t pwd[2 * sizeof(uint32_t)];
-} ST25DV_PASSWD;
-
 /**
 * @brief NFC Active Object Type
 * @extends TActiveObject
@@ -46,15 +38,15 @@ typedef struct {
     uint8_t retriesLeft;
     bool RFFieldPresence;
     union {
-        uint8_t raw[NFC_CMD_SIZE + ST25DV_MAX_MAILBOX_LENGTH];
+        uint8_t raw[NFC_CMD_SIZE + ST25DV_MAILBOX_SIZE];
         struct {
-            uint16_t cmd;
-            uint8_t mailbox[ST25DV_MAX_MAILBOX_LENGTH];
+            uint8_t cmd[NFC_CMD_SIZE];
+            uint8_t mailbox[ST25DV_MAILBOX_SIZE];
         };
     } transferBuf;
     struct {
         uint8_t uid[NFC_UID_SIZE];
-        ST25DV_PASSWD pwd;
+        uint8_t pwd[NFC_PASSWORD_SIZE];
     } st25dvRegs;
 } TNFCActiveObject;
 

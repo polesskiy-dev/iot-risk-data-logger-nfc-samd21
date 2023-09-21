@@ -24,7 +24,6 @@ static const char *const _debugEventSignals[NFC_SIG_MAX] = {
     [NFC_ALLOW_MB_MODE_WRITE] = "NFC_ALLOW_MB_MODE_WRITE",
     [NFC_ENABLE_FT_MODE] = "NFC_ENABLE_FT_MODE",
     [NFC_WRITE_MAILBOX] = "NFC_WRITE_MAILBOX",
-    [NFC_PREPARE_MAILBOX] = "NFC_PREPARE_MAILBOX",
     [NFC_ERROR] = "NFC_ERROR"
 };
 #endif
@@ -46,7 +45,7 @@ static DRV_HANDLE _openI2CDriver(void) {
     return drvI2CHandle;
 };
 
-/** NFC Global Functions */
+/* NFC Global Functions */
 
 TActiveObject *NFC_Initialize(void) {
     // init super AO
@@ -60,6 +59,8 @@ TActiveObject *NFC_Initialize(void) {
     nfcAO.drvI2CHandle = drvI2CHandle;
     nfcAO.transferHandle = DRV_I2C_TRANSFER_HANDLE_INVALID;
     nfcAO.retriesLeft = NFC_TRANSFER_RETRIES_MAX;
+//    memset(nfcAO.st25dvRegs.pwd, 0x00, NFC_PASSWORD_SIZE); // factory default password is 0x00
+    memset(nfcAO.st25dvRegs.pwd, 0x00, NFC_PASSWORD_SIZE); // factory default password is 0x00
     // TODO check that all fields are cleared
 
     // error on driver opening error

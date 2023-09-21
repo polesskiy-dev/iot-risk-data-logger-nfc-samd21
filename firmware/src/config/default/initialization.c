@@ -507,10 +507,11 @@ void SYS_Initialize ( void* data )
     
     /* MISRAC 2012 deviation block end */
     NVIC_Initialize();
-    
+
     /* Initialize Actors */
     // TODO temporary solution with delayed invocation to resolve conflict with USB initialization
-    SYS_TIME_CallbackRegisterMS((SYS_TIME_CALLBACK) INIT_Initialize, (uintptr_t)NULL, 1000, SYS_TIME_SINGLE);
+//    SYS_TIME_CallbackRegisterMS(INIT_Initialize, (uintptr_t)NULL, 1000, SYS_TIME_SINGLE);
+    INIT_Initialize((uintptr_t)NULL);
 
 
     /* MISRAC 2012 deviation block end */

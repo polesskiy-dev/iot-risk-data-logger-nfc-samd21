@@ -51,9 +51,11 @@ int main(void) {
         SYS_Tasks();
 
         INIT_Tasks();
-        STORAGE_Tasks();
         // SHT3X_Tasks();
-
+        // TODO AMBIENT_LIGHT_Tasks();
+        // TODO ACCELEROMETER_Tasks();
+        STORAGE_Tasks();
+        NFC_Tasks();
     }
 
     /* Execution should not come here during normal operation */
