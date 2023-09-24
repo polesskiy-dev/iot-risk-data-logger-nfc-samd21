@@ -1,33 +1,5 @@
 #include "./nfc.h"
 
-#ifdef __DEBUG
-static const char *const _debugStateNames[NFC_STATES_MAX] = {
-    [NFC_NO_STATE] = "NFC_NO_STATE",
-    [NFC_ST_INIT] = "NFC_ST_INIT",
-    [NFC_ST_IDLE] = "NFC_ST_IDLE",
-    [NFC_ST_READ_UID] = "NFC_ST_READ_UID",
-    [NFC_ST_PRESENT_I2C_PWD] = "NFC_ST_PRESENT_I2C_PWD",
-    [NFC_ST_ALLOW_MB_MODE_WRITE] = "NFC_ST_ALLOW_MB_MODE_WRITE",
-    [NFC_ST_ENABLE_FT_MODE] = "NFC_ST_ENABLE_FT_MODE",
-    [NFC_ST_WRITE_MAILBOX] = "NFC_ST_WRITE_MAILBOX",
-    [NFC_ST_ERROR] = "NFC_ST_ERROR"
-};
-
-static const char *const _debugEventSignals[NFC_SIG_MAX] = {
-    [NFC_NO_EVENT] = "NFC_NO_EVENT",
-    [NFC_TRANSFER_SUCCESS] = "NFC_TRANSFER_SUCCESS",
-    [NFC_TRANSFER_FAIL] = "NFC_TRANSFER_FAIL",
-    [NFC_TRANSFER_TIMEOUT] = "NFC_TRANSFER_TIMEOUT",
-    [NFC_TRANSFER_MAX_RETRIES] = "NFC_TRANSFER_MAX_RETRIES",
-    [NFC_READ_UID] = "NFC_READ_UID",
-    [NFC_PRESENT_I2C_PWD] = "NFC_PRESENT_I2C_PWD",
-    [NFC_ALLOW_MB_MODE_WRITE] = "NFC_ALLOW_MB_MODE_WRITE",
-    [NFC_ENABLE_FT_MODE] = "NFC_ENABLE_FT_MODE",
-    [NFC_WRITE_MAILBOX] = "NFC_WRITE_MAILBOX",
-    [NFC_ERROR] = "NFC_ERROR"
-};
-#endif
-
 extern const TState nfcStatesList[NFC_STATES_MAX];
 extern const TEventHandler nfcTransitionTable[NFC_STATES_MAX][NFC_SIG_MAX];
 static TEvent events[NFC_QUEUE_MAX_CAPACITY];
@@ -37,13 +9,9 @@ static TNFCActiveObject nfcAO;
 
 /** NFC Local Functions */
 
-static DRV_HANDLE _openI2CDriver(void) {
-    DRV_HANDLE drvI2CHandle = DRV_I2C_Open(DRV_I2C_INDEX_0,
-                                           DRV_IO_INTENT_READWRITE | DRV_IO_INTENT_NONBLOCKING |
-                                           DRV_IO_INTENT_SHARED);
+static DRV_HANDLE _openI2CDriver(void);
 
-    return drvI2CHandle;
-};
+static void _onNFCGPOPinChange(uintptr_t context);
 
 /* NFC Global Functions */
 
@@ -59,7 +27,6 @@ TActiveObject *NFC_Initialize(void) {
     nfcAO.drvI2CHandle = drvI2CHandle;
     nfcAO.transferHandle = DRV_I2C_TRANSFER_HANDLE_INVALID;
     nfcAO.retriesLeft = NFC_TRANSFER_RETRIES_MAX;
-//    memset(nfcAO.st25dvRegs.pwd, 0x00, NFC_PASSWORD_SIZE); // factory default password is 0x00
     memset(nfcAO.st25dvRegs.pwd, 0x00, NFC_PASSWORD_SIZE); // factory default password is 0x00
     // TODO check that all fields are cleared
 
@@ -75,11 +42,15 @@ TActiveObject *NFC_Initialize(void) {
             (uintptr_t) &nfcAO
     );
 
+    // Register callback for NFC GPO rise and fall events (RF presence / unpresence)
+    EIC_CallbackRegister(EIC_PIN_3, _onNFCGPOPinChange, (uintptr_t) &nfcAO);
+
     return (TActiveObject *) &nfcAO;
 };
 
 void NFC_Deinitialize(void) {
     nfcAO.super.state = NULL;
+    // TODO check should we close I2C driver here?
 }
 
 void NFC_Tasks(void) {
@@ -90,12 +61,6 @@ void NFC_Tasks(void) {
 
     const TState *nextState = FSM_ProcessEventToNextState(&nfcAO.super, event, NFC_STATES_MAX, NFC_SIG_MAX,
                                                           nfcStatesList, nfcTransitionTable);
-
-#ifdef __DEBUG
-    NFC_SIG sig = event.sig;
-    NFC_STATE name = nextState->name;
-    SYS_DEBUG_PRINT(SYS_ERROR_INFO, "NFC Event: %s, Next State: %s\r\n", _debugEventSignals[sig], _debugStateNames[name]);
-#endif
 
     if (FSM_IsValidState(nextState)) FSM_TraverseNextState(&nfcAO.super, nextState);
 }
@@ -133,4 +98,17 @@ void NFC_TransferEventHandler(
             SYS_DEBUG_PRINT(SYS_ERROR_INFO, "NFC_TransferEventHandler: unknown event %d\n", event);
             return;
     };
+};
+
+static DRV_HANDLE _openI2CDriver(void) {
+    DRV_HANDLE drvI2CHandle = DRV_I2C_Open(DRV_I2C_INDEX_0,
+                                           DRV_IO_INTENT_READWRITE | DRV_IO_INTENT_NONBLOCKING |
+                                           DRV_IO_INTENT_SHARED);
+
+    return drvI2CHandle;
+};
+
+/** @brief FIELD_CHANGE_EN: A pulse is emitted on GPO, when RF field appears or disappears */
+static void _onNFCGPOPinChange(uintptr_t context) {
+    ActiveObject_Dispatch(&nfcAO.super, (TEvent) {.sig = NFC_GPO_PULSE});
 };

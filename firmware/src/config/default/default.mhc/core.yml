@@ -177,28 +177,28 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: eic, value: 'false'}
+        attributes: {id: eic, value: 'true'}
   - type: Boolean
     attributes: {id: EIC_INTERRUPT_ENABLE_UPDATE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'true'}
+        attributes: {id: core, value: 'false'}
   - type: String
     attributes: {id: EIC_INTERRUPT_HANDLER}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: eic, value: EIC_Handler}
+        attributes: {id: eic, value: EIC_InterruptHandler}
   - type: Boolean
     attributes: {id: EIC_INTERRUPT_HANDLER_LOCK}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: eic, value: 'false'}
+        attributes: {id: eic, value: 'true'}
   - type: Integer
     attributes: {id: GCLK_0_FREQ}
     children:
@@ -642,21 +642,21 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'false'}
+        attributes: {id: core, value: 'true'}
   - type: String
     attributes: {id: NVIC_4_0_HANDLER}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: EIC_Handler}
+        attributes: {id: core, value: EIC_InterruptHandler}
   - type: Boolean
     attributes: {id: NVIC_4_0_HANDLER_LOCK}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 'false'}
+        attributes: {id: core, value: 'true'}
   - type: Boolean
     attributes: {id: NVIC_7_0_ENABLE}
     children:

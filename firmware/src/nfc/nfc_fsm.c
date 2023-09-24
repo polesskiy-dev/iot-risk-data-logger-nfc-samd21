@@ -6,6 +6,7 @@ static const uint8_t ST25DV_MAILBOX_RAM_REG[] = {0x20, 0x08};
 static const uint8_t ST25DV_MB_CTRL_DYN_REG[] = {0x20, 0x06};
 static const uint8_t ST25DV_MB_MODE_REG[] = {0x00, 0x0D};
 static const uint8_t ST25DV_I2C_PWD_REG[] = {0x09, 0x00};
+static const uint8_t ST25DV_ITSTS_DYN_REG[] = {0x20, 0x05}; // IT_STS_Dyn Interrupt status dynamic register
 
 static const TState *_idle(TActiveObject *const AO, TEvent event);
 
@@ -18,6 +19,10 @@ static const TState *_allowMBModeWrite(TActiveObject *const AO, TEvent event);
 static const TState *_enableFTMode(TActiveObject *const AO, TEvent event);
 
 static const TState *_writeMailbox(TActiveObject *const AO, TEvent event);
+
+static const TState *_readInterruptStatus(TActiveObject *const AO, TEvent event);
+
+static const TState *_handleInterruptStatus(TActiveObject *const AO, TEvent event);
 
 static const TState *_error(TActiveObject *const AO, TEvent event);
 
@@ -45,6 +50,7 @@ const TState nfcStatesList[NFC_STATES_MAX] = {
         [NFC_ST_INIT] =                 {.name = NFC_ST_INIT},
         [NFC_ST_IDLE] =                 {.name = NFC_ST_IDLE},
         [NFC_ST_READ_UID] =             {.name = NFC_ST_READ_UID},
+        [NFC_ST_READ_ITSTS] =           {.name = NFC_ST_READ_ITSTS},
         [NFC_ST_PRESENT_I2C_PWD] =      {.name = NFC_ST_PRESENT_I2C_PWD, .onExit = _refreshRetries},
         [NFC_ST_ALLOW_MB_MODE_WRITE] =  {.name = NFC_ST_ALLOW_MB_MODE_WRITE, .onExit = _refreshRetries},
         [NFC_ST_ENABLE_FT_MODE] =       {.name = NFC_ST_ENABLE_FT_MODE, .onExit = _refreshRetries},
@@ -56,12 +62,15 @@ const TState nfcStatesList[NFC_STATES_MAX] = {
 /* state transitions table */
 const TEventHandler nfcTransitionTable[NFC_STATES_MAX][NFC_SIG_MAX] = {
         [NFC_ST_INIT]=                  {[NFC_READ_UID]=_readUID, [NFC_ERROR]=_error},
-        [NFC_ST_IDLE]=                  {[NFC_WRITE_MAILBOX]=_writeMailbox, /* TODO NFC_ST_READ_MAILBOX on RF (NFC_INT) */ [NFC_ERROR]=_error},
+        [NFC_ST_IDLE]=                  {[NFC_GPO_PULSE]=_readInterruptStatus, [NFC_WRITE_MAILBOX]=_writeMailbox, [NFC_ERROR]=_error},
+        [NFC_ST_READ_ITSTS]=            {[NFC_TRANSFER_SUCCESS]=_handleInterruptStatus, [NFC_TRANSFER_FAIL]=_error, [NFC_ERROR]=_error},
         [NFC_ST_READ_UID]=              {[NFC_TRANSFER_SUCCESS]=_presentI2CPwd, [NFC_TRANSFER_FAIL]=_error, [NFC_ERROR]=_error},
         /* enable Fast Transfer Mode (Mailbox MODE accessed wor W when I2C security session is open)*/
         [NFC_ST_PRESENT_I2C_PWD]=       {[NFC_TRANSFER_SUCCESS]=_allowMBModeWrite, [NFC_TRANSFER_FAIL]=_presentI2CPwd, [NFC_TRANSFER_MAX_RETRIES]=_error, [NFC_ERROR]=_error},
         [NFC_ST_ALLOW_MB_MODE_WRITE]=   {[NFC_TRANSFER_SUCCESS]=_enableFTMode, [NFC_TRANSFER_FAIL]=_allowMBModeWrite, [NFC_TRANSFER_MAX_RETRIES]=_error, [NFC_ERROR]=_error},
         [NFC_ST_ENABLE_FT_MODE]=        {[NFC_TRANSFER_SUCCESS]=_idle /* Mailbox ready */, [NFC_TRANSFER_FAIL]=_enableFTMode, [NFC_TRANSFER_MAX_RETRIES]=_error, [NFC_ERROR]=_error},
+        /* Check RF field */
+
         /* Mailbox (exchange data between I2C and RF) */
         [NFC_ST_WRITE_MAILBOX]=         {[NFC_TRANSFER_SUCCESS]=_idle, [NFC_ERROR]=_error},
         [NFC_ST_READ_MAILBOX]=          {[NFC_TRANSFER_SUCCESS]=_idle, [NFC_ERROR]=_error},
@@ -190,6 +199,58 @@ static const TState *_writeMailbox(TActiveObject *const AO, TEvent event) {
 
     return &(nfcStatesList[NFC_ST_WRITE_MAILBOX]);
 };
+
+static const TState *_readInterruptStatus(TActiveObject *const AO, TEvent event) {
+    TNFCActiveObject *nfcAO = (TNFCActiveObject *) AO;
+
+    DRV_I2C_WriteReadTransferAdd(
+            nfcAO->drvI2CHandle,
+            ST25DV_ADDR_DATA_I2C,
+            (void *const) &ST25DV_ITSTS_DYN_REG,
+            NFC_CMD_SIZE,
+            &(nfcAO->st25dvRegs.interruptStatus),
+            NFC_ITSTS_SIZE,
+            &(nfcAO->transferHandle)
+    );
+
+    _dispatchErrorOnInvalidTransfer(nfcAO);
+
+    return &(nfcStatesList[NFC_ST_READ_ITSTS]);
+}
+
+static const TState *_handleInterruptStatus(TActiveObject *const AO, TEvent event) {
+    TNFCActiveObject *nfcAO = (TNFCActiveObject *) AO;
+
+    if (nfcAO->st25dvRegs.interruptStatus.RF_ACTIVITY) {
+        // TODO handle RF activity
+    };
+
+    if (nfcAO->st25dvRegs.interruptStatus.RF_INTERRUPT) {
+        // TODO handle RF interrupt
+    };
+
+    if (nfcAO->st25dvRegs.interruptStatus.FIELD_FALLING) {
+        // TODO handle FIELD falling
+    };
+
+    if (nfcAO->st25dvRegs.interruptStatus.FIELD_RISING) {
+        // TODO handle FIELD rising
+    };
+
+    if (nfcAO->st25dvRegs.interruptStatus.RF_PUT_MSG) {
+        // TODO handle RF put message
+    };
+
+    if (nfcAO->st25dvRegs.interruptStatus.RF_GET_MSG) {
+        // TODO handle RF get message
+    };
+
+    if (nfcAO->st25dvRegs.interruptStatus.RF_WRITE) {
+        // TODO handle RF write
+    };
+
+    return &(nfcStatesList[NFC_ST_IDLE]);
+}
 
 static const TState *_error(TActiveObject *const AO, TEvent event) {
     SYS_ASSERT(!(NFC_ERROR == event.nfcSig), "__FILE__ NFC Error");

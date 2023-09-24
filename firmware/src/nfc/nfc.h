@@ -36,7 +36,6 @@ typedef struct {
     DRV_HANDLE drvI2CHandle;
     DRV_I2C_TRANSFER_HANDLE transferHandle;
     uint8_t retriesLeft;
-    bool RFFieldPresence;
     union {
         uint8_t raw[NFC_CMD_SIZE + ST25DV_MAILBOX_SIZE];
         struct {
@@ -47,6 +46,16 @@ typedef struct {
     struct {
         uint8_t uid[NFC_UID_SIZE];
         uint8_t pwd[NFC_PASSWORD_SIZE];
+        struct {
+            unsigned RF_USER:1;
+            unsigned RF_ACTIVITY:1;
+            unsigned RF_INTERRUPT:1;
+            unsigned FIELD_FALLING:1;
+            unsigned FIELD_RISING:1;
+            unsigned RF_PUT_MSG:1;
+            unsigned RF_GET_MSG:1;
+            unsigned RF_WRITE:1;
+        } interruptStatus;
     } st25dvRegs;
 } TNFCActiveObject;
 

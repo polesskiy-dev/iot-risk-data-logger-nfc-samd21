@@ -1,1060 +1,131 @@
-313 1694729476415 XXXX 1694729476415, Thread 313: XXXX 1694729476415, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729476416 XXXX 1694729476416, Thread 313: XXXX 1694729476416, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729476516 XXXX 1694729476516, Thread 313: XXXX 1694729476516, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729476517 XXXX 1694729476517, Thread 313: XXXX 1694729476517, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729476621 XXXX 1694729476621, Thread 313: XXXX 1694729476621, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729476623 XXXX 1694729476623, Thread 313: XXXX 1694729476623, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729476725 XXXX 1694729476725, Thread 313: XXXX 1694729476725, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729476726 XXXX 1694729476726, Thread 313: XXXX 1694729476726, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729476826 XXXX 1694729476826, Thread 313: XXXX 1694729476826, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729476827 XXXX 1694729476827, Thread 313: XXXX 1694729476827, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729476931 XXXX 1694729476931, Thread 313: XXXX 1694729476931, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729476933 XXXX 1694729476933, Thread 313: XXXX 1694729476933, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729477036 XXXX 1694729477036, Thread 313: XXXX 1694729477036, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729477038 XXXX 1694729477038, Thread 313: XXXX 1694729477038, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729477141 XXXX 1694729477141, Thread 313: XXXX 1694729477141, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729477142 XXXX 1694729477142, Thread 313: XXXX 1694729477142, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729477246 XXXX 1694729477246, Thread 313: XXXX 1694729477246, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729477247 XXXX 1694729477247, Thread 313: XXXX 1694729477247, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729477350 XXXX 1694729477350, Thread 313: XXXX 1694729477350, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729477351 XXXX 1694729477351, Thread 313: XXXX 1694729477351, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729477451 XXXX 1694729477451, Thread 313: XXXX 1694729477451, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729477452 XXXX 1694729477452, Thread 313: XXXX 1694729477452, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729477552 XXXX 1694729477552, Thread 313: XXXX 1694729477552, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729477554 XXXX 1694729477554, Thread 313: XXXX 1694729477554, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729477657 XXXX 1694729477657, Thread 313: XXXX 1694729477657, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729477659 XXXX 1694729477659, Thread 313: XXXX 1694729477659, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729477762 XXXX 1694729477762, Thread 313: XXXX 1694729477762, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729477763 XXXX 1694729477763, Thread 313: XXXX 1694729477763, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729477866 XXXX 1694729477866, Thread 313: XXXX 1694729477866, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729477867 XXXX 1694729477867, Thread 313: XXXX 1694729477867, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729477969 XXXX 1694729477969, Thread 313: XXXX 1694729477969, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729477970 XXXX 1694729477970, Thread 313: XXXX 1694729477970, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729478074 XXXX 1694729478074, Thread 313: XXXX 1694729478074, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729478075 XXXX 1694729478075, Thread 313: XXXX 1694729478075, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729478179 XXXX 1694729478179, Thread 313: XXXX 1694729478179, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729478180 XXXX 1694729478180, Thread 313: XXXX 1694729478180, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729478282 XXXX 1694729478282, Thread 313: XXXX 1694729478282, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729478284 XXXX 1694729478284, Thread 313: XXXX 1694729478284, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729478388 XXXX 1694729478388, Thread 313: XXXX 1694729478388, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729478389 XXXX 1694729478389, Thread 313: XXXX 1694729478389, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729478492 XXXX 1694729478492, Thread 313: XXXX 1694729478492, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729478493 XXXX 1694729478493, Thread 313: XXXX 1694729478493, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729478598 XXXX 1694729478598, Thread 313: XXXX 1694729478598, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729478599 XXXX 1694729478599, Thread 313: XXXX 1694729478599, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729478698 XXXX 1694729478698, Thread 313: XXXX 1694729478698, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729478699 XXXX 1694729478699, Thread 313: XXXX 1694729478699, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729478799 XXXX 1694729478799, Thread 313: XXXX 1694729478799, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729478800 XXXX 1694729478800, Thread 313: XXXX 1694729478800, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729478900 XXXX 1694729478900, Thread 313: XXXX 1694729478900, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729478901 XXXX 1694729478901, Thread 313: XXXX 1694729478901, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729479005 XXXX 1694729479005, Thread 313: XXXX 1694729479005, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729479006 XXXX 1694729479006, Thread 313: XXXX 1694729479006, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729479109 XXXX 1694729479109, Thread 313: XXXX 1694729479109, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729479110 XXXX 1694729479110, Thread 313: XXXX 1694729479110, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729479215 XXXX 1694729479215, Thread 313: XXXX 1694729479215, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729479216 XXXX 1694729479216, Thread 313: XXXX 1694729479216, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729479320 XXXX 1694729479320, Thread 313: XXXX 1694729479320, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729479321 XXXX 1694729479321, Thread 313: XXXX 1694729479321, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729479422 XXXX 1694729479422, Thread 313: XXXX 1694729479422, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729479423 XXXX 1694729479423, Thread 313: XXXX 1694729479423, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729479528 XXXX 1694729479528, Thread 313: XXXX 1694729479528, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729479529 XXXX 1694729479529, Thread 313: XXXX 1694729479529, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729479633 XXXX 1694729479633, Thread 313: XXXX 1694729479633, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729479634 XXXX 1694729479634, Thread 313: XXXX 1694729479634, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729479737 XXXX 1694729479737, Thread 313: XXXX 1694729479737, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729479738 XXXX 1694729479738, Thread 313: XXXX 1694729479738, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729479843 XXXX 1694729479843, Thread 313: XXXX 1694729479843, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729479844 XXXX 1694729479844, Thread 313: XXXX 1694729479844, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729479946 XXXX 1694729479946, Thread 313: XXXX 1694729479946, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729479948 XXXX 1694729479948, Thread 313: XXXX 1694729479948, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729480047 XXXX 1694729480047, Thread 313: XXXX 1694729480047, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729480047 XXXX 1694729480047, Thread 313: XXXX 1694729480047, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729480152 XXXX 1694729480152, Thread 313: XXXX 1694729480152, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729480153 XXXX 1694729480153, Thread 313: XXXX 1694729480153, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729480253 XXXX 1694729480253, Thread 313: XXXX 1694729480253, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729480254 XXXX 1694729480254, Thread 313: XXXX 1694729480254, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729480355 XXXX 1694729480355, Thread 313: XXXX 1694729480355, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729480356 XXXX 1694729480356, Thread 313: XXXX 1694729480356, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729480458 XXXX 1694729480458, Thread 313: XXXX 1694729480458, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729480459 XXXX 1694729480459, Thread 313: XXXX 1694729480459, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729480562 XXXX 1694729480562, Thread 313: XXXX 1694729480562, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729480564 XXXX 1694729480564, Thread 313: XXXX 1694729480563, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729480667 XXXX 1694729480667, Thread 313: XXXX 1694729480667, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729480668 XXXX 1694729480668, Thread 313: XXXX 1694729480668, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729480771 XXXX 1694729480771, Thread 313: XXXX 1694729480771, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729480772 XXXX 1694729480772, Thread 313: XXXX 1694729480772, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729480876 XXXX 1694729480876, Thread 313: XXXX 1694729480876, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729480878 XXXX 1694729480878, Thread 313: XXXX 1694729480878, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729480981 XXXX 1694729480981, Thread 313: XXXX 1694729480981, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729480982 XXXX 1694729480982, Thread 313: XXXX 1694729480982, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729481083 XXXX 1694729481083, Thread 313: XXXX 1694729481083, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729481084 XXXX 1694729481084, Thread 313: XXXX 1694729481084, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729481185 XXXX 1694729481185, Thread 313: XXXX 1694729481185, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729481186 XXXX 1694729481186, Thread 313: XXXX 1694729481186, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729481288 XXXX 1694729481288, Thread 313: XXXX 1694729481288, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729481289 XXXX 1694729481289, Thread 313: XXXX 1694729481289, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729481393 XXXX 1694729481393, Thread 313: XXXX 1694729481393, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729481394 XXXX 1694729481394, Thread 313: XXXX 1694729481394, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729481497 XXXX 1694729481497, Thread 313: XXXX 1694729481497, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729481499 XXXX 1694729481499, Thread 313: XXXX 1694729481499, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729481603 XXXX 1694729481603, Thread 313: XXXX 1694729481603, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729481604 XXXX 1694729481604, Thread 313: XXXX 1694729481604, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729481706 XXXX 1694729481706, Thread 313: XXXX 1694729481706, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729481707 XXXX 1694729481707, Thread 313: XXXX 1694729481707, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729481810 XXXX 1694729481810, Thread 313: XXXX 1694729481810, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729481812 XXXX 1694729481812, Thread 313: XXXX 1694729481812, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729481915 XXXX 1694729481915, Thread 313: XXXX 1694729481915, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729481916 XXXX 1694729481916, Thread 313: XXXX 1694729481916, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729482020 XXXX 1694729482020, Thread 313: XXXX 1694729482020, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729482022 XXXX 1694729482022, Thread 313: XXXX 1694729482021, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729482126 XXXX 1694729482126, Thread 313: XXXX 1694729482126, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729482128 XXXX 1694729482128, Thread 313: XXXX 1694729482127, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729482228 XXXX 1694729482228, Thread 313: XXXX 1694729482228, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729482229 XXXX 1694729482229, Thread 313: XXXX 1694729482229, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729482330 XXXX 1694729482330, Thread 313: XXXX 1694729482330, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729482331 XXXX 1694729482331, Thread 313: XXXX 1694729482331, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729482432 XXXX 1694729482432, Thread 313: XXXX 1694729482432, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729482433 XXXX 1694729482433, Thread 313: XXXX 1694729482433, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729482543 XXXX 1694729482542, Thread 313: XXXX 1694729482542, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729482543 XXXX 1694729482543, Thread 313: XXXX 1694729482543, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729482643 XXXX 1694729482643, Thread 313: XXXX 1694729482643, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729482644 XXXX 1694729482644, Thread 313: XXXX 1694729482644, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729482747 XXXX 1694729482747, Thread 313: XXXX 1694729482747, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729482748 XXXX 1694729482748, Thread 313: XXXX 1694729482748, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729482851 XXXX 1694729482851, Thread 313: XXXX 1694729482851, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729482852 XXXX 1694729482852, Thread 313: XXXX 1694729482852, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729482952 XXXX 1694729482952, Thread 313: XXXX 1694729482952, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729482953 XXXX 1694729482953, Thread 313: XXXX 1694729482953, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729483057 XXXX 1694729483057, Thread 313: XXXX 1694729483057, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729483058 XXXX 1694729483058, Thread 313: XXXX 1694729483058, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729483162 XXXX 1694729483162, Thread 313: XXXX 1694729483162, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729483163 XXXX 1694729483163, Thread 313: XXXX 1694729483163, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729483267 XXXX 1694729483267, Thread 313: XXXX 1694729483267, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729483268 XXXX 1694729483268, Thread 313: XXXX 1694729483268, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729483373 XXXX 1694729483373, Thread 313: XXXX 1694729483373, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729483374 XXXX 1694729483374, Thread 313: XXXX 1694729483374, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729483477 XXXX 1694729483477, Thread 313: XXXX 1694729483477, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729483478 XXXX 1694729483478, Thread 313: XXXX 1694729483478, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729483582 XXXX 1694729483582, Thread 313: XXXX 1694729483582, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729483583 XXXX 1694729483583, Thread 313: XXXX 1694729483583, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729483688 XXXX 1694729483688, Thread 313: XXXX 1694729483688, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729483688 XXXX 1694729483688, Thread 313: XXXX 1694729483688, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729483792 XXXX 1694729483792, Thread 313: XXXX 1694729483792, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729483794 XXXX 1694729483794, Thread 313: XXXX 1694729483794, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729483897 XXXX 1694729483897, Thread 313: XXXX 1694729483897, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729483898 XXXX 1694729483898, Thread 313: XXXX 1694729483898, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729484002 XXXX 1694729484002, Thread 313: XXXX 1694729484002, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729484004 XXXX 1694729484004, Thread 313: XXXX 1694729484004, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729484106 XXXX 1694729484106, Thread 313: XXXX 1694729484106, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729484108 XXXX 1694729484108, Thread 313: XXXX 1694729484108, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729484212 XXXX 1694729484212, Thread 313: XXXX 1694729484212, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729484214 XXXX 1694729484214, Thread 313: XXXX 1694729484213, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729484317 XXXX 1694729484317, Thread 313: XXXX 1694729484317, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729484318 XXXX 1694729484318, Thread 313: XXXX 1694729484318, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729484422 XXXX 1694729484422, Thread 313: XXXX 1694729484422, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729484424 XXXX 1694729484423, Thread 313: XXXX 1694729484423, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729484526 XXXX 1694729484526, Thread 313: XXXX 1694729484526, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729484527 XXXX 1694729484527, Thread 313: XXXX 1694729484527, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729484631 XXXX 1694729484631, Thread 313: XXXX 1694729484631, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729484633 XXXX 1694729484633, Thread 313: XXXX 1694729484633, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729484737 XXXX 1694729484737, Thread 313: XXXX 1694729484737, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729484739 XXXX 1694729484738, Thread 313: XXXX 1694729484738, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729484840 XXXX 1694729484840, Thread 313: XXXX 1694729484840, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729484841 XXXX 1694729484841, Thread 313: XXXX 1694729484841, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729484955 XXXX 1694729484955, Thread 313: XXXX 1694729484955, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729484956 XXXX 1694729484956, Thread 313: XXXX 1694729484956, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729485060 XXXX 1694729485060, Thread 313: XXXX 1694729485060, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729485062 XXXX 1694729485062, Thread 313: XXXX 1694729485062, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729485166 XXXX 1694729485166, Thread 313: XXXX 1694729485166, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729485168 XXXX 1694729485168, Thread 313: XXXX 1694729485168, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729485272 XXXX 1694729485272, Thread 313: XXXX 1694729485272, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729485274 XXXX 1694729485274, Thread 313: XXXX 1694729485273, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729485377 XXXX 1694729485377, Thread 313: XXXX 1694729485377, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729485379 XXXX 1694729485379, Thread 313: XXXX 1694729485379, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729485484 XXXX 1694729485484, Thread 313: XXXX 1694729485484, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729485485 XXXX 1694729485485, Thread 313: XXXX 1694729485485, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729485588 XXXX 1694729485588, Thread 313: XXXX 1694729485588, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729485589 XXXX 1694729485589, Thread 313: XXXX 1694729485589, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729485692 XXXX 1694729485692, Thread 313: XXXX 1694729485692, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729485694 XXXX 1694729485694, Thread 313: XXXX 1694729485694, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729485797 XXXX 1694729485797, Thread 313: XXXX 1694729485797, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729485799 XXXX 1694729485798, Thread 313: XXXX 1694729485798, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729485897 XXXX 1694729485897, Thread 313: XXXX 1694729485897, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729485898 XXXX 1694729485898, Thread 313: XXXX 1694729485898, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729486001 XXXX 1694729486001, Thread 313: XXXX 1694729486001, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729486003 XXXX 1694729486003, Thread 313: XXXX 1694729486003, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729486105 XXXX 1694729486105, Thread 313: XXXX 1694729486105, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729486106 XXXX 1694729486106, Thread 313: XXXX 1694729486106, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729486208 XXXX 1694729486208, Thread 313: XXXX 1694729486208, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729486208 XXXX 1694729486208, Thread 313: XXXX 1694729486208, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729486312 XXXX 1694729486312, Thread 313: XXXX 1694729486312, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729486313 XXXX 1694729486313, Thread 313: XXXX 1694729486313, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729486413 XXXX 1694729486413, Thread 313: XXXX 1694729486413, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729486415 XXXX 1694729486415, Thread 313: XXXX 1694729486415, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729486518 XXXX 1694729486518, Thread 313: XXXX 1694729486518, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729486519 XXXX 1694729486519, Thread 313: XXXX 1694729486519, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729486621 XXXX 1694729486621, Thread 313: XXXX 1694729486621, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729486623 XXXX 1694729486623, Thread 313: XXXX 1694729486623, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729486725 XXXX 1694729486725, Thread 313: XXXX 1694729486725, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729486727 XXXX 1694729486727, Thread 313: XXXX 1694729486727, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729486830 XXXX 1694729486830, Thread 313: XXXX 1694729486830, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729486832 XXXX 1694729486832, Thread 313: XXXX 1694729486832, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729486932 XXXX 1694729486932, Thread 313: XXXX 1694729486932, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729486934 XXXX 1694729486934, Thread 313: XXXX 1694729486934, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729487037 XXXX 1694729487037, Thread 313: XXXX 1694729487037, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729487039 XXXX 1694729487039, Thread 313: XXXX 1694729487039, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729487142 XXXX 1694729487142, Thread 313: XXXX 1694729487142, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729487144 XXXX 1694729487144, Thread 313: XXXX 1694729487144, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729487243 XXXX 1694729487243, Thread 313: XXXX 1694729487243, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729487244 XXXX 1694729487244, Thread 313: XXXX 1694729487244, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729487348 XXXX 1694729487348, Thread 313: XXXX 1694729487348, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729487350 XXXX 1694729487350, Thread 313: XXXX 1694729487350, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729487453 XXXX 1694729487453, Thread 313: XXXX 1694729487453, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729487455 XXXX 1694729487455, Thread 313: XXXX 1694729487455, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729487557 XXXX 1694729487557, Thread 313: XXXX 1694729487557, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729487559 XXXX 1694729487559, Thread 313: XXXX 1694729487559, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729487660 XXXX 1694729487660, Thread 313: XXXX 1694729487660, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729487661 XXXX 1694729487661, Thread 313: XXXX 1694729487661, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729487764 XXXX 1694729487764, Thread 313: XXXX 1694729487764, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729487766 XXXX 1694729487766, Thread 313: XXXX 1694729487766, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729487869 XXXX 1694729487869, Thread 313: XXXX 1694729487869, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729487870 XXXX 1694729487870, Thread 313: XXXX 1694729487870, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729487974 XXXX 1694729487974, Thread 313: XXXX 1694729487974, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729487975 XXXX 1694729487975, Thread 313: XXXX 1694729487975, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729488079 XXXX 1694729488079, Thread 313: XXXX 1694729488079, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729488081 XXXX 1694729488081, Thread 313: XXXX 1694729488081, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729488182 XXXX 1694729488182, Thread 313: XXXX 1694729488182, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729488183 XXXX 1694729488183, Thread 313: XXXX 1694729488183, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729488287 XXXX 1694729488287, Thread 313: XXXX 1694729488287, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729488288 XXXX 1694729488288, Thread 313: XXXX 1694729488288, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729488392 XXXX 1694729488392, Thread 313: XXXX 1694729488392, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729488393 XXXX 1694729488393, Thread 313: XXXX 1694729488393, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729488495 XXXX 1694729488495, Thread 313: XXXX 1694729488495, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729488497 XXXX 1694729488497, Thread 313: XXXX 1694729488497, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729488601 XXXX 1694729488601, Thread 313: XXXX 1694729488601, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729488603 XXXX 1694729488603, Thread 313: XXXX 1694729488603, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729488705 XXXX 1694729488705, Thread 313: XXXX 1694729488705, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729488707 XXXX 1694729488707, Thread 313: XXXX 1694729488707, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729488807 XXXX 1694729488807, Thread 313: XXXX 1694729488807, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729488809 XXXX 1694729488809, Thread 313: XXXX 1694729488809, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729488909 XXXX 1694729488909, Thread 313: XXXX 1694729488909, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729488911 XXXX 1694729488911, Thread 313: XXXX 1694729488911, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729489010 XXXX 1694729489010, Thread 313: XXXX 1694729489010, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729489011 XXXX 1694729489011, Thread 313: XXXX 1694729489011, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729489113 XXXX 1694729489113, Thread 313: XXXX 1694729489113, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729489113 XXXX 1694729489113, Thread 313: XXXX 1694729489113, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729489217 XXXX 1694729489217, Thread 313: XXXX 1694729489217, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729489219 XXXX 1694729489218, Thread 313: XXXX 1694729489218, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729489318 XXXX 1694729489318, Thread 313: XXXX 1694729489318, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729489319 XXXX 1694729489319, Thread 313: XXXX 1694729489319, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729489423 XXXX 1694729489423, Thread 313: XXXX 1694729489423, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729489425 XXXX 1694729489425, Thread 313: XXXX 1694729489425, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729489529 XXXX 1694729489529, Thread 313: XXXX 1694729489529, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729489531 XXXX 1694729489531, Thread 313: XXXX 1694729489531, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729489634 XXXX 1694729489634, Thread 313: XXXX 1694729489634, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729489636 XXXX 1694729489636, Thread 313: XXXX 1694729489636, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729489738 XXXX 1694729489738, Thread 313: XXXX 1694729489738, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729489739 XXXX 1694729489739, Thread 313: XXXX 1694729489739, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729489840 XXXX 1694729489840, Thread 313: XXXX 1694729489840, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729489842 XXXX 1694729489842, Thread 313: XXXX 1694729489841, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729489943 XXXX 1694729489943, Thread 313: XXXX 1694729489943, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729489944 XXXX 1694729489944, Thread 313: XXXX 1694729489944, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729490047 XXXX 1694729490047, Thread 313: XXXX 1694729490047, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729490048 XXXX 1694729490048, Thread 313: XXXX 1694729490047, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729490151 XXXX 1694729490151, Thread 313: XXXX 1694729490151, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729490153 XXXX 1694729490153, Thread 313: XXXX 1694729490152, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729490252 XXXX 1694729490252, Thread 313: XXXX 1694729490252, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729490254 XXXX 1694729490254, Thread 313: XXXX 1694729490254, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729490358 XXXX 1694729490358, Thread 313: XXXX 1694729490358, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729490359 XXXX 1694729490359, Thread 313: XXXX 1694729490359, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729490459 XXXX 1694729490459, Thread 313: XXXX 1694729490459, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729490461 XXXX 1694729490461, Thread 313: XXXX 1694729490461, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729490560 XXXX 1694729490560, Thread 313: XXXX 1694729490560, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729490562 XXXX 1694729490562, Thread 313: XXXX 1694729490562, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729490665 XXXX 1694729490665, Thread 313: XXXX 1694729490665, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729490666 XXXX 1694729490666, Thread 313: XXXX 1694729490666, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729490770 XXXX 1694729490770, Thread 313: XXXX 1694729490770, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729490772 XXXX 1694729490772, Thread 313: XXXX 1694729490772, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729490875 XXXX 1694729490875, Thread 313: XXXX 1694729490875, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729490877 XXXX 1694729490877, Thread 313: XXXX 1694729490877, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729490981 XXXX 1694729490981, Thread 313: XXXX 1694729490981, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729490982 XXXX 1694729490982, Thread 313: XXXX 1694729490982, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729491086 XXXX 1694729491086, Thread 313: XXXX 1694729491086, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729491087 XXXX 1694729491087, Thread 313: XXXX 1694729491087, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729491187 XXXX 1694729491187, Thread 313: XXXX 1694729491187, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729491189 XXXX 1694729491189, Thread 313: XXXX 1694729491189, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729491291 XXXX 1694729491291, Thread 313: XXXX 1694729491291, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729491292 XXXX 1694729491292, Thread 313: XXXX 1694729491292, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729491392 XXXX 1694729491392, Thread 313: XXXX 1694729491392, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729491394 XXXX 1694729491394, Thread 313: XXXX 1694729491394, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729491497 XXXX 1694729491497, Thread 313: XXXX 1694729491497, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729491499 XXXX 1694729491499, Thread 313: XXXX 1694729491499, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729491599 XXXX 1694729491599, Thread 313: XXXX 1694729491599, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729491601 XXXX 1694729491601, Thread 313: XXXX 1694729491601, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729491704 XXXX 1694729491704, Thread 313: XXXX 1694729491704, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729491706 XXXX 1694729491706, Thread 313: XXXX 1694729491706, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729491806 XXXX 1694729491806, Thread 313: XXXX 1694729491806, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729491808 XXXX 1694729491808, Thread 313: XXXX 1694729491808, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729491912 XXXX 1694729491912, Thread 313: XXXX 1694729491912, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729491914 XXXX 1694729491914, Thread 313: XXXX 1694729491914, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729492017 XXXX 1694729492017, Thread 313: XXXX 1694729492017, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729492019 XXXX 1694729492019, Thread 313: XXXX 1694729492019, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729492120 XXXX 1694729492120, Thread 313: XXXX 1694729492120, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729492122 XXXX 1694729492122, Thread 313: XXXX 1694729492122, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729492226 XXXX 1694729492226, Thread 313: XXXX 1694729492225, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729492227 XXXX 1694729492227, Thread 313: XXXX 1694729492227, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729492328 XXXX 1694729492328, Thread 313: XXXX 1694729492328, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729492330 XXXX 1694729492330, Thread 313: XXXX 1694729492330, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729492434 XXXX 1694729492434, Thread 313: XXXX 1694729492434, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729492435 XXXX 1694729492435, Thread 313: XXXX 1694729492435, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729492539 XXXX 1694729492539, Thread 313: XXXX 1694729492539, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729492540 XXXX 1694729492540, Thread 313: XXXX 1694729492540, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729492644 XXXX 1694729492644, Thread 313: XXXX 1694729492644, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729492646 XXXX 1694729492646, Thread 313: XXXX 1694729492646, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729492746 XXXX 1694729492746, Thread 313: XXXX 1694729492746, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729492748 XXXX 1694729492748, Thread 313: XXXX 1694729492748, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729492850 XXXX 1694729492850, Thread 313: XXXX 1694729492850, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729492851 XXXX 1694729492851, Thread 313: XXXX 1694729492851, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729492955 XXXX 1694729492955, Thread 313: XXXX 1694729492955, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729492957 XXXX 1694729492957, Thread 313: XXXX 1694729492957, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729493056 XXXX 1694729493056, Thread 313: XXXX 1694729493056, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729493058 XXXX 1694729493058, Thread 313: XXXX 1694729493058, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729493162 XXXX 1694729493162, Thread 313: XXXX 1694729493162, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729493163 XXXX 1694729493163, Thread 313: XXXX 1694729493163, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729493267 XXXX 1694729493267, Thread 313: XXXX 1694729493267, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729493269 XXXX 1694729493269, Thread 313: XXXX 1694729493269, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729493373 XXXX 1694729493373, Thread 313: XXXX 1694729493373, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729493374 XXXX 1694729493374, Thread 313: XXXX 1694729493374, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729493478 XXXX 1694729493478, Thread 313: XXXX 1694729493478, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729493479 XXXX 1694729493479, Thread 313: XXXX 1694729493479, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729493583 XXXX 1694729493583, Thread 313: XXXX 1694729493583, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729493584 XXXX 1694729493584, Thread 313: XXXX 1694729493584, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729493688 XXXX 1694729493688, Thread 313: XXXX 1694729493688, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729493689 XXXX 1694729493689, Thread 313: XXXX 1694729493689, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729493791 XXXX 1694729493791, Thread 313: XXXX 1694729493791, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729493793 XXXX 1694729493793, Thread 313: XXXX 1694729493793, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729493897 XXXX 1694729493897, Thread 313: XXXX 1694729493897, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729493898 XXXX 1694729493898, Thread 313: XXXX 1694729493898, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729494002 XXXX 1694729494002, Thread 313: XXXX 1694729494002, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729494003 XXXX 1694729494003, Thread 313: XXXX 1694729494003, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729494104 XXXX 1694729494104, Thread 313: XXXX 1694729494104, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729494105 XXXX 1694729494105, Thread 313: XXXX 1694729494105, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729494209 XXXX 1694729494209, Thread 313: XXXX 1694729494209, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729494211 XXXX 1694729494211, Thread 313: XXXX 1694729494211, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729494315 XXXX 1694729494315, Thread 313: XXXX 1694729494315, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729494316 XXXX 1694729494316, Thread 313: XXXX 1694729494316, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729494416 XXXX 1694729494416, Thread 313: XXXX 1694729494416, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729494417 XXXX 1694729494417, Thread 313: XXXX 1694729494417, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729494522 XXXX 1694729494522, Thread 313: XXXX 1694729494522, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729494523 XXXX 1694729494523, Thread 313: XXXX 1694729494523, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729494627 XXXX 1694729494627, Thread 313: XXXX 1694729494627, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729494629 XXXX 1694729494629, Thread 313: XXXX 1694729494629, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729494729 XXXX 1694729494729, Thread 313: XXXX 1694729494729, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729494731 XXXX 1694729494731, Thread 313: XXXX 1694729494731, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729494832 XXXX 1694729494832, Thread 313: XXXX 1694729494832, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729494834 XXXX 1694729494834, Thread 313: XXXX 1694729494834, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729494933 XXXX 1694729494933, Thread 313: XXXX 1694729494933, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729494935 XXXX 1694729494935, Thread 313: XXXX 1694729494935, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729495038 XXXX 1694729495038, Thread 313: XXXX 1694729495038, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729495039 XXXX 1694729495039, Thread 313: XXXX 1694729495039, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729495143 XXXX 1694729495143, Thread 313: XXXX 1694729495143, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729495145 XXXX 1694729495145, Thread 313: XXXX 1694729495145, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729495248 XXXX 1694729495248, Thread 313: XXXX 1694729495248, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729495250 XXXX 1694729495250, Thread 313: XXXX 1694729495250, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729495353 XXXX 1694729495353, Thread 313: XXXX 1694729495353, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729495355 XXXX 1694729495355, Thread 313: XXXX 1694729495355, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729495458 XXXX 1694729495458, Thread 313: XXXX 1694729495458, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729495460 XXXX 1694729495460, Thread 313: XXXX 1694729495460, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729495563 XXXX 1694729495563, Thread 313: XXXX 1694729495563, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729495565 XXXX 1694729495565, Thread 313: XXXX 1694729495565, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729495664 XXXX 1694729495664, Thread 313: XXXX 1694729495664, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729495665 XXXX 1694729495665, Thread 313: XXXX 1694729495665, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729495769 XXXX 1694729495769, Thread 313: XXXX 1694729495769, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729495771 XXXX 1694729495771, Thread 313: XXXX 1694729495771, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729495874 XXXX 1694729495874, Thread 313: XXXX 1694729495874, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729495876 XXXX 1694729495876, Thread 313: XXXX 1694729495876, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729495979 XXXX 1694729495979, Thread 313: XXXX 1694729495979, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729495980 XXXX 1694729495980, Thread 313: XXXX 1694729495980, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729496084 XXXX 1694729496084, Thread 313: XXXX 1694729496084, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729496086 XXXX 1694729496086, Thread 313: XXXX 1694729496086, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729496189 XXXX 1694729496189, Thread 313: XXXX 1694729496189, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729496191 XXXX 1694729496191, Thread 313: XXXX 1694729496191, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729496294 XXXX 1694729496294, Thread 313: XXXX 1694729496294, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729496296 XXXX 1694729496296, Thread 313: XXXX 1694729496296, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729496399 XXXX 1694729496399, Thread 313: XXXX 1694729496399, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729496401 XXXX 1694729496401, Thread 313: XXXX 1694729496401, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729496503 XXXX 1694729496503, Thread 313: XXXX 1694729496503, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729496505 XXXX 1694729496505, Thread 313: XXXX 1694729496505, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729496608 XXXX 1694729496608, Thread 313: XXXX 1694729496608, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729496609 XXXX 1694729496609, Thread 313: XXXX 1694729496609, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729496713 XXXX 1694729496713, Thread 313: XXXX 1694729496713, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729496715 XXXX 1694729496715, Thread 313: XXXX 1694729496715, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729496819 XXXX 1694729496819, Thread 313: XXXX 1694729496819, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729496820 XXXX 1694729496820, Thread 313: XXXX 1694729496820, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729496924 XXXX 1694729496924, Thread 313: XXXX 1694729496924, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729496925 XXXX 1694729496925, Thread 313: XXXX 1694729496925, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729497029 XXXX 1694729497029, Thread 313: XXXX 1694729497029, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729497031 XXXX 1694729497031, Thread 313: XXXX 1694729497031, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729497134 XXXX 1694729497134, Thread 313: XXXX 1694729497134, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729497136 XXXX 1694729497136, Thread 313: XXXX 1694729497136, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729497240 XXXX 1694729497240, Thread 313: XXXX 1694729497240, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729497241 XXXX 1694729497241, Thread 313: XXXX 1694729497241, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729497345 XXXX 1694729497345, Thread 313: XXXX 1694729497345, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729497347 XXXX 1694729497347, Thread 313: XXXX 1694729497347, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729497451 XXXX 1694729497451, Thread 313: XXXX 1694729497451, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729497452 XXXX 1694729497452, Thread 313: XXXX 1694729497452, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729497555 XXXX 1694729497555, Thread 313: XXXX 1694729497555, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729497557 XXXX 1694729497557, Thread 313: XXXX 1694729497557, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729497660 XXXX 1694729497660, Thread 313: XXXX 1694729497660, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729497662 XXXX 1694729497662, Thread 313: XXXX 1694729497662, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729497765 XXXX 1694729497765, Thread 313: XXXX 1694729497765, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729497766 XXXX 1694729497766, Thread 313: XXXX 1694729497766, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729497870 XXXX 1694729497870, Thread 313: XXXX 1694729497870, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729497872 XXXX 1694729497872, Thread 313: XXXX 1694729497872, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729497975 XXXX 1694729497975, Thread 313: XXXX 1694729497975, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729497976 XXXX 1694729497976, Thread 313: XXXX 1694729497976, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729498080 XXXX 1694729498080, Thread 313: XXXX 1694729498080, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729498081 XXXX 1694729498081, Thread 313: XXXX 1694729498081, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729498185 XXXX 1694729498185, Thread 313: XXXX 1694729498185, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729498186 XXXX 1694729498186, Thread 313: XXXX 1694729498186, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729498290 XXXX 1694729498290, Thread 313: XXXX 1694729498290, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729498292 XXXX 1694729498292, Thread 313: XXXX 1694729498292, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729498393 XXXX 1694729498393, Thread 313: XXXX 1694729498393, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729498395 XXXX 1694729498395, Thread 313: XXXX 1694729498395, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729498498 XXXX 1694729498498, Thread 313: XXXX 1694729498498, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729498499 XXXX 1694729498499, Thread 313: XXXX 1694729498499, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729498603 XXXX 1694729498603, Thread 313: XXXX 1694729498603, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729498604 XXXX 1694729498604, Thread 313: XXXX 1694729498604, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729498703 XXXX 1694729498703, Thread 313: XXXX 1694729498703, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729498704 XXXX 1694729498704, Thread 313: XXXX 1694729498704, Exiting Thread 313: Commands::runScriptBasic  
+280 1695589171719 GEN4_CONNECT_DIAGNOSTICS:MPLABCommTool is NOT null
+280 1695589171719 GEN4_CONNECT_DIAGNOSTICS:AttachedToolPID = 9036, AttachedToolVID = 4d8
+280 1695589171719 GEN4_CONNECT_DIAGNOSTICS:transport type = USB
+280 1695589171719 GEN4_CONNECT_DIAGNOSTICS:AttachedToolPID = 9036, AttachedToolVID = 4d8
+280 1695589173740 GEN4_CONNECT_DIAGNOSTICS:Before MPLABCommTool.Connect()
+280 1695589173741 GEN4_CONNECT_DIAGNOSTICS:After MPLABCommTool.Connect()
+280 1695589173741 GEN4_CONNECT_DIAGNOSTICS:MPLABCommTool.Connect() returned MPLABCOMM_NO_ERROR
+280 1695589173741 GEN4_CONNECT_DIAGNOSTICS:Attaching to MPLABCommTool plugnplay
+280 1695589173747 GEN4_CONNECT_DIAGNOSTICS:Adding new plug and play observer com.microchip.mplab.mdbcore.RI4Tool.RI4ToolBase$RI4PlugNPlayObserver@44704aae
+280 1695589173747 GEN4_CONNECT_DIAGNOSTICS:Begin PlugNPlayObservers list dump:
+280 1695589173747 GEN4_CONNECT_DIAGNOSTICS:com.microchip.mplab.mdbcore.RI4Tool.RI4ToolBase$RI4PlugNPlayObserver@44704aae
+280 1695589173747 GEN4_CONNECT_DIAGNOSTICS:End PlugNPlayObservers list dump:
+280 1695589173748 GEN4_CONNECT_DIAGNOSTICS:Registering for alternate PNP notifications. CommPnPCriteria.cPIDList = [9035], CommPnPCriteria.cSerialNumber = ?
 
-313 1694729498965 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:HaltTarget
-313 1694729498965 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-313 1694729498965 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-313 1694729498965 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-313 1694729498966 XXXX 1694729498966, Thread 313: XXXX 1694729498966, Entering Thread 313: Commands::runScriptBasic, script name = Halt, timeOut = -1 ms  
-313 1694729498967 XXXX 1694729498967, Thread 313: XXXX 1694729498967, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729498967 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:HaltTarget
-313 1694729498967 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-313 1694729498967 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-313 1694729498967 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-313 1694729498967 XXXX 1694729498967, Thread 313: XXXX 1694729498967, Entering Thread 313: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
-313 1694729498968 XXXX 1694729498968, Thread 313: XXXX 1694729498968, Exiting Thread 313: Commands::runScriptBasic  
+280 1695589173883 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Pre:init
+280 1695589173883 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload
+280 1695589173883 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: Values:
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: pcAddress = 7fffffffffffffff, Vpp = 3.30, useRowEraseIfVoltageIsLow = false, voltageBelowWhichUseRowErase = 0.00, deviceName = ATSAMD21E18A, programmerType = NVMCTRL_U2207
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: MemInfo values:
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = ffffffff, exists = true, startAddr = 00000000, endAddr = 20007fff, rowSize = 0200, rowEraseSize = 0200, addrInc = 0004, widthProgram = 0004
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = ffffffff, exists = true, startAddr = 00804000, endAddr = 00804007, rowSize = 0001, rowEraseSize = 0000, addrInc = 0004, widthProgram = 0004
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = ffffffff, exists = true, startAddr = 00804008, endAddr = 008040ff, rowSize = 0040, rowEraseSize = 0000, addrInc = 0004, widthProgram = 0004
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0200, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0004, widthProgram = 0004
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = ffffffff, exists = true, startAddr = 40000000, endAddr = e000efff, rowSize = 0000, rowEraseSize = 0000, addrInc = 0004, widthProgram = 0004
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0004, widthProgram = 0004
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0004, widthProgram = 0004
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 7fffffff, exists = true, startAddr = 41002018, endAddr = 4100201b, rowSize = 0001, rowEraseSize = 0000, addrInc = 0001, widthProgram = 0001
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A DeviceInfo: CfgRequiredBitsMask Values:
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Address = 00804000, Mask = fe01ff77
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Address = 00804004, Mask = ffff01ff
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A BasicInfo: Values:
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A BasicInfo: InputStream = com.microchip.mplab.libs.toolpacksupport.EquatableFileInputStream@6efa678d, ToolFlavor = PIC32C
+280 1695589173884 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload End
+280 1695589175370 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Post:init
+280 1695589175370 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return Value
+280 1695589175370 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A none
+280 1695589175370 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return End
 
-313 1694729498970 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadTargetMemory
-313 1694729498970 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-313 1694729498970 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Emulation
-313 1694729498971 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e0002000
-313 1694729498971 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e0002003
-313 1694729498971 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-313 1694729498971 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-313 1694729498971 XXXX 1694729498971, Thread 313: XXXX 1694729498971, Entering Thread 313: Commands::runScriptWithUpload, script name = ReadEmu  
-313 1694729498971 XXXX 1694729498971, Thread 313: XXXX 1694729498971, Entering Thread 313: ToolCommUsb::readTransfer, sideData is 0x24 bytes long, transferDataLength is 0x4 bytes long  
-313 1694729498973 XXXX 1694729498973, Thread 313: XXXX 1694729498973, Exiting Thread 313: ToolCommUsb::readTransfer,  cr.status = 0x0  
-313 1694729498973 XXXX 1694729498973, Thread 313: XXXX 1694729498973, Exiting Thread 313: Commands::runScriptWithUpload  
-313 1694729498973 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadTargetMemory
-313 1694729498973 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-313 1694729498973 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-313 1694729498973 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
+280 1695589175370 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Pre:GetInterfaceProvider
+280 1695589175370 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload
+280 1695589175370 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A RI4DebugInterface
+280 1695589175370 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload End
+280 1695589175370 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Post:GetInterfaceProvider
+280 1695589175370 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return Value
+280 1695589175370 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A com.microchip.mplab.libs.RI4ToolsController.implementations.RI4DebugInterfaceImpl@7c4efb17
+280 1695589175370 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return End
 
-313 1694729498973 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugWriteTargetMemory
-313 1694729498973 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-313 1694729498973 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Emulation
-313 1694729498973 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e000edfc
-313 1694729498973 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e000edff
-313 1694729498973 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-313 1694729498973 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-313 1694729498973 XXXX 1694729498973, Thread 313: XXXX 1694729498973, Entering Thread 313: Commands::runScriptWithDownload, script name = WriteEmu  
-313 1694729498976 XXXX 1694729498976, Thread 313: XXXX 1694729498976, Exiting Thread 313: Commands::runScriptWithDownload(WriteEmu)  
-313 1694729498976 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugWriteTargetMemory
-313 1694729498976 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-313 1694729498976 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-313 1694729498976 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
+280 1695589175384 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Pre:GetInterfaceProvider
+280 1695589175384 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload
+280 1695589175384 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A RI4ProgramInterface
+280 1695589175384 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload End
+280 1695589175384 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Post:GetInterfaceProvider
+280 1695589175384 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return Value
+280 1695589175384 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A com.microchip.mplab.libs.RI4ToolsController.implementations.RI4ProgramInterfaceImpl@477a11c7
+280 1695589175384 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return End
 
-313 1694729498976 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugWriteTargetMemory
-313 1694729498976 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-313 1694729498976 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Emulation
-313 1694729498976 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e0001000
-313 1694729498976 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e0001003
-313 1694729498976 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-313 1694729498976 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-313 1694729498976 XXXX 1694729498976, Thread 313: XXXX 1694729498976, Entering Thread 313: Commands::runScriptWithDownload, script name = WriteEmu  
-313 1694729498979 XXXX 1694729498979, Thread 313: XXXX 1694729498979, Exiting Thread 313: Commands::runScriptWithDownload(WriteEmu)  
-313 1694729498979 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugWriteTargetMemory
-313 1694729498979 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-313 1694729498979 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-313 1694729498979 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
+280 1695589175393 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Pre:GetInterfaceProvider
+280 1695589175393 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload
+280 1695589175393 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A RI4ConnectInterface
+280 1695589175393 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload End
+280 1695589175394 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Post:GetInterfaceProvider
+280 1695589175394 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return Value
+280 1695589175394 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A com.microchip.mplab.libs.PK4ToolsController.PK4ConnectInterfaceImpl@1801e03d
+280 1695589175394 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return End
 
-313 1694729498979 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugWriteTargetMemory
-313 1694729498979 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-313 1694729498979 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Emulation
-313 1694729498979 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e0001020
-313 1694729498979 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e000102b
-313 1694729498979 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 12
-313 1694729498979 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-313 1694729498979 XXXX 1694729498979, Thread 313: XXXX 1694729498979, Entering Thread 313: Commands::runScriptWithDownload, script name = WriteEmu  
-313 1694729498982 XXXX 1694729498982, Thread 313: XXXX 1694729498982, Exiting Thread 313: Commands::runScriptWithDownload(WriteEmu)  
-313 1694729498982 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugWriteTargetMemory
-313 1694729498982 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-313 1694729498982 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-313 1694729498982 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Pre:selectCore
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Payload
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A ATSAMD21E18A
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Payload End
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Post:selectCore
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Return Value
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A none
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Return End
 
-313 1694729498982 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugWriteTargetMemory
-313 1694729498982 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-313 1694729498982 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Emulation
-313 1694729498982 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e0001030
-313 1694729498982 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e000103b
-313 1694729498982 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 12
-313 1694729498982 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-313 1694729498982 XXXX 1694729498982, Thread 313: XXXX 1694729498982, Entering Thread 313: Commands::runScriptWithDownload, script name = WriteEmu  
-313 1694729498985 XXXX 1694729498985, Thread 313: XXXX 1694729498985, Exiting Thread 313: Commands::runScriptWithDownload(WriteEmu)  
-313 1694729498985 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugWriteTargetMemory
-313 1694729498985 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-313 1694729498985 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-313 1694729498985 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Pre:GetInterfaceProvider
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A RI4ControllerDiagnosticsInterface
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload End
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Post:GetInterfaceProvider
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return Value
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A com.microchip.mplab.libs.RI4ToolsController.implementations.RI4ControllerDiagnosticsInterfaceImpl@16d2354e
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return End
 
-313 1694729498985 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugWriteTargetMemory
-313 1694729498985 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-313 1694729498985 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Emulation
-313 1694729498985 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e0002000
-313 1694729498985 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e0002003
-313 1694729498985 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-313 1694729498985 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-313 1694729498985 XXXX 1694729498985, Thread 313: XXXX 1694729498985, Entering Thread 313: Commands::runScriptWithDownload, script name = WriteEmu  
-313 1694729498988 XXXX 1694729498988, Thread 313: XXXX 1694729498988, Exiting Thread 313: Commands::runScriptWithDownload(WriteEmu)  
-313 1694729498988 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugWriteTargetMemory
-313 1694729498988 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-313 1694729498988 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-313 1694729498988 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Pre:GetInterfaceProvider
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A ProgrammerToGo
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload End
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Post:GetInterfaceProvider
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return Value
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A com.microchip.mplab.libs.RI4ToolsController.implementations.ProgrammerToGoImpl@768a7515
+280 1695589175395 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return End
 
-313 1694729498988 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugWriteTargetMemory
-313 1694729498988 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-313 1694729498988 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Emulation
-313 1694729498988 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e0002008
-313 1694729498988 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A e0002017
-313 1694729498988 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 16
-313 1694729498988 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-313 1694729498988 XXXX 1694729498988, Thread 313: XXXX 1694729498988, Entering Thread 313: Commands::runScriptWithDownload, script name = WriteEmu  
-313 1694729498991 XXXX 1694729498991, Thread 313: XXXX 1694729498991, Exiting Thread 313: Commands::runScriptWithDownload(WriteEmu)  
-313 1694729498991 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugWriteTargetMemory
-313 1694729498991 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-313 1694729498991 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-313 1694729498991 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
+280 1695589175396 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Pre:GetInterfaceProvider
+280 1695589175396 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload
+280 1695589175396 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Status
+280 1695589175396 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Payload End
+280 1695589175396 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Post:GetInterfaceProvider
+280 1695589175396 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return Value
+280 1695589175396 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A null
+280 1695589175396 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_ATSAMD21E18A Return End
 
-313 1694729498991 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:GetPC
-313 1694729498991 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-313 1694729498991 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-313 1694729498991 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-313 1694729498991 XXXX 1694729498991, Thread 313: XXXX 1694729498991, Entering Thread 313: Commands::runScriptBasic, script name = GetPC, timeOut = -1 ms  
-313 1694729498992 XXXX 1694729498992, Thread 313: XXXX 1694729498992, Exiting Thread 313: Commands::runScriptBasic  
-313 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:GetPC
-313 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-313 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A d76c
-313 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
+280 1695589175397 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Pre:EstablishCommunincations
+280 1695589175397 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Payload
+280 1695589175397 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A com.microchip.mplab.mdbcore.PK5Tool.PK5Com@6bede07a
+280 1695589175397 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Payload End
+280 1695589175401 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Post:EstablishCommunincations
+280 1695589175401 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Return Value
+280 1695589175402 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A true
+280 1695589175402 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Return End
 
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A PC
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729498992 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729498992 XXXX 1694729498992, Thread 6167: XXXX 1694729498992, Entering Thread 6167: Commands::runScriptWithUpload, script name = GetCoreRegsRange  
-6167 1694729498993 XXXX 1694729498993, Thread 6167: XXXX 1694729498993, Entering Thread 6167: ToolCommUsb::readTransfer, sideData is 0x45 bytes long, transferDataLength is 0x4c bytes long  
-6167 1694729498997 XXXX 1694729498997, Thread 6167: XXXX 1694729498997, Exiting Thread 6167: ToolCommUsb::readTransfer,  cr.status = 0x0  
-6167 1694729498997 XXXX 1694729498997, Thread 6167: XXXX 1694729498997, Exiting Thread 6167: Commands::runScriptWithUpload  
-6167 1694729498997 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729498997 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729498997 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729498997 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R0
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499052 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R1
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R2
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499053 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R3
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R4
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R5
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R6
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R7
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R8
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R9
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R10
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R11
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A R12
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499054 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A SP
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A LR
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A PC
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A MSP
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A PSP
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A PSR
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A APSR
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A IPSR
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A EPSR
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A PRIMASK
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499055 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499056 XXXX 1694729499056, Thread 6167: XXXX 1694729499056, Entering Thread 6167: Commands::runScriptWithUpload, script name = GetCoreRegsRange  
-6167 1694729499056 XXXX 1694729499056, Thread 6167: XXXX 1694729499056, Entering Thread 6167: ToolCommUsb::readTransfer, sideData is 0x45 bytes long, transferDataLength is 0x4 bytes long  
-6167 1694729499058 XXXX 1694729499058, Thread 6167: XXXX 1694729499058, Exiting Thread 6167: ToolCommUsb::readTransfer,  cr.status = 0x0  
-6167 1694729499058 XXXX 1694729499058, Thread 6167: XXXX 1694729499058, Exiting Thread 6167: Commands::runScriptWithUpload  
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:IsTargetInDebugMode
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:IsTargetInDebugMode
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:DebugReadNamedRegister
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A CONTROL
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Length = 4
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Post:DebugReadNamedRegister
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return Value
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A true
-6167 1694729499058 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Return End
-6179 1694729501691 GEN4_CONNECT_DIAGNOSTICS:Calling Update on plug and play observer com.microchip.mplab.mdbcore.RI4Tool.RI4ToolBase$RI4PlugNPlayObserver@7b279e46
-6179 1694729501691 GEN4_CONNECT_DIAGNOSTICS:Entering plug and play Update(). Attached PID = 9036
-6179 1694729501691 GEN4_CONNECT_DIAGNOSTICS:Entering MPLABCommEvent handler
-6179 1694729501691 GEN4_CONNECT_DIAGNOSTICS:MPLABCommEvent.pid = 9036
-6179 1694729501691 GEN4_CONNECT_DIAGNOSTICS:eventType = MPLABCOMM_TOOL_UNPLUGGED
-6179 1694729501691 GEN4_CONNECT_DIAGNOSTICS:Exiting plug and play Update()
-6181 1694729501805 GEN4_CONNECT_DIAGNOSTICS:MPLABCommTool is null
-
-6181 1694729501805 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Pre:EndDebugSession
-6181 1694729501805 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload
-6181 1694729501805 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A null
-6181 1694729501805 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_ATSAMD21E18A Payload End
-6181 1694729501805 XXXX 1694729501805, Thread 6181: XXXX 1694729501805, Entering Thread 6181: Commands::runScriptBasic, script name = ExitDebugMode, timeOut = -1 ms  
-6181 1694729501806 XXXX 1694729501806, Thread 6181: com.Send returned false 
-6181 1694729501806 XXXX 1694729501806, Thread 6181: transfer: exception after writeHeaderAndGetResult null 
-6181 1694729501806 XXXX 1694729501806, Thread 6181: XXXX 1694729501806, Entering Thread 6181: ToolCommUsb::recoverFromProtocolError, type = NO_SCRIPT  
-6181 1694729501806 XXXX 1694729501806, Thread 6181: Send Abort Script Engine Command 
-6181 1694729501806 XXXX 1694729501806, Thread 6181: XXXX 1694729501806, Entering Thread 6181: ToolCommUsb::killScriptEngine  
-6181 1694729501806 XXXX 1694729501806, Thread 6181: com.Send returned false 
-6181 1694729501806 XXXX 1694729501806, Thread 6181: Failed sending Abort Script Engine Command. Set nuclear option = true 
-6181 1694729501806 XXXX 1694729501806, Thread 6181: About to nuke 
-6181 1694729501806 XXXX 1694729501806, Thread 6181: XXXX 1694729501806, Entering Thread 6181: ToolCommUsb::nuclearOption  
-6181 1694729501806 XXXX 1694729501806, Thread 6181: com.Send returned false 
+280 1695589175402 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Pre:GetFirmwareInfo
+280 1695589175402 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Payload
+280 1695589175402 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A null
+280 1695589175402 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_ATSAMD21E18A Payload End
+280 1695589185553 XXXX 1695589185553, Thread 280: com.Send returned false 
+280 1695589185555 XXXX 1695589185555, Thread 280: execCommand: exception after writeSideChanel null 

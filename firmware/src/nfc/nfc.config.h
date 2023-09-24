@@ -17,6 +17,7 @@ extern "C" {
 
 /* all SIZE is in Bytes */
 #define NFC_UID_SIZE                        (0x08)
+#define NFC_ITSTS_SIZE                      (0x01)
 #define NFC_CMD_SIZE                        (0x02)
 #define NFC_PASSWORD_SIZE                   (0x08)
 #define NFC_PASSWORD_VALIDATION_INDEX       (0x08)
@@ -65,6 +66,7 @@ typedef enum {
     NFC_ST_INIT,
     NFC_ST_IDLE,
     NFC_ST_READ_UID,
+    NFC_ST_READ_ITSTS,
     NFC_ST_PRESENT_I2C_PWD,
     NFC_ST_ALLOW_MB_MODE_WRITE,
     NFC_ST_ENABLE_FT_MODE,
@@ -87,6 +89,8 @@ typedef enum {
     NFC_ALLOW_MB_MODE_WRITE,
     NFC_ENABLE_FT_MODE,
     NFC_WRITE_MAILBOX,
+
+    NFC_GPO_PULSE,
     NFC_ERROR,
     NFC_SIG_MAX,
 } NFC_SIG;
