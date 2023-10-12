@@ -83,9 +83,11 @@ void SHT3X_Tasks(void) {
                                                           sht3xStatesList, sht3xTransitionTable);
 
 #ifdef __DEBUG
+    // TODO replace by simplified macro: #STRINGIFY_VAR(VAR) ("#VAR") 
     SHT3X_SIG sig = event.sig;
     SHT3X_STATE name = nextState->name;
     SYS_DEBUG_PRINT(SYS_ERROR_INFO, "SHT3x Event: %s, Next State: %s\r\n", _debugEventSignals[sig], _debugStateNames[name]);
+    // TODO SYS_DEBUG_PRINT(SYS_ERROR_INFO, "SHT3x Event: %s, Next State: %s\r\n",  STRINGIFY_VAR(sig), STRINGIFY_VAR(name));
 #endif
 
     if (FSM_IsValidState(nextState)) FSM_TraverseNextState(&sht3xAO.super, nextState);
