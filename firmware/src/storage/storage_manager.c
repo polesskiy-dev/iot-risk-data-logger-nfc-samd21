@@ -81,8 +81,9 @@ void STORAGE_Tasks(void) {
     const TEvent event = ActiveObject_ProcessQueue(&storageAO.super);
     if (STORAGE_NO_EVENT == event.sig) return;
 
-    const TState *nextState = FSM_ProcessEventToNextState(&storageAO.super, event, STORAGE_STATES_MAX, STORAGE_SIG_MAX,
-                                                          storageStatesList, storageTransitionTable);
+    const TState *nextState = FSM_ProcessEventToNextStateFromTransitionTable(&storageAO.super, event,
+                                                                             STORAGE_STATES_MAX, STORAGE_SIG_MAX,
+                                                                             storageTransitionTable);
 
 #ifdef __DEBUG
     STORAGE_SIG sig = event.sig;
@@ -90,7 +91,7 @@ void STORAGE_Tasks(void) {
     SYS_DEBUG_PRINT(SYS_ERROR_INFO, "STORAGE Event: %s, Next State: %s\r\n", _debugEventSignals[sig], _debugStateNames[name]);
 #endif
 
-    if (FSM_IsValidState(nextState)) FSM_TraverseNextState(&storageAO.super, nextState);
+    if (FSM_IsValidState(nextState)) FSM_TraverseAOToNextState(&storageAO.super, nextState);
 };
 
 void STORAGE_CLearPageBuffer(TSTORAGEActiveObject *const storageAO) {

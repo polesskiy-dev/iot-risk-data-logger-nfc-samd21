@@ -59,10 +59,10 @@ void NFC_Tasks(void) {
     const TEvent event = ActiveObject_ProcessQueue(&nfcAO.super);
     if (NFC_NO_EVENT == event.sig) return;
 
-    const TState *nextState = FSM_ProcessEventToNextState(&nfcAO.super, event, NFC_STATES_MAX, NFC_SIG_MAX,
-                                                          nfcStatesList, nfcTransitionTable);
+    const TState *nextState = FSM_ProcessEventToNextStateFromTransitionTable(&nfcAO.super, event, NFC_STATES_MAX,
+                                                                             NFC_SIG_MAX, nfcTransitionTable);
 
-    if (FSM_IsValidState(nextState)) FSM_TraverseNextState(&nfcAO.super, nextState);
+    if (FSM_IsValidState(nextState)) FSM_TraverseAOToNextState(&nfcAO.super, nextState);
 }
 
 /**

@@ -79,8 +79,8 @@ void SHT3X_Tasks(void) {
     const TEvent event = ActiveObject_ProcessQueue(&sht3xAO.super);
     if (SHT3X_NO_EVENT == event.sig) return;
 
-    const TState *nextState = FSM_ProcessEventToNextState(&sht3xAO.super, event, SHT3X_STATES_MAX, SHT3X_SIG_MAX,
-                                                          sht3xStatesList, sht3xTransitionTable);
+    const TState *nextState = FSM_ProcessEventToNextStateFromTransitionTable(&sht3xAO.super, event, SHT3X_STATES_MAX,
+                                                                             SHT3X_SIG_MAX, sht3xTransitionTable);
 
 #ifdef __DEBUG
     // TODO replace by simplified macro: #STRINGIFY_VAR(VAR) ("#VAR") 
@@ -90,7 +90,7 @@ void SHT3X_Tasks(void) {
     // TODO SYS_DEBUG_PRINT(SYS_ERROR_INFO, "SHT3x Event: %s, Next State: %s\r\n",  STRINGIFY_VAR(sig), STRINGIFY_VAR(name));
 #endif
 
-    if (FSM_IsValidState(nextState)) FSM_TraverseNextState(&sht3xAO.super, nextState);
+    if (FSM_IsValidState(nextState)) FSM_TraverseAOToNextState(&sht3xAO.super, nextState);
 };
 
 /**
