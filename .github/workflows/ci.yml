@@ -29,7 +29,7 @@ jobs:
             sudo ./xc32-v4.30-full-install-linux-x64-installer.run --mode unattended --debuglevel 4 --netservername localhost --LicenseType FreeMode # --installdir /Applications/microchip/xc32/v4.30/bin/
             ls -al /opt/microchip/xc32/v4.30/bin
       - name: Replace Makefile-local-default.mk by CI related
-        run: mv ./config/Makefile-ci-default.mk ./firmware/open-risk-logger-samd21-xpro-proto.X/nbproject/Makefile-local-default.mk
+        run: mv ./config/Makefile-ci-default.mk ./firmware/iot-risk-data-logger-nfc-samd21.X/nbproject/Makefile-local-default.mk
       - name: Compile project Makefile
         run: cd ./firmware/open-risk-logger-samd21-xpro-proto.X && make
   # deploy-hex:
