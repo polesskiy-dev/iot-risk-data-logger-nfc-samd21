@@ -145,9 +145,11 @@
         </logicalFolder>
         <itemPath>../src/config/common.defs.h</itemPath>
       </logicalFolder>
-      <logicalFolder name="init" displayName="init" projectFiles="true">
-        <itemPath>../src/init/init_manager.h</itemPath>
-        <itemPath>../src/init/init.config.h</itemPath>
+      <logicalFolder name="init_manager"
+                     displayName="init_manager"
+                     projectFiles="true">
+        <itemPath>../src/init_manager/init_manager.h</itemPath>
+        <itemPath>../src/init_manager/init.config.h</itemPath>
       </logicalFolder>
       <logicalFolder name="nfc" displayName="nfc" projectFiles="true">
         <itemPath>../src/nfc/nfc.config.h</itemPath>
@@ -531,8 +533,10 @@
           <itemPath>../src/config/default/usb_device_init_data.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder name="init" displayName="init" projectFiles="true">
-        <itemPath>../src/init/init_manager.c</itemPath>
+      <logicalFolder name="init_manager"
+                     displayName="init_manager"
+                     projectFiles="true">
+        <itemPath>../src/init_manager/init_manager.c</itemPath>
       </logicalFolder>
       <logicalFolder name="nfc" displayName="nfc" projectFiles="true">
         <itemPath>../src/nfc/nfc_fsm.c</itemPath>

@@ -18,7 +18,7 @@
 #include "../../config/common.defs.h"
 #include "../../../../libraries/active-object-fsm/src/active_object/active_object.h"
 #include "../../../../libraries/active-object-fsm/src/fsm/fsm.h"
-#include "init/init.config.h"
+#include "../../init_manager/init.config.h"
 #include "./sht3x.config.h"
 
 #ifdef    __cplusplus

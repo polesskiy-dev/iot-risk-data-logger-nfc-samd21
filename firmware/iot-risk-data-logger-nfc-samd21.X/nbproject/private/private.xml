@@ -3,12 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/nfc/nfc_fsm.c</file>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/osal/osal_impl_basic.h</file>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/main.c</file>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/nfc/nfc.c</file>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/driver/memory/src/drv_memory.c</file>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/system/console/src/sys_console.c</file>
+            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/sensors/sht3x-temperature-humidity/sht3x.c</file>
         </group>
     </open-files>
 </project-private>

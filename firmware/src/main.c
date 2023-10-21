@@ -26,7 +26,7 @@
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
-#include "init/init_manager.h"
+#include "init_manager/init_manager.h"
 
 void _toggleLED(uintptr_t context) {
     _LED_Toggle();

@@ -49,7 +49,7 @@
 #include "../../nfc/nfc.h"
 #include "../../sensors/sht3x-temperature-humidity/sht3x.h"
 #include "../../storage/storage_manager.h"
-#include "init/init_manager.h"
+#include "../../init_manager/init_manager.h"
 
 
 // ****************************************************************************
