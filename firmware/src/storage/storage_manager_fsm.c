@@ -10,7 +10,7 @@ static const TState *_writeMemoryBootSector(TActiveObject *const AO, TEvent even
 
 static const TState *_verifyMemoryBootSector(TActiveObject *const AO, TEvent event);
 
-static const TState *_findLastLogsNonEmptyPage(TActiveObject *const AO, TEvent event);
+static const TState *_seekLastLogsNonEmptyPage(TActiveObject *const AO, TEvent event);
 
 static const TState *_storeDataInTail(TActiveObject *const AO, TEvent event);
 
@@ -30,7 +30,7 @@ const TState storageStatesList[STORAGE_STATES_MAX] = {
         [STORAGE_ST_READ_BOOT_SECTOR] =         {.name = STORAGE_ST_READ_BOOT_SECTOR},
         [STORAGE_ST_VERIFY_BOOT_SECTOR] =       {.name = STORAGE_ST_VERIFY_BOOT_SECTOR, .onExit = (TStateHook) STORAGE_CLearPageBuffer},
         [STORAGE_ST_WRITE_BOOT_SECTOR] =        {.name = STORAGE_ST_WRITE_BOOT_SECTOR},
-        [STORAGE_ST_FIND_LAST_NONEMPTY_PAGE] =  {.name = STORAGE_ST_FIND_LAST_NONEMPTY_PAGE, .onEnter = (TStateHook) STORAGE_CLearPageBuffer, .onExit = (TStateHook) STORAGE_CLearPageBuffer},
+        [STORAGE_ST_SEEK_LAST_NONEMPTY_PAGE] =  {.name = STORAGE_ST_SEEK_LAST_NONEMPTY_PAGE, .onEnter = (TStateHook) STORAGE_CLearPageBuffer, .onExit = (TStateHook) STORAGE_CLearPageBuffer},
         [STORAGE_ST_IDLE] =                     {.name = STORAGE_ST_IDLE, .onEnter = (TStateHook) STORAGE_CLearPageBuffer},
         [STORAGE_ST_STORE_DATA_IN_TAIL] =       {.name = STORAGE_ST_STORE_DATA_IN_TAIL, .onEnter = (TStateHook) STORAGE_CLearPageBuffer},
         [STORAGE_ST_STORE_DATA] =               {.name = STORAGE_ST_STORE_DATA, .onExit = (TStateHook) STORAGE_CLearPageBuffer},
@@ -41,9 +41,9 @@ const TState storageStatesList[STORAGE_STATES_MAX] = {
 const TEventHandler storageTransitionTable[STORAGE_STATES_MAX][STORAGE_SIG_MAX] = {
         [STORAGE_ST_INIT]=                      {[STORAGE_CHECK_MEMORY_BOOT_SECTOR] = _readMemoryBootSector, [STORAGE_ERROR]=_error},
         [STORAGE_ST_READ_BOOT_SECTOR]=          {[STORAGE_TRANSFER_SUCCESS]=_verifyMemoryBootSector, [STORAGE_TRANSFER_FAIL]=_error, [STORAGE_ERROR]=_error},
-        [STORAGE_ST_VERIFY_BOOT_SECTOR]=        {[STORAGE_VERIFY_MEMORY_BOOT_SECTOR_SUCCESS]=_findLastLogsNonEmptyPage, [STORAGE_WRITE_MEMORY_BOOT_SECTOR]=_writeMemoryBootSector, [STORAGE_ERROR]=_error},
-        [STORAGE_ST_WRITE_BOOT_SECTOR]=         {[STORAGE_TRANSFER_SUCCESS]=_findLastLogsNonEmptyPage /* TODO check whether STORAGE_TRANSFER_SUCCESS occurs after all 10 blocks or after each*/, [STORAGE_TRANSFER_FAIL]=_error, [STORAGE_ERROR]=_error},
-        [STORAGE_ST_FIND_LAST_NONEMPTY_PAGE]=   {[STORAGE_TRANSFER_SUCCESS]=_findLastLogsNonEmptyPage, [STORAGE_TRANSFER_FAIL]=_error, [STORAGE_FIND_LAST_NON_EMPTY_PAGE_SUCCESS]=_idle, [STORAGE_ERROR]=_error},
+        [STORAGE_ST_VERIFY_BOOT_SECTOR]=        {[STORAGE_VERIFY_MEMORY_BOOT_SECTOR_SUCCESS]=_seekLastLogsNonEmptyPage, [STORAGE_WRITE_MEMORY_BOOT_SECTOR]=_writeMemoryBootSector, [STORAGE_ERROR]=_error},
+        [STORAGE_ST_WRITE_BOOT_SECTOR]=         {[STORAGE_TRANSFER_SUCCESS]=_seekLastLogsNonEmptyPage /* TODO check whether STORAGE_TRANSFER_SUCCESS occurs after all 10 blocks or after each*/, [STORAGE_TRANSFER_FAIL]=_error, [STORAGE_ERROR]=_error},
+        [STORAGE_ST_SEEK_LAST_NONEMPTY_PAGE]=   {[STORAGE_TRANSFER_SUCCESS]=_seekLastLogsNonEmptyPage, [STORAGE_TRANSFER_FAIL]=_error, [STORAGE_FIND_LAST_NON_EMPTY_PAGE_SUCCESS]=_idle, [STORAGE_ERROR]=_error},
         [STORAGE_ST_IDLE]=                      {[STORAGE_STORE_DATA_IN_TAIL]=_storeDataInTail, [STORAGE_ERROR]=_error},
         [STORAGE_ST_STORE_DATA_IN_TAIL]=        {[STORAGE_TRANSFER_SUCCESS]=_storeData, [STORAGE_TRANSFER_FAIL]=_error, [STORAGE_ERROR]=_error},
         [STORAGE_ST_STORE_DATA]=                {[STORAGE_TRANSFER_SUCCESS]=_idle, [STORAGE_TRANSFER_FAIL]=_error, [STORAGE_STORE_DATA_IN_TAIL]=_storeDataInTail, [STORAGE_ERROR]=_error},
@@ -109,7 +109,7 @@ static const TState *_writeMemoryBootSector(TActiveObject *const AO, TEvent even
     return &(storageStatesList[STORAGE_ST_WRITE_BOOT_SECTOR]);
 }
 
-static const TState *_findLastLogsNonEmptyPage(TActiveObject *const AO, TEvent event) {
+static const TState *_seekLastLogsNonEmptyPage(TActiveObject *const AO, TEvent event) {
     TSTORAGEActiveObject *storageAO = (TSTORAGEActiveObject *) AO;
 
     DRV_MEMORY_AsyncRead(
@@ -129,7 +129,7 @@ static const TState *_findLastLogsNonEmptyPage(TActiveObject *const AO, TEvent e
         ActiveObject_Dispatch(&(storageAO->super), (TEvent) {.sig = STORAGE_FIND_LAST_NON_EMPTY_PAGE});
     }
 
-    return &(storageStatesList[STORAGE_ST_FIND_LAST_NONEMPTY_PAGE]);
+    return &(storageStatesList[STORAGE_ST_SEEK_LAST_NONEMPTY_PAGE]);
 }
 
 static const TState *_storeDataInTail(TActiveObject *const AO, TEvent event) {

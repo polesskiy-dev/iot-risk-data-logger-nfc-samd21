@@ -90,6 +90,13 @@ void NFC_Tasks(void);
 */
 void NFC_TransferEventHandler(DRV_I2C_TRANSFER_EVENT event, DRV_I2C_TRANSFER_HANDLE transferHandle, uintptr_t context);
 
+/** @brief dispatch error on i2c transfer queuing */
+void NFC_DispatchErrorOnInvalidTransfer(TNFCActiveObject *const nfcAO);
+
+void NFC_VerifyRetries(TNFCActiveObject *const nfcAO);
+
+void NFC_ProcessPrepareMailboxFSM(TNFCActiveObject *const nfcAO, TEvent event);
+
 #ifdef    __cplusplus
 }
 #endif

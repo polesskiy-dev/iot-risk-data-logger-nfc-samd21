@@ -152,6 +152,8 @@
         <itemPath>../src/init_manager/init.config.h</itemPath>
       </logicalFolder>
       <logicalFolder name="nfc" displayName="nfc" projectFiles="true">
+        <logicalFolder name="substates" displayName="substates" projectFiles="true">
+        </logicalFolder>
         <itemPath>../src/nfc/nfc.config.h</itemPath>
         <itemPath>../src/nfc/nfc.h</itemPath>
       </logicalFolder>
@@ -539,6 +541,9 @@
         <itemPath>../src/init_manager/init_manager.c</itemPath>
       </logicalFolder>
       <logicalFolder name="nfc" displayName="nfc" projectFiles="true">
+        <logicalFolder name="substates" displayName="substates" projectFiles="true">
+          <itemPath>../src/nfc/substates/nfc_prepare_mailbox_fsm.c</itemPath>
+        </logicalFolder>
         <itemPath>../src/nfc/nfc_fsm.c</itemPath>
         <itemPath>../src/nfc/nfc.c</itemPath>
       </logicalFolder>
