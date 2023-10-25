@@ -42,7 +42,7 @@ TActiveObject *NFC_Initialize(void) {
             (uintptr_t) &nfcAO
     );
 
-    // Register callback for NFC GPO rise and fall events (RF presence / unpresence)
+    // Register callback for NFC GPO fall events (RF presence / absence)
     EIC_CallbackRegister(EIC_PIN_3, _onNFCGPOPinChange, (uintptr_t) &nfcAO);
 
     return (TActiveObject *) &nfcAO;
@@ -63,6 +63,13 @@ void NFC_Tasks(void) {
                                                                              NFC_SIG_MAX, nfcTransitionTable);
 
     if (FSM_IsValidState(nextState)) FSM_TraverseAOToNextState(&nfcAO.super, nextState);
+
+#ifdef __DEBUG
+    // TODO replace by simplified macro: #STRINGIFY_VAR(VAR) ("#VAR")
+//    int sig = event.sig;
+//    int name = nextState->name;
+//    SYS_DEBUG_PRINT(SYS_ERROR_INFO, "NFC Event: %d, Next State: %d\n", sig, name);
+#endif
 }
 
 /**
@@ -110,5 +117,8 @@ static DRV_HANDLE _openI2CDriver(void) {
 
 /** @brief FIELD_CHANGE_EN: A pulse is emitted on GPO, when RF field appears or disappears */
 static void _onNFCGPOPinChange(uintptr_t context) {
-    ActiveObject_Dispatch(&nfcAO.super, (TEvent) {.sig = NFC_GPO_PULSE});
+//    static volatile uint8_t gpo = 0;
+    SYS_DEBUG_PRINT(SYS_ERROR_INFO, "GPO %d\n");
+    TNFCActiveObject *nfcAO = (TNFCActiveObject *) context;
+    ActiveObject_Dispatch(&nfcAO->super, (TEvent) {.sig = NFC_GPO_PULSE});
 };

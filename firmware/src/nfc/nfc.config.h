@@ -13,7 +13,7 @@ extern "C" {
 
 #define NFC_QUEUE_MAX_CAPACITY              (16)
 
-#define NFC_TRANSFER_RETRIES_MAX            (0x08)
+#define NFC_TRANSFER_RETRIES_MAX            (0x20)
 
 /* all SIZE is in Bytes */
 #define NFC_UID_SIZE                        (0x08)

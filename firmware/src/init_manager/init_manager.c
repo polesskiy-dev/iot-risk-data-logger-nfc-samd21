@@ -27,7 +27,7 @@ void INIT_Initialize(uintptr_t context) {
     ActiveObject_Initialize(&initAO.super, INIT_AO_ID, events, INIT_QUEUE_MAX_CAPACITY);
 
     // init storage on next cycle
-    ActiveObject_Dispatch(&initAO.super, (TEvent) {.sig = INIT_SIG_STORAGE});
+//    ActiveObject_Dispatch(&initAO.super, (TEvent) {.sig = INIT_SIG_STORAGE});
     // init sensors on next cycle
 //    ActiveObject_Dispatch(&initAO.super, (TEvent) {.sig = INIT_SIG_SENSORS});
     // init NFC on next cycle
