@@ -90,11 +90,11 @@ void NFC_TransferEventHandler(
 
             /* All data from or to the buffer was transferred successfully. */
         case DRV_I2C_TRANSFER_EVENT_COMPLETE:
-            return ActiveObject_Dispatch(&nfcAO.super, (TEvent) {.sig = NFC_TRANSFER_SUCCESS});
+            return ActiveObject_Dispatch(&nfcAO.super, (TEvent) {.sig = NFC_I2C_TRANSFER_SUCCESS});
 
             /* There was an error while processing the buffer transfer request. */
         case DRV_I2C_TRANSFER_EVENT_ERROR:
-            return ActiveObject_Dispatch(&nfcAO.super, (TEvent) {.sig = NFC_TRANSFER_FAIL});
+            return ActiveObject_Dispatch(&nfcAO.super, (TEvent) {.sig = NFC_I2C_TRANSFER_FAIL});
 
             /* Transfer Handle given is expired. It means transfer
             is completed but with or without error is not known. */

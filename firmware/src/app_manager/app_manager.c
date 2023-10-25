@@ -61,7 +61,7 @@ static const TState *_processAppManagerFSM(TActiveObject *appAO, TEvent event) {
             ActiveObject_Dispatch(initAO, (TEvent) {.sig = INIT_SIG_STORAGE});
             return &appAOStatesList[APP_ST_NFC_AND_SENSORS];
         // Handle phone (NFC RF field) event
-        case APP_SIG_NFC_RF_FIELD_APPEARS:
+        case APP_SIG_NFC_RF_FIELD_APPEARS: // TODO resolve situation when NFC and USB appears at the same time
             return &appAOStatesList[APP_ST_NFC_ONLY];
         case APP_SIG_NFC_RF_FIELD_DISAPPEAR:
             return &appAOStatesList[APP_ST_NFC_AND_SENSORS];

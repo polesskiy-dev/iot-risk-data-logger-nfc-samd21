@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/usb/src/usb_device.c</file>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/nfc/nfc_fsm.c</file>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/exceptions.c</file>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/initialization.c</file>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/nfc/nfc.c</file>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/driver/memory/src/drv_memory.c</file>
-            <file>file:/Users/artempolisskyi/projects/iot-risk-data-logger-nfc-samd21/firmware/src/config/default/system/console/src/sys_console.c</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

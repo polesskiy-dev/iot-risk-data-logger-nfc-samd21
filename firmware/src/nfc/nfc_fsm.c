@@ -46,15 +46,15 @@ const TState nfcStatesList[NFC_STATES_MAX] = {
 /* state transitions table */
 const TEventHandler nfcTransitionTable[NFC_STATES_MAX][NFC_SIG_MAX] = {
         [NFC_ST_INIT]=                      {[NFC_READ_UID]=_readUID, [NFC_ERROR]=_error},
-        [NFC_ST_IDLE]=                      {[NFC_GPO_PULSE]=_readInterruptStatus, [NFC_WRITE_MAILBOX]=_writeMailbox, [NFC_ERROR]=_error},
-        [NFC_ST_READ_INTERRUPT_STATUS]=     {[NFC_TRANSFER_SUCCESS]=_handleInterruptStatus, /*[NFC_GPO_PULSE]=_readInterruptStatus*/ /*[NFC_TRANSFER_FAIL]=_error TODO */ [NFC_ERROR]=_error},
-        [NFC_ST_READ_UID]=                  {[NFC_TRANSFER_SUCCESS]=_prepareMailbox, [NFC_TRANSFER_FAIL]=_error, [NFC_ERROR]=_error},
+        [NFC_ST_READ_UID]=                  {[NFC_I2C_TRANSFER_SUCCESS]=_prepareMailbox, [NFC_I2C_TRANSFER_FAIL]=_error, [NFC_ERROR]=_error},
         /* Prepare mailbox (enable Fast Transfer mode) */
-        [NFC_SUPER_ST_PREPARE_MAILBOX]=     {[NFC_PREPARE_MAILBOX_SUCCESS]=_idle, [NFC_TRANSFER_SUCCESS]=_prepareMailbox, [NFC_TRANSFER_FAIL]=_prepareMailbox, [NFC_TRANSFER_MAX_RETRIES]=_error, [NFC_ERROR]=_error},/* Check RF field */
+        [NFC_SUPER_ST_PREPARE_MAILBOX]=     {[NFC_PREPARE_MAILBOX_SUCCESS]=_idle, [NFC_I2C_TRANSFER_SUCCESS]=_prepareMailbox, [NFC_I2C_TRANSFER_FAIL]=_prepareMailbox, [NFC_I2C_TRANSFER_MAX_RETRIES]=_error, [NFC_ERROR]=_error},/* Check RF field */
+        [NFC_ST_IDLE]=                      {[NFC_GPO_PULSE]=_readInterruptStatus, [NFC_WRITE_MAILBOX]=_writeMailbox, [NFC_ERROR]=_error},
+        [NFC_ST_READ_INTERRUPT_STATUS]=     {[NFC_I2C_TRANSFER_SUCCESS]=_handleInterruptStatus, /*[NFC_GPO_PULSE]=_readInterruptStatus*/ /*[NFC_I2C_TRANSFER_FAIL]=_error TODO */ [NFC_ERROR]=_error},
 
         /* Mailbox (exchange data between I2C and RF) */
-        [NFC_ST_WRITE_MAILBOX]=             {[NFC_TRANSFER_SUCCESS]=_idle, [NFC_ERROR]=_error},
-        [NFC_ST_READ_MAILBOX]=              {[NFC_TRANSFER_SUCCESS]=_idle, [NFC_ERROR]=_error},
+        [NFC_ST_WRITE_MAILBOX]=             {[NFC_I2C_TRANSFER_SUCCESS]=_idle, [NFC_ERROR]=_error},
+        [NFC_ST_READ_MAILBOX]=              {[NFC_I2C_TRANSFER_SUCCESS]=_idle, [NFC_ERROR]=_error},
 
         [NFC_ST_ERROR]=                     {[NFC_ERROR]=_error},
 };
@@ -128,7 +128,6 @@ static const TState *_readInterruptStatus(TActiveObject *const AO, TEvent event)
 }
 
 static const TState *_handleInterruptStatus(TActiveObject *const AO, TEvent event) {
-    static uint8_t invoked = 0;
     TNFCActiveObject *nfcAO = (TNFCActiveObject *) AO;
 
     if (nfcAO->st25dvRegs.interruptStatus.bitFields.RF_ACTIVITY) {
@@ -141,25 +140,28 @@ static const TState *_handleInterruptStatus(TActiveObject *const AO, TEvent even
 
     if (nfcAO->st25dvRegs.interruptStatus.bitFields.FIELD_FALLING) {
         // TODO handle FIELD falling
+         
     };
 
     if (nfcAO->st25dvRegs.interruptStatus.bitFields.FIELD_RISING) {
         // TODO handle FIELD rising
+
     };
 
     if (nfcAO->st25dvRegs.interruptStatus.bitFields.RF_PUT_MSG) {
         // TODO handle RF put message
+        _LED_Clear();
+        ActiveObject_Dispatch(&(nfcAO->super), (TEvent) {.sig = NFC_READ_MAILBOX});
     };
 
     if (nfcAO->st25dvRegs.interruptStatus.bitFields.RF_GET_MSG) {
         // TODO handle RF get message
+        // _LED_Set();
     };
 
     if (nfcAO->st25dvRegs.interruptStatus.bitFields.RF_WRITE) {
         // TODO handle RF write
     };
-
-    SYS_DEBUG_PRINT(SYS_ERROR_INFO, "GPO IT_STS_Dyn: %X, invoked %d\n", nfcAO->st25dvRegs.interruptStatus.raw, invoked++);
 
     return &(nfcStatesList[NFC_ST_IDLE]);
 }
@@ -174,8 +176,8 @@ static const TState *_prepareMailbox(TActiveObject *const AO, TEvent event) {
 
 static const TState *_error(TActiveObject *const AO, TEvent event) {
     SYS_ASSERT(!(NFC_ERROR == event.nfcSig), "__FILE__ NFC Error");
-    SYS_ASSERT(!(NFC_TRANSFER_FAIL == event.nfcSig), "__FILE__ NFC Transfer Error");
-    SYS_ASSERT(!(NFC_TRANSFER_MAX_RETRIES == event.nfcSig), "__FILE__ NFC Transfer max retries Error");
+    SYS_ASSERT(!(NFC_I2C_TRANSFER_FAIL == event.nfcSig), "__FILE__ NFC Transfer Error");
+    SYS_ASSERT(!(NFC_I2C_TRANSFER_MAX_RETRIES == event.nfcSig), "__FILE__ NFC Transfer max retries Error");
 
     return &(nfcStatesList[NFC_ST_ERROR]);
 };
@@ -198,6 +200,6 @@ void NFC_DispatchErrorOnInvalidTransfer(TNFCActiveObject *const nfcAO) {
 
 void NFC_VerifyRetries(TNFCActiveObject *const nfcAO) {
     if (NO_RETRIES_LEFT == nfcAO->retriesLeft) {
-        ActiveObject_Dispatch(&(nfcAO->super), (TEvent) {.sig = NFC_TRANSFER_MAX_RETRIES});
+        ActiveObject_Dispatch(&(nfcAO->super), (TEvent) {.sig = NFC_I2C_TRANSFER_MAX_RETRIES});
     }
 };

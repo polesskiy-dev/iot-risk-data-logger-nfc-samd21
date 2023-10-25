@@ -29,8 +29,8 @@ extern "C" {
 
 //#define
 
-#define ST25DV_ADDR_DATA_I2C                (0xA6 >> 1)
-#define ST25DV_ADDR_SYST_I2C                (0xAE >> 1)
+#define ST25DV_ADDR_DATA_I2C                (0xA6 >> 1) // E2=0
+#define ST25DV_ADDR_SYST_I2C                (0xAE >> 1) // E2=1
 
 /* MB_MODE */
 #define ST25DV_MB_MODE_RW_SHIFT              (0)
@@ -60,6 +60,33 @@ extern "C" {
 #define ST25DV_MB_CTRL_DYN_CURRENTMSG_FIELD  (0x3F)
 #define ST25DV_MB_CTRL_DYN_CURRENTMSG_MASK   (0xC0)
 
+/* GPO */
+#define ST25DV_GPO_RFUSERSTATE_SHIFT         (0)
+#define ST25DV_GPO_RFUSERSTATE_FIELD         0xFE
+#define ST25DV_GPO_RFUSERSTATE_MASK          0x01
+#define ST25DV_GPO_RFACTIVITY_SHIFT          (1)
+#define ST25DV_GPO_RFACTIVITY_FIELD          0xFD
+#define ST25DV_GPO_RFACTIVITY_MASK           0x02
+#define ST25DV_GPO_RFINTERRUPT_SHIFT         (2)
+#define ST25DV_GPO_RFINTERRUPT_FIELD         0xFB
+#define ST25DV_GPO_RFINTERRUPT_MASK          0x04
+#define ST25DV_GPO_FIELDCHANGE_SHIFT         (3)
+#define ST25DV_GPO_FIELDCHANGE_FIELD         0xF7
+#define ST25DV_GPO_FIELDCHANGE_MASK          0x08
+#define ST25DV_GPO_RFPUTMSG_SHIFT            (4)
+#define ST25DV_GPO_RFPUTMSG_FIELD            0xEF
+#define ST25DV_GPO_RFPUTMSG_MASK             0x10
+#define ST25DV_GPO_RFGETMSG_SHIFT            (5)
+#define ST25DV_GPO_RFGETMSG_FIELD            0xDF
+#define ST25DV_GPO_RFGETMSG_MASK             0x20
+#define ST25DV_GPO_RFWRITE_SHIFT             (6)
+#define ST25DV_GPO_RFWRITE_FIELD             0xBF
+#define ST25DV_GPO_RFWRITE_MASK              0x40
+#define ST25DV_GPO_ENABLE_SHIFT              (7)
+#define ST25DV_GPO_ENABLE_FIELD              0x7F
+#define ST25DV_GPO_ENABLE_MASK               0x80
+#define ST25DV_GPO_ALL_MASK                  0xFF
+
 /** @brief nfc states */
 typedef enum {
     NFC_NO_STATE = 0,
@@ -77,10 +104,10 @@ typedef enum {
 /** @brief nfc events signals */
 typedef enum {
     NFC_NO_EVENT = 0,
-    NFC_TRANSFER_SUCCESS = 1,
-    NFC_TRANSFER_FAIL,
-    NFC_TRANSFER_TIMEOUT,
-    NFC_TRANSFER_MAX_RETRIES,
+    NFC_I2C_TRANSFER_SUCCESS = 1,
+    NFC_I2C_TRANSFER_FAIL,
+    NFC_I2C_TRANSFER_TIMEOUT,
+    NFC_I2C_TRANSFER_MAX_RETRIES,
 
     NFC_READ_UID,
     NFC_READ_ITSTS,
@@ -90,6 +117,9 @@ typedef enum {
     NFC_WRITE_MAILBOX,
 
     NFC_GPO_PULSE,
+
+    NFC_READ_MAILBOX,
+
     NFC_ERROR,
     NFC_SIG_MAX,
 } NFC_SIG;

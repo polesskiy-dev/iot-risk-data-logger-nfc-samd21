@@ -46,7 +46,7 @@ int main(void) {
     SYS_Initialize(NULL);
 
     // Debug: verify that app isn't stuck
-    SYS_TIME_CallbackRegisterMS(_toggleLED, (uintptr_t) NULL, 1000, SYS_TIME_PERIODIC);
+//    SYS_TIME_CallbackRegisterMS(_toggleLED, (uintptr_t) NULL, 1000, SYS_TIME_PERIODIC);
 
     while (true) {
         /* Maintain state machines of all polled MPLAB Harmony modules. */

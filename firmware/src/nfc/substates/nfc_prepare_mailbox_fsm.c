@@ -6,6 +6,7 @@
 #include "../nfc.h"
 
 static const uint8_t ST25DV_MB_CTRL_DYN_REG[] = {0x20, 0x06};
+static const uint8_t ST25DV_GPO_REG[] = {0x00, 0x00};
 static const uint8_t ST25DV_MB_MODE_REG[] = {0x00, 0x0D};
 static const uint8_t ST25DV_I2C_PWD_REG[] = {0x09, 0x00};
 
@@ -15,6 +16,7 @@ typedef enum {
     NFC_PREPARE_MAILBOX_ST_PRESENT_I2C_PWD,
     NFC_PREPARE_MAILBOX_ST_ALLOW_MB_MODE_WRITE,
     NFC_PREPARE_MAILBOX_ST_ENABLE_FT_MODE,
+    NFC_PREPARE_MAILBOX_ST_GPO_PULSE_ON_RF,
     NFC_PREPARE_MAILBOX_ST_FT_MODE_ENABLED
 } NFC_PREPARE_MAILBOX_STATE;
 
@@ -24,14 +26,16 @@ static void _allowMBModeWrite(TNFCActiveObject *const nfcAO);
 
 static void _enableFTMode(TNFCActiveObject *const nfcAO);
 
+static void _enableGPOPulseOnRF(TNFCActiveObject *const nfcAO);
+
 void NFC_ProcessPrepareMailboxFSM(TNFCActiveObject *const nfcAO, TEvent event) {
     static NFC_PREPARE_MAILBOX_STATE FTModeState = NFC_PREPARE_MAILBOX_ST_INIT;
 
-    if (NFC_TRANSFER_SUCCESS == event.sig) {
+    if (NFC_I2C_TRANSFER_SUCCESS == event.sig) {
         FTModeState++; // go to next state in chain @see NFC_PREPARE_MAILBOX_STATE
     }
 
-    /* on NFC_TRANSFER_FAIL the state remains the same, and we retry appropriate state handler function */
+    /* on NFC_I2C_TRANSFER_FAIL the state remains the same, and we retry appropriate state handler function */
 
     switch (FTModeState) {
         case NFC_PREPARE_MAILBOX_ST_PRESENT_I2C_PWD:
@@ -43,8 +47,12 @@ void NFC_ProcessPrepareMailboxFSM(TNFCActiveObject *const nfcAO, TEvent event) {
         case NFC_PREPARE_MAILBOX_ST_ENABLE_FT_MODE:
             _enableFTMode(nfcAO);
             break;
+        case NFC_PREPARE_MAILBOX_ST_GPO_PULSE_ON_RF:
+            _enableGPOPulseOnRF(nfcAO);
+            break;
         case NFC_PREPARE_MAILBOX_ST_FT_MODE_ENABLED:
-            ActiveObject_Dispatch(&nfcAO->super, (TEvent) {.sig = NFC_PREPARE_MAILBOX_SUCCESS}); // notify parent FSM that mailbox is ready
+            ActiveObject_Dispatch(&nfcAO->super,
+                                  (TEvent) {.sig = NFC_PREPARE_MAILBOX_SUCCESS}); // notify parent FSM that mailbox is ready
             break;
         default:
             break; // TODO assert?
@@ -118,3 +126,45 @@ static void _enableFTMode(TNFCActiveObject *const nfcAO) {
     nfcAO->retriesLeft--;
     NFC_VerifyRetries(nfcAO);
 };
+
+/** @brief  Enables GPO pulse on RF Get/Put message (factory default disabled) */
+static void _enableGPOPulseOnRF(TNFCActiveObject *const nfcAO) {
+    memset(nfcAO->transferBuf.raw, 0, NFC_CMD_SIZE + ST25DV_MAILBOX_SIZE);
+
+    memcpy(nfcAO->transferBuf.cmd, ST25DV_GPO_REG, NFC_CMD_SIZE);
+    nfcAO->transferBuf.mailbox[NFC_MAILBOX_HEAD] =
+            ST25DV_GPO_ENABLE_MASK | ST25DV_GPO_RFPUTMSG_MASK | ST25DV_GPO_RFGETMSG_MASK | ST25DV_GPO_FIELDCHANGE_MASK;
+
+    DRV_I2C_WriteTransferAdd(
+            nfcAO->drvI2CHandle,
+            ST25DV_ADDR_SYST_I2C,
+            nfcAO->transferBuf.raw,
+            NFC_CMD_SIZE + NFC_SINGLE_BYTE_REG_SIZE,
+            &(nfcAO->transferHandle)
+    );
+
+    NFC_DispatchErrorOnInvalidTransfer(nfcAO);
+    nfcAO->retriesLeft--;
+    NFC_VerifyRetries(nfcAO);
+}
+
+//static void _readGPODyn(TNFCActiveObject *const nfcAO) {
+//
+//    memset(nfcAO->transferBuf.raw, 0, NFC_CMD_SIZE + ST25DV_MAILBOX_SIZE);
+//
+//    memcpy(nfcAO->transferBuf.cmd, ST25DV_GPO_REG, NFC_CMD_SIZE);
+//
+//    DRV_I2C_WriteReadTransferAdd(
+//            nfcAO->drvI2CHandle,
+//            ST25DV_ADDR_SYST_I2C,
+//            nfcAO->transferBuf.raw,
+//            NFC_CMD_SIZE,
+//            &gpoDyn,
+//            1,
+//            &(nfcAO->transferHandle)
+//    );
+//
+//    NFC_DispatchErrorOnInvalidTransfer(nfcAO);
+//    nfcAO->retriesLeft--;
+//    NFC_VerifyRetries(nfcAO);
+//}
