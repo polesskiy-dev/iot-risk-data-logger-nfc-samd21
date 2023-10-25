@@ -11,10 +11,11 @@
 #include "../config/common.defs.h"
 #include "../../../libraries/active-object-fsm/src/active_object/active_object.h"
 #include "../../../libraries/active-object-fsm/src/fsm/fsm.h"
-#include "./init.config.h"
 #include "../sensors/sht3x-temperature-humidity/sht3x.h"
-#include "../nfc/nfc.h"
 #include "../storage/storage_manager.h"
+#include "../nfc/nfc.h"
+#include "../app_manager//app_manager.h"
+#include "./init.config.h"
 
 #ifdef    __cplusplus
 extern "C" {
@@ -33,6 +34,7 @@ typedef enum {
 /** @brief init manager events signals */
 typedef enum {
     INIT_NO_EVENT = 0,
+    INIT_SIG_MAIN_APP,
     INIT_SIG_SENSORS,
     INIT_SIG_NFC,
     INIT_SIG_STORAGE,

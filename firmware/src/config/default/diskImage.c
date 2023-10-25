@@ -45,6 +45,7 @@
 
 #include "configuration.h"
 #include "definitions.h"
+#include "usb/src/usb_device_msd_local.h"
 #include "../../storage/storage_manager.h"
 
 const unsigned char 

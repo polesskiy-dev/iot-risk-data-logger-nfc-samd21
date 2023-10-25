@@ -4,6 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="app_manager" displayName="app_manager" projectFiles="true">
+        <itemPath>../src/app_manager/app_manager.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="default" projectFiles="true">
           <logicalFolder name="f2" displayName="driver" projectFiles="true">
@@ -149,7 +152,6 @@
                      displayName="init_manager"
                      projectFiles="true">
         <itemPath>../src/init_manager/init_manager.h</itemPath>
-        <itemPath>../src/init_manager/init.config.h</itemPath>
       </logicalFolder>
       <logicalFolder name="nfc" displayName="nfc" projectFiles="true">
         <logicalFolder name="substates" displayName="substates" projectFiles="true">
@@ -260,6 +262,9 @@
         <itemPath>../src/storage/storage_manager.h</itemPath>
         <itemPath>../src/storage/storage_data.defs.h</itemPath>
       </logicalFolder>
+      <logicalFolder name="usb_manager" displayName="usb_manager" projectFiles="true">
+        <itemPath>../src/usb_manager/usb_manager.h</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="libraries" displayName="libraries" projectFiles="true">
       <logicalFolder name="active-object-fsm"
@@ -309,6 +314,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="app_manager" displayName="app_manager" projectFiles="true">
+        <itemPath>../src/app_manager/app_manager.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="default" projectFiles="true">
           <logicalFolder name="f4" displayName="driver" projectFiles="true">
@@ -558,6 +566,9 @@
       <logicalFolder name="storage" displayName="storage" projectFiles="true">
         <itemPath>../src/storage/storage_manager.c</itemPath>
         <itemPath>../src/storage/storage_manager_fsm.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="usb_manager" displayName="usb_manager" projectFiles="true">
+        <itemPath>../src/usb_manager/usb_manager.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>

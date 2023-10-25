@@ -25,8 +25,11 @@
 #include <stddef.h>                     // Defines NULL
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
+
 #include "definitions.h"                // SYS function prototypes
 #include "init_manager/init_manager.h"
+#include "config/common.defs.h"         // Common definitions
+#include "app_manager/app_manager.h"
 
 void _toggleLED(uintptr_t context) {
     _LED_Toggle();
@@ -38,7 +41,6 @@ void _toggleLED(uintptr_t context) {
 // Section: Main Entry Point
 // *****************************************************************************
 // *****************************************************************************
-
 int main(void) {
     /* Initialize all modules */
     SYS_Initialize(NULL);
@@ -51,11 +53,7 @@ int main(void) {
         SYS_Tasks();
 
         INIT_Tasks();
-        // SHT3X_Tasks();
-        // TODO AMBIENT_LIGHT_Tasks();
-        // TODO ACCELEROMETER_Tasks();
-        STORAGE_Tasks();
-        NFC_Tasks();
+        APP_Tasks();
     }
 
     /* Execution should not come here during normal operation */

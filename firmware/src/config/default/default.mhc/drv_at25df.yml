@@ -65,18 +65,5 @@ children:
         attributes: {id: targetAttachmentID}
         children:
         - {type: Value, value: SERCOM1_SPI}
-  - type: DirectCapability
-    attributes: {id: memory}
-    children:
-    - type: Attributes
-      children:
-      - type: String
-        attributes: {id: targetComponentID}
-        children:
-        - {type: Value, value: drv_memory_1}
-      - type: String
-        attributes: {id: targetAttachmentID}
-        children:
-        - {type: Value, value: drv_memory_MEMORY_dependency}
 - type: ElementPosition
   attributes: {x: '168', y: '132', id: drv_at25df}

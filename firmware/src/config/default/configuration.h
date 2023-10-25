@@ -125,21 +125,15 @@ extern "C" {
 #define DRV_I2C_CLOCK_SPEED_IDX0              100
 
 /* Memory Driver Global Configuration Options */
-#define DRV_MEMORY_INSTANCES_NUMBER          (2U)
+#define DRV_MEMORY_INSTANCES_NUMBER          (1U)
 /* I2C Driver Common Configuration Options */
 #define DRV_I2C_INSTANCES_NUMBER              (1U)
 
 
 
-/* Memory Driver Instance 1 Configuration */
-#define DRV_MEMORY_INDEX_1                   1
-#define DRV_MEMORY_CLIENTS_NUMBER_IDX1       1
-#define DRV_MEMORY_BUF_Q_SIZE_IDX1    1
-
-
 /* Memory Driver Instance 0 Configuration */
 #define DRV_MEMORY_INDEX_0                   0
-#define DRV_MEMORY_CLIENTS_NUMBER_IDX0       1
+#define DRV_MEMORY_CLIENTS_NUMBER_IDX0       2
 #define DRV_MEMORY_BUF_Q_SIZE_IDX0    1
 
 /* AT25DF Driver Configuration Options */

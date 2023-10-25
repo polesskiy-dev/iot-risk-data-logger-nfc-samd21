@@ -75,24 +75,8 @@
 */
 void SYS_Tasks ( void )
 {
-    /* Maintain system services */
-    SYS_CONSOLE_Tasks(SYS_CONSOLE_INDEX_0);
-
-
-
     /* Maintain Device Drivers */
-    DRV_MEMORY_Tasks(sysObj.drvMemory1);
-
     DRV_MEMORY_Tasks(sysObj.drvMemory0);
-
-
-
-    /* Maintain Middleware & Other Libraries */
-        /* USB Device layer tasks routine */ 
-    USB_DEVICE_Tasks(sysObj.usbDevObject0);
-
-    /* USB FS Driver Task Routine */ 
-    DRV_USBFSV1_Tasks(sysObj.drvUSBFSV1Object);
 }
 
 /*******************************************************************************

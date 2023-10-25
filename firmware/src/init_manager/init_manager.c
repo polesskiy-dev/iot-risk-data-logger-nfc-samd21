@@ -3,6 +3,7 @@
 /** @brief All Active Objects in system list */
 TActiveObject *systemActorsList[ACTIVE_OBJECTS_MAX] = {
         [INIT_AO_ID] = NULL,
+        [MAIN_APP_AO_ID] = NULL,
         [STORAGE_AO_ID] = NULL,
         [NFC_AO_ID] = NULL,
         [SHT3X_AO_ID] = NULL,
@@ -26,8 +27,10 @@ void INIT_Initialize(uintptr_t context) {
     systemActorsList[INIT_AO_ID] = (TActiveObject *) &initAO; // place to global AO list
     ActiveObject_Initialize(&initAO.super, INIT_AO_ID, events, INIT_QUEUE_MAX_CAPACITY);
 
+    // init main app on next cycle
+    ActiveObject_Dispatch(&initAO.super, (TEvent) {.sig = INIT_SIG_MAIN_APP});
     // init storage on next cycle
-//    ActiveObject_Dispatch(&initAO.super, (TEvent) {.sig = INIT_SIG_STORAGE});
+    ActiveObject_Dispatch(&initAO.super, (TEvent) {.sig = INIT_SIG_STORAGE});
     // init sensors on next cycle
 //    ActiveObject_Dispatch(&initAO.super, (TEvent) {.sig = INIT_SIG_SENSORS});
     // init NFC on next cycle
@@ -41,7 +44,7 @@ void INIT_Tasks(void) {
     if (NULL == initAO.super.state) return; // not initialized yet
 
     const TEvent event = ActiveObject_ProcessQueue(&initAO.super);
-    if (INIT_NO_EVENT == event.sig) return;
+    if (INIT_NO_EVENT == event.sig) return; // nothing to do on no new events
 
     const TState *nextState = _processInitManagerFSM(&initAO, event);
     initAO.super.state = nextState;
@@ -49,6 +52,9 @@ void INIT_Tasks(void) {
 
 static const TState *_processInitManagerFSM(TInitActiveObject *AO, TEvent event) {
     switch (event.sig) {
+        case INIT_SIG_MAIN_APP:
+            systemActorsList[MAIN_APP_AO_ID] = APP_Initialize();
+            return &initAOStatesList[INIT_ST_IDLE];
         case INIT_SIG_SENSORS:
             systemActorsList[SHT3X_AO_ID] = SHT3X_Initialize();
             ActiveObject_Dispatch(systemActorsList[SHT3X_AO_ID],

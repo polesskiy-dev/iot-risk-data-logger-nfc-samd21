@@ -11,7 +11,7 @@ TActiveObject *STORAGE_Initialize(void) {
     storageAO.super.state = &storageStatesList[STORAGE_ST_INIT];
 
     // open MEMORY driver, get handler
-    DRV_HANDLE drvMemoryHandle = DRV_MEMORY_Open(sysObj.drvMemory1, /* TODO make it 0 driver*/
+    DRV_HANDLE drvMemoryHandle = DRV_MEMORY_Open(sysObj.drvMemory0,
                                                  DRV_IO_INTENT_READWRITE | DRV_IO_INTENT_NONBLOCKING);
 
     // init AO fields
@@ -59,9 +59,9 @@ void STORAGE_Tasks(void) {
                                                                              storageTransitionTable);
 
 #ifdef __DEBUG
-//    STORAGE_SIG sig = event.sig;
-//    STORAGE_STATE name = nextState->name;
-//    SYS_DEBUG_PRINT(SYS_ERROR_INFO, "STORAGE Event: %s, Next State: %s\r\n", _debugEventSignals[sig], _debugStateNames[name]);
+    //    STORAGE_SIG sig = event.sig;
+    //    STORAGE_STATE name = nextState->name;
+    //    SYS_DEBUG_PRINT(SYS_ERROR_INFO, "STORAGE Event: %s, Next State: %s\r\n", _debugEventSignals[sig], _debugStateNames[name]);
 #endif
 
     if (FSM_IsValidState(nextState)) FSM_TraverseAOToNextState(&storageAO.super, nextState);
