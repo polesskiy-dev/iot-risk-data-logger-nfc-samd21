@@ -96,13 +96,13 @@ void EIC_Initialize(void)
                               EIC_CONFIG_SENSE4_NONE  |
                               EIC_CONFIG_SENSE5_NONE  |
                               EIC_CONFIG_SENSE6_NONE  |
-                              EIC_CONFIG_SENSE7_HIGH | EIC_CONFIG_FILTEN7_Msk;
+                              EIC_CONFIG_SENSE7_BOTH ;
 
     /* External Interrupt Asynchronous Mode enable */
-    EIC_REGS->EIC_WAKEUP = 0x8;
+    EIC_REGS->EIC_WAKEUP = 0x8008;
 
     /* External Interrupt enable*/
-    EIC_REGS->EIC_INTENSET = 0x8;
+    EIC_REGS->EIC_INTENSET = 0x8008;
 
     /* Callbacks for enabled interrupts */
     eicCallbackObject[0].eicPinNo = EIC_PIN_MAX;
@@ -120,7 +120,7 @@ void EIC_Initialize(void)
     eicCallbackObject[12].eicPinNo = EIC_PIN_MAX;
     eicCallbackObject[13].eicPinNo = EIC_PIN_MAX;
     eicCallbackObject[14].eicPinNo = EIC_PIN_MAX;
-    eicCallbackObject[15].eicPinNo = EIC_PIN_MAX;
+    eicCallbackObject[15].eicPinNo = EIC_PIN_15;
 
     /* Enable the EIC */
     EIC_REGS->EIC_CTRL |= EIC_CTRL_ENABLE_Msk;

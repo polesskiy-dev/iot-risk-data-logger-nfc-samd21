@@ -54,16 +54,16 @@ static const TState *_processAppManagerFSM(TActiveObject *appAO, TEvent event) {
     TActiveObject* initAO = &systemActorsList[INIT_AO_ID];
     switch (event.sig) {
         // handle USB cable event
-        case USB_CABLE_CONNECTED:
+        case APP_SIG_USB_CABLE_CONNECTED:
             ActiveObject_Dispatch(initAO, (TEvent) {.sig = DEINIT_SIG_STORAGE});
             return &appAOStatesList[APP_ST_USB_ONLY];
-        case USB_CABLE_DISCONNECTED:
+        case APP_SIG_USB_CABLE_DISCONNECTED:
             ActiveObject_Dispatch(initAO, (TEvent) {.sig = INIT_SIG_STORAGE});
             return &appAOStatesList[APP_ST_NFC_AND_SENSORS];
         // Handle phone (NFC RF field) event
-        case NFC_RF_FIELD_APPEARS:
+        case APP_SIG_NFC_RF_FIELD_APPEARS:
             return &appAOStatesList[APP_ST_NFC_ONLY];
-        case NFC_RF_FIELD_DISAPPEAR:
+        case APP_SIG_NFC_RF_FIELD_DISAPPEAR:
             return &appAOStatesList[APP_ST_NFC_AND_SENSORS];
         default:    
             return &appAOStatesList[APP_ST_NFC_AND_SENSORS];

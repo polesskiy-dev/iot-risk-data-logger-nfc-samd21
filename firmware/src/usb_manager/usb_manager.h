@@ -20,6 +20,11 @@
 #include "definitions.h"
 #include "device.h"
 
+#include "../../../libraries/active-object-fsm/src/active_object/active_object.h"
+#include "../../../libraries/active-object-fsm/src/fsm/fsm.h"
+#include "../init_manager/init_manager.h"
+#include "../app_manager/app_manager.h"
+
 #ifdef    __cplusplus
 extern "C" {
 #endif

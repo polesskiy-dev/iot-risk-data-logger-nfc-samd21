@@ -185,7 +185,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: eic, value: 'false'}
+        attributes: {id: eic, value: 'true'}
   - type: Boolean
     attributes: {id: GENERATOR_EIC_EXTINT_3_ACTIVE}
     children:

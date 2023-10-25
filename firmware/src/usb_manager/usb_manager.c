@@ -1,10 +1,12 @@
 #include "./usb_manager.h"
 
-//static void _onVUSBChange(uintptr_t context);
+extern TActiveObject systemActorsList[ACTIVE_OBJECTS_MAX];
+
+static void _onVUSBChange(uintptr_t context);
 
 void USB_Initialize (void) {
-    // Register callback for NFC GPO fall events (RF presence / absence)
-//    EIC_CallbackRegister(EIC_PIN_?, _onVUSBChange, NULL);
+    // Register callback for USB_VBUS_SENSE pin change events (USB cable connect / disconnect)
+    EIC_CallbackRegister(EIC_PIN_15, _onVUSBChange, (uintptr_t)NULL);
 }
 
 void USB_Tasks(void) {
@@ -19,6 +21,13 @@ void USB_Tasks(void) {
     DRV_USBFSV1_Tasks(sysObj.drvUSBFSV1Object);
 }
 
-//static void _onVUSBChange(uintptr_t context) {
-//    // TODO
-//};
+static void _onVUSBChange(uintptr_t context) {
+    TActiveObject* mainAppAO = &systemActorsList[MAIN_APP_AO_ID];
+    bool usbCableConnected = USB_VBUS_SENSE_Get();
+
+    if (usbCableConnected) {
+        ActiveObject_Dispatch(mainAppAO, (TEvent) {.sig = APP_SIG_USB_CABLE_CONNECTED});
+    } else {
+        ActiveObject_Dispatch(mainAppAO, (TEvent) {.sig = APP_SIG_USB_CABLE_DISCONNECTED});
+    }
+};
