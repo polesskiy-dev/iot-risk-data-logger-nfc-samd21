@@ -6779,7 +6779,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_at25df" name="DRV_AT25DF_CHIP_SELECT_PIN"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_at25df&gt;
   &lt;drv_at25df dnOrder=&quot;0&quot; id=&quot;DRV_AT25DF_CHIP_SELECT_PIN&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;16&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/drv_at25df&gt;
 &lt;/drv_at25df&gt;
 </value>
@@ -6846,7 +6848,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drv_at25df" name="FLASH_SIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drv_at25df&gt;
   &lt;drv_at25df dnOrder=&quot;0&quot; id=&quot;FLASH_SIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;8388608&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/drv_at25df&gt;
 &lt;/drv_at25df&gt;
 </value>
@@ -11087,7 +11091,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom1" name="SPI_DIPO"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom1&gt;
   &lt;sercom1 dnOrder=&quot;0&quot; id=&quot;SPI_DIPO&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;3&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sercom1&gt;
 &lt;/sercom1&gt;
 </value>
@@ -13127,7 +13138,7 @@
       </entry>
       <entry>
          <file>../src/config/default/peripheral/sercom/spi_master/plib_sercom1_spi_master.c</file>
-         <hash>b1def5598c772186671faa1ee7891432c5f0fc710c793fc3a17515d2f59c3e4f</hash>
+         <hash>b36a6549330bdbc692b7b770305dfc5423a33d3d421971db218f52c959e30798</hash>
       </entry>
       <entry>
          <file>../src/packs/ATSAMD21E18A_DFP/instance/tc3.h</file>
@@ -13407,7 +13418,7 @@
       </entry>
       <entry>
          <file>../src/config/default/configuration.h</file>
-         <hash>fed58c60b9d92b03d28d850a136c81f18411c845d1efa27392c052c8e8770d6f</hash>
+         <hash>6abe4e5ad374f3063a59213c38cd1be53337ea55bdb911e20f348692b8619df4</hash>
       </entry>
       <entry>
          <file>../src/config/default/osal/osal_freertos.h</file>
