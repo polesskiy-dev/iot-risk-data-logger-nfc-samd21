@@ -401,7 +401,7 @@
               <itemPath>../src/config/default/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
             <logicalFolder name="rtc" displayName="rtc" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/rtc/plib_rtc_timer.c</itemPath>
+              <itemPath>../src/config/default/peripheral/rtc/plib_rtc_clock.c</itemPath>
             </logicalFolder>
             <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
               <logicalFolder name="i2c_master" displayName="i2c_master" projectFiles="true">
