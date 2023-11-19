@@ -80,14 +80,14 @@ void _DRV_USBFSV1_Tasks(  void *pvParameters  )
     }
 }
 
-/* Handle for the APP_Tasks. */
-TaskHandle_t xAPP_Tasks;
+/* Handle for the FLASH_Tasks. */
+TaskHandle_t xFLASH_Tasks;
 
-static void lAPP_Tasks(  void *pvParameters  )
+static void lFLASH_Tasks(  void *pvParameters  )
 {   
     while(true)
     {
-        APP_Tasks();
+        FLASH_Tasks();
     }
 }
 
@@ -138,13 +138,13 @@ void SYS_Tasks ( void )
 
 
     /* Maintain the application's state machine. */
-        /* Create OS Thread for APP_Tasks. */
-    (void) xTaskCreate((TaskFunction_t) lAPP_Tasks,
-                "APP_Tasks",
+        /* Create OS Thread for FLASH_Tasks. */
+    (void) xTaskCreate((TaskFunction_t) lFLASH_Tasks,
+                "FLASH_Tasks",
                 128,
                 NULL,
                 1,
-                &xAPP_Tasks);
+                &xFLASH_Tasks);
 
 
 

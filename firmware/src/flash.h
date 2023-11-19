@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app.h
+    flash.h
 
   Summary:
     This header file provides prototypes and definitions for the application.
@@ -13,13 +13,13 @@
   Description:
     This header file provides function prototypes and data type definitions for
     the application.  Some of these are required by the system (such as the
-    "APP_Initialize" and "APP_Tasks" prototypes) and some of them are only used
-    internally by the application (such as the "APP_STATES" definition).  Both
+    "FLASH_Initialize" and "FLASH_Tasks" prototypes) and some of them are only used
+    internally by the application (such as the "FLASH_STATES" definition).  Both
     are defined here for convenience.
 *******************************************************************************/
 
-#ifndef _APP_H
-#define _APP_H
+#ifndef _FLASH_H
+#define _FLASH_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -61,11 +61,11 @@ extern "C" {
 typedef enum
 {
     /* Application's state machine's initial state. */
-    APP_STATE_INIT=0,
-    APP_STATE_SERVICE_TASKS,
+    FLASH_STATE_INIT=0,
+    FLASH_STATE_SERVICE_TASKS,
     /* TODO: Define states used by the application state machine. */
 
-} APP_STATES;
+} FLASH_STATES;
 
 
 // *****************************************************************************
@@ -84,11 +84,11 @@ typedef enum
 typedef struct
 {
     /* The application's current state */
-    APP_STATES state;
+    FLASH_STATES state;
 
     /* TODO: Define any additional data used by the application. */
 
-} APP_DATA;
+} FLASH_DATA;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -106,7 +106,7 @@ typedef struct
 
 /*******************************************************************************
   Function:
-    void APP_Initialize ( void )
+    void FLASH_Initialize ( void )
 
   Summary:
      MPLAB Harmony application initialization routine.
@@ -114,7 +114,7 @@ typedef struct
   Description:
     This function initializes the Harmony application.  It places the
     application in its initial state and prepares it to run so that its
-    APP_Tasks function can be called.
+    FLASH_Tasks function can be called.
 
   Precondition:
     All other system initialization routines should be called before calling
@@ -128,19 +128,19 @@ typedef struct
 
   Example:
     <code>
-    APP_Initialize();
+    FLASH_Initialize();
     </code>
 
   Remarks:
     This routine must be called from the SYS_Initialize function.
 */
 
-void APP_Initialize ( void );
+void FLASH_Initialize ( void );
 
 
 /*******************************************************************************
   Function:
-    void APP_Tasks ( void )
+    void FLASH_Tasks ( void )
 
   Summary:
     MPLAB Harmony Demo application tasks function
@@ -161,14 +161,14 @@ void APP_Initialize ( void );
 
   Example:
     <code>
-    APP_Tasks();
+    FLASH_Tasks();
     </code>
 
   Remarks:
     This routine must be called from SYS_Tasks() routine.
  */
 
-void APP_Tasks( void );
+void FLASH_Tasks( void );
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
@@ -176,7 +176,7 @@ void APP_Tasks( void );
 #endif
 //DOM-IGNORE-END
 
-#endif /* _APP_H */
+#endif /* _FLASH_H */
 
 /*******************************************************************************
  End of File

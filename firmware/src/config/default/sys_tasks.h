@@ -57,8 +57,8 @@
 // Section: RTOS "Tasks" Handles
 // *****************************************************************************
 // *****************************************************************************
-/* Declaration of  APP_Tasks task handle */
-extern TaskHandle_t xAPP_Tasks;
+/* Declaration of  FLASH_Tasks task handle */
+extern TaskHandle_t xFLASH_Tasks;
 
 
 

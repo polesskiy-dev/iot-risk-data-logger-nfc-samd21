@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app.c
+    flash.c
 
   Summary:
     This file contains the source code for the MPLAB Harmony application.
@@ -27,7 +27,13 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#include "app.h"
+#include "flash.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "time.h"
+#include "definitions.h"
+#include "config/default/peripheral/rtc/plib_rtc.h"
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -45,12 +51,12 @@
     This structure holds the application's data.
 
   Remarks:
-    This structure should be initialized by the APP_Initialize function.
+    This structure should be initialized by the FLASH_Initialize function.
 
     Application strings and buffers are be defined outside this structure.
 */
 
-APP_DATA appData;
+FLASH_DATA flashData;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -80,41 +86,78 @@ APP_DATA appData;
 
 /*******************************************************************************
   Function:
-    void APP_Initialize ( void )
+    void FLASH_Initialize ( void )
 
   Remarks:
-    See prototype in app.h.
+    See prototype in flash.h.
  */
+/* Binary Semaphore: Create a global binary semaphore. 
+ * This semaphore will be taken (waited on) by the LED task and given (signaled) by the RTC alarm callback. */
+SemaphoreHandle_t xRTCSemaphore = NULL;
 
-void APP_Initialize ( void )
+struct tm alarmTime; 
+struct tm currentTime; // TODO check can we make it local
+
+void vDummySendLEDEventCb (RTC_CLOCK_INT_MASK event, uintptr_t context )
+{
+    if((event & RTC_CLOCK_INT_MASK_YEAR_OVERFLOW) ==
+    RTC_CLOCK_INT_MASK_YEAR_OVERFLOW)
+    {
+        // This means a year overflow has occurred.
+    }
+    else if ((event & RTC_CLOCK_INT_MASK_ALARM) == RTC_CLOCK_INT_MASK_ALARM)
+    {
+        xSemaphoreGiveFromISR(xRTCSemaphore, NULL); // Signal the LED task
+    }
+}
+
+void FLASH_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
-    appData.state = APP_STATE_INIT;
+    flashData.state = FLASH_STATE_INIT;
 
 
 
     /* TODO: Initialize your application's state machine and other
      * parameters.
      */
+    
+    /* Create the semaphore before starting the scheduler */
+    xRTCSemaphore = xSemaphoreCreateBinary();
+
+    
+    // TODO move RTC init to a separate module
+    // init RTC Alarm
+    alarmTime.tm_sec = 1;
+    RTC_ALARM_MASK mask = RTC_ALARM_MASK_SS; // alarm every minute
+    RTC_RTCCTimeSet(&currentTime); // time should be parsed from __DATE__, __TIME__
+    
+    // The mask is specified to match all time field and ignore all date fields.
+    if(RTC_RTCCAlarmSet(&alarmTime, mask) == false)
+    {
+        //incorrect format
+    }
+    
+    RTC_RTCCCallbackRegister(vDummySendLEDEventCb, (uintptr_t)NULL); // TODO pass appropriate context instead of NULL
 }
 
 
 /******************************************************************************
   Function:
-    void APP_Tasks ( void )
+    void FLASH_Tasks ( void )
 
   Remarks:
-    See prototype in app.h.
+    See prototype in flash.h.
  */
 
-void APP_Tasks ( void )
+void FLASH_Tasks ( void )
 {
 
     /* Check the application's current state. */
-    switch ( appData.state )
+    switch ( flashData.state )
     {
         /* Application's initial state. */
-        case APP_STATE_INIT:
+        case FLASH_STATE_INIT:
         {
             bool appInitialized = true;
 
@@ -122,14 +165,26 @@ void APP_Tasks ( void )
             if (appInitialized)
             {
 
-                appData.state = APP_STATE_SERVICE_TASKS;
+                flashData.state = FLASH_STATE_SERVICE_TASKS;
             }
             break;
         }
 
-        case APP_STATE_SERVICE_TASKS:
+        case FLASH_STATE_SERVICE_TASKS:
         {
-
+            if(xSemaphoreTake(xRTCSemaphore, portMAX_DELAY))
+            {
+                // Toggle LED
+                _LED_Toggle();
+                /*
+                 * To Check Heap: 
+                 * For now it's free 4912 bytes with only USB and LED
+                 */
+                volatile size_t heapConsumption = xPortGetFreeHeapSize();
+                (void)heapConsumption;
+                __NOP();
+                
+            }
             break;
         }
 
