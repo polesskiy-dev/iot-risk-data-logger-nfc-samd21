@@ -34,7 +34,7 @@
 #include <stdint.h>
 
 #ifndef CONF_CPU_FREQUENCY
-#define CONF_CPU_FREQUENCY 48000000
+#define CONF_CPU_FREQUENCY 47972352
 #endif
 
 #if CONF_CPU_FREQUENCY < 1000

@@ -202,7 +202,7 @@ bool SERCOM0_I2C_TransferSetup(SERCOM_I2C_TRANSFER_SETUP* setup, uint32_t srcClk
 
     if( srcClkFreq == 0U)
     {
-        srcClkFreq = 48000000UL;
+        srcClkFreq = 47972352UL;
     }
 
     if (SERCOM0_I2C_CalculateBaudValue(srcClkFreq, i2cClkSpeed, &baudValue) == false)
